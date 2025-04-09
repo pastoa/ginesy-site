@@ -32,7 +32,7 @@
 </header>
 
 <section class="une">
-  <img src="images/CAG Chine.jpg" alt="Actualité à la une">
+  <img src="images/actu_une.jpg" alt="Actualité à la une">
   <div class="caption">RENCONTRE DIPLOMATIQUE EN CHINE</div>
 </section>
 
@@ -57,12 +57,47 @@
 
 <section id="actualites">
   <h2>ACTUALITÉS</h2>
-  <p>Bloc actualités en attente de contenu dynamique ou manuel.</p>
+  <div class="actus-bloc-1">
+    <div class="actu-main" style="background-image: url('images/actu_une.jpg');">
+      <div class="actu-caption">
+        <h3><a href="#">VISITE AU SOMMET FRANCO-CHINOIS</a></h3>
+      </div>
+    </div>
+    <div class="actu-liste">
+      <div><a href="#">RÉUNION AVEC LES ÉLUS DU HAUT-PAYS</a><br><span class="date">8 AVRIL 2025</span></div>
+      <div><a href="#">LANCEMENT DU PLAN SMART DEAL À NICE</a><br><span class="date">6 AVRIL 2025</span></div>
+      <div><a href="#">DÉPLACEMENT DANS LES VALLÉES DE LA TINÉE</a><br><span class="date">4 AVRIL 2025</span></div>
+    </div>
+  </div>
+  <div class="actus-bloc-2">
+    <div class="actu-mini" style="background-image: url('images/priorite1.jpg');">
+      <div class="mini-caption"><a href="#">PROJET D’AMÉNAGEMENT TERRITORIAL</a></div>
+    </div>
+    <div class="actu-mini" style="background-image: url('images/priorite2.jpg');">
+      <div class="mini-caption"><a href="#">SOUTIEN À L’AGRICULTURE LOCALE</a></div>
+    </div>
+  </div>
 </section>
 
 <section id="priorites">
   <h2>MES PRIORITÉS</h2>
-  <p>Bloc priorités avec onglets et images.</p>
+  <div class="tabs">
+    <button class="tablink active" onclick="showTab(0)">DÉFENDRE NOS TERRITOIRES</button>
+    <button class="tablink" onclick="showTab(1)">GREEN DEAL</button>
+    <button class="tablink" onclick="showTab(2)">SMART DEAL</button>
+  </div>
+  <div class="tab-content active">
+    <img src="images/priorite1.jpg" alt="">
+    <p>Protéger nos vallées, accompagner les maires ruraux, sécuriser les zones de montagne.</p>
+  </div>
+  <div class="tab-content">
+    <img src="images/priorite2.jpg" alt="">
+    <p>Investir dans la transition écologique, soutenir l’économie verte et les circuits courts.</p>
+  </div>
+  <div class="tab-content">
+    <img src="images/priorite3.jpg" alt="">
+    <p>Déployer le numérique dans tous les territoires pour une administration plus proche.</p>
+  </div>
 </section>
 
 <section id="contact" class="contact-section">
@@ -77,7 +112,7 @@
       </form>
     </div>
     <div class="contact-photo">
-      <img src="images/482829683_1207560967391891_2154707709222069417_n.jpg" alt="Photo contact">
+      <img src="images/photo_contact.jpg" alt="Photo contact">
     </div>
   </div>
 </section>
@@ -85,6 +120,17 @@
 <footer>
   <p>&copy; 2025 - Charles Ange Ginésy</p>
 </footer>
+
+<script>
+  function showTab(n) {
+    document.querySelectorAll('.tablink').forEach((b, i) => {
+      b.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.tab-content').forEach((c, i) => {
+      c.classList.toggle('active', i === n);
+    });
+  }
+</script>
 
 </body>
 </html>
