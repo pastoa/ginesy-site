@@ -18,9 +18,10 @@ header.hero .top-bar {
   background: #000C2D;
   padding: 0.5em 1em;
 }
-header.hero .social-icons img {
-  width: 24px;
+header.hero .social-icons a {
+  color: white;
   margin-left: 1em;
+  font-size: 1.2em;
 }
 header.hero img {
   max-width: 150px;
@@ -46,7 +47,6 @@ nav a {
 }
 main {
   padding: 2em;
-  text-align: center;
 }
 footer {
   background: #001F54;
@@ -54,23 +54,48 @@ footer {
   text-align: center;
   padding: 1em;
 }
-.button {
-  background: #0066CC;
-  color: white;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 5px;
-}
 .floating-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #CC0000;
   color: white;
-  padding: 1em;
-  border-radius: 50px;
+  padding: 0.8em 1.2em;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.actus-home h2 {
+  text-align: center;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+.news-card {
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.news-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 1em;
+}
+.news-overlay h3 {
+  margin: 0;
+  font-size: 1.1em;
 }
 header.hero-small {
   background: #003366;
@@ -79,21 +104,16 @@ header.hero-small {
   text-align: center;
 }
 .actus-list {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2em;
-  text-align: left;
 }
 .actus-list article {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 2em;
-  padding-bottom: 1em;
+  margin-bottom: 3em;
 }
-.actus-list h2 {
+.actus-list article img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.actus-list article h2 {
   color: #003366;
-}
-.read-more {
-  color: #0066CC;
-  text-decoration: none;
-  font-weight: bold;
 }
