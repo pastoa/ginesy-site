@@ -1,6 +1,6 @@
 
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -18,11 +18,11 @@ header {
   color: white;
 }
 .header-left h1 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
 }
 .fonction {
-  font-size: 0.75em;
+  font-size: 0.65em;
   margin: 0;
 }
 nav ul {
@@ -31,7 +31,7 @@ nav ul {
   gap: 1em;
   margin: 0;
   padding: 0;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 nav a {
   text-decoration: none;
@@ -40,14 +40,13 @@ nav a {
 }
 .socials {
   display: flex;
-  gap: 0.7em;
+  gap: 0.6em;
   align-items: center;
 }
 .socials img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.2s, opacity 0.2s;
-  filter: brightness(0) invert(1);
 }
 .socials img:hover {
   transform: scale(1.2);
@@ -130,10 +129,10 @@ nav a {
   gap: 1.5em;
 }
 .reseaux-icons img {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
+  filter: invert(30%) sepia(100%) saturate(800%) hue-rotate(180deg) brightness(1.2);
   transition: transform 0.2s, opacity 0.2s;
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(180deg) saturate(300%);
 }
 .reseaux-icons img:hover {
   transform: scale(1.2);
