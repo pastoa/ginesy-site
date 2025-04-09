@@ -3,91 +3,78 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Charles Ange Ginésy</title>
+  <title>Charles Ange Ginésy - Accueil</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="top-bar">
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <img src="images/president.jpg" alt="Charles Ange Ginésy">
-    <div class="hero-text">
+  <header class="site-header">
+    <div class="president-info">
       <h1>Charles Ange Ginésy</h1>
       <p>Président du Département des Alpes-Maritimes</p>
     </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Le Président</a></li>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
+  <section class="hero-image">
+    <h2>Les Priorités de Charles Ange Ginésy</h2>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="president.html">Le Président</a></li>
-      <li><a href="galerie.html">Photos</a></li>
-      <li><a href="videos.html">Vidéos</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li>Défendre nos vallées</li>
+      <li>Préserver notre environnement</li>
+      <li>Renforcer la sécurité</li>
     </ul>
-  </nav>
+  </section>
 
-  <main>
-    <section class="actus-home">
-      <h2>Actualités</h2>
-      <div class="news-grid">
-        
-    <a href="actualites.html#article1" class="news-card" style="background-image: url('images/news1.jpg');">
-        <div class="news-overlay">
-            <h3>Inauguration du nouveau collège à Carros</h3>
-        </div>
-    </a>
-    
+  <section class="presentation">
+    <img src="images/news2.jpg" alt="Le Président">
+    <div class="bio">
+      <h2>Le Président</h2>
+      <p>Charles Ange Ginésy est engagé pour son territoire depuis de nombreuses années. Homme de terrain, proche des habitants, il défend avec conviction les valeurs de la République et de la ruralité.</p>
+    </div>
+  </section>
 
-    <a href="actualites.html#article2" class="news-card" style="background-image: url('images/news2.jpg');">
-        <div class="news-overlay">
-            <h3>Soutien renforcé aux vallées sinistrées</h3>
-        </div>
-    </a>
-    
+  <section class="actualites-home">
+    <h2>Actualités</h2>
+    <div class="news-grid">
+      <a href="#" class="news-card" style="background-image: url('images/news1.jpg');">
+        <div class="overlay"><h3>Inauguration du collège de Carros</h3></div>
+      </a>
+      <a href="#" class="news-card" style="background-image: url('images/news2.jpg');">
+        <div class="overlay"><h3>Plan de soutien aux vallées</h3></div>
+      </a>
+      <a href="#" class="news-card" style="background-image: url('images/news3.jpg');">
+        <div class="overlay"><h3>Rencontre avec les élus du haut pays</h3></div>
+      </a>
+    </div>
+  </section>
 
-    <a href="actualites.html#article3" class="news-card" style="background-image: url('images/news3.jpg');">
-        <div class="news-overlay">
-            <h3>Forum des élus du territoire</h3>
-        </div>
-    </a>
-    
+  <section class="reseaux">
+    <h2>Suivre Charles Ange Ginésy</h2>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </section>
 
-    <a href="actualites.html#article4" class="news-card" style="background-image: url('images/news4.jpg');">
-        <div class="news-overlay">
-            <h3>Un nouveau plan pour la ruralité</h3>
-        </div>
-    </a>
-    
-
-    <a href="actualites.html#article5" class="news-card" style="background-image: url('images/news5.jpg');">
-        <div class="news-overlay">
-            <h3>Réunion stratégique avec les maires</h3>
-        </div>
-    </a>
-    
-
-    <a href="actualites.html#article6" class="news-card" style="background-image: url('images/news6.jpg');">
-        <div class="news-overlay">
-            <h3>Aménagement durable du haut pays</h3>
-        </div>
-    </a>
-    
-      </div>
-    </section>
-  </main>
-
-  <a href="contact.html" class="floating-button"><i class="fas fa-envelope"></i> Contact</a>
+  <section>
+    <form class="contact-form">
+      <h2>Contact</h2>
+      <input type="text" placeholder="Votre nom">
+      <input type="email" placeholder="Votre email">
+      <textarea placeholder="Votre message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 - Présidence des Alpes-Maritimes</p>
+    <p>&copy; 2025 - Charles Ange Ginésy - Département des Alpes-Maritimes</p>
   </footer>
 </body>
 </html>

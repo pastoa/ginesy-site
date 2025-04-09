@@ -1,119 +1,143 @@
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
   color: #333;
 }
-header.hero {
-  background: #001F54;
-  color: white;
-  text-align: center;
-  padding: 1em 1em 2em;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-header.hero .top-bar {
+header.site-header {
+  background: #002654;
+  color: white;
+  padding: 1em 2em;
   display: flex;
-  justify-content: flex-end;
-  background: #000C2D;
-  padding: 0.5em 1em;
+  justify-content: space-between;
+  align-items: center;
 }
-header.hero .social-icons a {
-  color: white;
-  margin-left: 1em;
-  font-size: 1.2em;
+header.site-header .president-info h1 {
+  margin: 0;
+  font-size: 1.5em;
 }
-header.hero img {
-  max-width: 150px;
-  border-radius: 50%;
-  margin-top: 1em;
+header.site-header .president-info p {
+  margin: 0;
+  font-style: italic;
 }
-nav ul {
+nav.main-nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 1em;
+  margin: 0;
   padding: 0;
-  background: #003366;
+}
+nav.main-nav a {
+  color: white;
+  font-weight: bold;
+}
+.hero-image {
+  background: url('images/news1.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  flex-direction: column;
+}
+.hero-image h2 {
+  font-size: 2.5em;
   margin: 0;
 }
-nav li {
-  margin: 0 1em;
+.hero-image ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
 }
-nav a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 1em;
+.hero-image li {
+  font-size: 1.2em;
 }
-main {
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
+  background: #f8f8f8;
+}
+.presentation img {
+  max-width: 100%;
+  border-radius: 10px;
+  width: 300px;
+}
+.presentation .bio {
+  flex: 1;
+}
+.actualites-home {
   padding: 2em;
 }
-footer {
-  background: #001F54;
-  color: white;
-  text-align: center;
-  padding: 1em;
-}
-.floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #CC0000;
-  color: white;
-  padding: 0.8em 1.2em;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-.actus-home h2 {
+.actualites-home h2 {
   text-align: center;
 }
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5em;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 .news-card {
-  display: block;
-  position: relative;
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
   color: white;
-  text-decoration: none;
-  overflow: hidden;
+  position: relative;
   border-radius: 8px;
+  overflow: hidden;
 }
-.news-overlay {
+.news-card .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
+  padding: 1em;
   display: flex;
   align-items: flex-end;
-  padding: 1em;
 }
-.news-overlay h3 {
-  margin: 0;
-  font-size: 1.1em;
-}
-header.hero-small {
-  background: #003366;
+.reseaux {
+  background: #002654;
   color: white;
-  padding: 2em 1em;
+  padding: 2em;
   text-align: center;
 }
-.actus-list {
-  max-width: 900px;
-  margin: 0 auto;
+.reseaux a {
+  margin: 0 1em;
+  font-size: 1.5em;
 }
-.actus-list article {
-  margin-bottom: 3em;
+form.contact-form {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
-.actus-list article img {
-  max-width: 100%;
-  border-radius: 8px;
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-.actus-list article h2 {
-  color: #003366;
+form.contact-form button {
+  background: #002654;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background: #001B3F;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
 }
