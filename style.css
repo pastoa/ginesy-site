@@ -1,143 +1,128 @@
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #fff;
-  color: #333;
+  color: #111;
+  background: white;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-header.site-header {
-  background: #002654;
-  color: white;
-  padding: 1em 2em;
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 2em;
+  background: white;
+  border-bottom: 1px solid #eee;
 }
-header.site-header .president-info h1 {
-  margin: 0;
-  font-size: 1.5em;
+header img {
+  height: 60px;
 }
-header.site-header .president-info p {
-  margin: 0;
-  font-style: italic;
-}
-nav.main-nav ul {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 1em;
+  gap: 2em;
   margin: 0;
   padding: 0;
 }
-nav.main-nav a {
-  color: white;
+nav a {
+  text-decoration: none;
+  color: #111;
   font-weight: bold;
 }
-.hero-image {
-  background: url('images/news1.jpg') no-repeat center center/cover;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-  flex-direction: column;
-}
-.hero-image h2 {
-  font-size: 2.5em;
-  margin: 0;
-}
-.hero-image ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1em;
-}
-.hero-image li {
+.socials a {
+  margin-left: 1em;
   font-size: 1.2em;
+  color: #111;
 }
-.presentation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  padding: 2em;
-  background: #f8f8f8;
+.une {
+  max-width: 1100px;
+  margin: 2em auto;
+  position: relative;
 }
-.presentation img {
-  max-width: 100%;
-  border-radius: 10px;
-  width: 300px;
+.une img {
+  width: 100%;
+  border-radius: 6px;
 }
-.presentation .bio {
-  flex: 1;
+.une .caption {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background: white;
+  padding: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
 }
-.actualites-home {
-  padding: 2em;
+.actus-section {
+  max-width: 1200px;
+  margin: 4em auto;
 }
-.actualites-home h2 {
-  text-align: center;
+.actus-section h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #002654;
+  padding-bottom: 0.3em;
 }
-.news-grid {
+.actus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5em;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
   margin-top: 2em;
 }
-.news-card {
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  color: white;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.news-card .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  padding: 1em;
-  display: flex;
-  align-items: flex-end;
-}
-.reseaux {
-  background: #002654;
-  color: white;
-  padding: 2em;
-  text-align: center;
-}
-.reseaux a {
-  margin: 0 1em;
-  font-size: 1.5em;
-}
-form.contact-form {
-  max-width: 600px;
-  margin: 2em auto;
-  padding: 2em;
+.actus-grid .featured {
   background: #f4f4f4;
-  border-radius: 10px;
-}
-form.contact-form input,
-form.contact-form textarea {
-  width: 100%;
   padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
 }
-form.contact-form button {
+.actus-grid .listes small {
+  display: block;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+.actus-grid .listes p {
+  margin: 0 0 1em 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+}
+.priorites {
+  background: #f7f7f7;
+  padding: 4em 2em;
+}
+.priorites h2 {
+  text-align: center;
+  font-size: 2em;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 1em;
+}
+.tabs button {
+  padding: 0.7em 1.2em;
+  border: 2px solid #002654;
+  background: white;
+  color: #002654;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.tabs button.active {
   background: #002654;
   color: white;
-  padding: 1em 2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+}
+.tab-content {
+  max-width: 800px;
+  margin: 2em auto 0;
+  display: none;
+}
+.tab-content.active {
+  display: block;
 }
 footer {
-  background: #001B3F;
-  color: white;
   text-align: center;
-  padding: 1em;
-  margin-top: 2em;
+  padding: 2em;
+  background: #002654;
+  color: white;
+  margin-top: 4em;
 }

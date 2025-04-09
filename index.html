@@ -3,78 +3,81 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Charles Ange Ginésy - Accueil</title>
+  <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="president-info">
-      <h1>Charles Ange Ginésy</h1>
-      <p>Président du Département des Alpes-Maritimes</p>
-    </div>
-    <nav class="main-nav">
+  <header>
+    <img src="images/logo_cag.png" alt="Logo CAG">
+    <nav>
       <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Le Président</a></li>
         <li><a href="#">Actualités</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Mes Priorités</a></li>
+        <li><a href="#">Me contacter</a></li>
       </ul>
     </nav>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
   </header>
 
-  <section class="hero-image">
-    <h2>Les Priorités de Charles Ange Ginésy</h2>
-    <ul>
-      <li>Défendre nos vallées</li>
-      <li>Préserver notre environnement</li>
-      <li>Renforcer la sécurité</li>
-    </ul>
+  <section class="une">
+    <img src="images/actu_une.jpg" alt="Actualité à la une">
+    <div class="caption">Rencontre diplomatique en Chine</div>
   </section>
 
-  <section class="presentation">
-    <img src="images/news2.jpg" alt="Le Président">
-    <div class="bio">
-      <h2>Le Président</h2>
-      <p>Charles Ange Ginésy est engagé pour son territoire depuis de nombreuses années. Homme de terrain, proche des habitants, il défend avec conviction les valeurs de la République et de la ruralité.</p>
-    </div>
-  </section>
-
-  <section class="actualites-home">
+  <section class="actus-section">
     <h2>Actualités</h2>
-    <div class="news-grid">
-      <a href="#" class="news-card" style="background-image: url('images/news1.jpg');">
-        <div class="overlay"><h3>Inauguration du collège de Carros</h3></div>
-      </a>
-      <a href="#" class="news-card" style="background-image: url('images/news2.jpg');">
-        <div class="overlay"><h3>Plan de soutien aux vallées</h3></div>
-      </a>
-      <a href="#" class="news-card" style="background-image: url('images/news3.jpg');">
-        <div class="overlay"><h3>Rencontre avec les élus du haut pays</h3></div>
-      </a>
+    <div class="actus-grid">
+      <div class="featured">
+        <h3>Visite au sommet franco-chinois</h3>
+        <p>Le Président Charles Ange Ginésy s’est rendu en Chine pour renforcer la coopération territoriale…</p>
+      </div>
+      <div class="listes">
+        <small>8 avril 2025</small>
+        <p>Réunion avec les élus du haut-pays</p>
+        <small>6 avril 2025</small>
+        <p>Lancement du plan Smart Deal à Nice</p>
+        <small>2 avril 2025</small>
+        <p>Déplacement dans les vallées de la Tinée</p>
+      </div>
     </div>
   </section>
 
-  <section class="reseaux">
-    <h2>Suivre Charles Ange Ginésy</h2>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-  </section>
-
-  <section>
-    <form class="contact-form">
-      <h2>Contact</h2>
-      <input type="text" placeholder="Votre nom">
-      <input type="email" placeholder="Votre email">
-      <textarea placeholder="Votre message"></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+  <section class="priorites">
+    <h2>Mes Priorités</h2>
+    <div class="tabs">
+      <button class="tablink active" onclick="showTab(0)">Défendre nos territoires</button>
+      <button class="tablink" onclick="showTab(1)">Green Deal</button>
+      <button class="tablink" onclick="showTab(2)">Smart Deal</button>
+    </div>
+    <div class="tab-content active">
+      <p>Protéger nos vallées, accompagner les maires ruraux, sécuriser les zones de montagne.</p>
+    </div>
+    <div class="tab-content">
+      <p>Investir dans la transition écologique, soutenir l’économie verte et les circuits courts.</p>
+    </div>
+    <div class="tab-content">
+      <p>Déployer le numérique dans tous les territoires pour une administration plus proche.</p>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 - Charles Ange Ginésy - Département des Alpes-Maritimes</p>
   </footer>
+
+  <script>
+    function showTab(n) {
+      document.querySelectorAll('.tablink').forEach((b, i) => {
+        b.classList.toggle('active', i === n);
+      });
+      document.querySelectorAll('.tab-content').forEach((c, i) => {
+        c.classList.toggle('active', i === n);
+      });
+    }
+  </script>
 </body>
 </html>
