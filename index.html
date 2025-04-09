@@ -3,16 +3,17 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Charles Ange Ginésy</title>
+  <title>CHARLES ANGE GINÉSY</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <header>
-    <div>
+    <div class="header-left">
       <h1>CHARLES ANGE GINÉSY</h1>
-      <p>Président du Département des Alpes-Maritimes</p>
-      <p>Président de la Communauté de Communes Alpes d'Azur</p>
+      <p class="fonction">Président du Département des Alpes-Maritimes</p>
+      <p class="fonction">Président de la Communauté de Communes Alpes d’Azur</p>
     </div>
     <nav>
       <ul>
@@ -23,9 +24,9 @@
       </ul>
     </nav>
     <div class="socials">
-      <a href="#"><i class="fab fa-facebook-f" style="color:#002654;"></i></a>
-      <a href="#"><i class="fab fa-x-twitter" style="color:#002654;"></i></a>
-      <a href="#"><i class="fab fa-tiktok" style="color:#002654;"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
     </div>
   </header>
 
@@ -34,18 +35,37 @@
     <div class="caption">RENCONTRE DIPLOMATIQUE EN CHINE</div>
   </section>
 
+  <section class="newsletter-banner">
+    <p>TOUT SAVOIR DE L’ACTUALITÉ DE CHARLES ANGE GINÉSY</p>
+    <input type="email" placeholder="Votre adresse email"><i class="fas fa-envelope"></i>
+  </section>
+
+  <section class="suivez-moi">
+    <h3>SUIVEZ-MOI</h3>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </section>
+
   <section class="actus-section">
     <h2>ACTUALITÉS</h2>
-    <div class="actus-grid">
-      <div class="featured" style="background: url('images/actu_une.jpg') center/cover; color: white;">
-        <h3><a href="actualites.html#article1" style="color: white; text-decoration: none;">VISITE AU SOMMET FRANCO-CHINOIS</a></h3>
-        <p>Le Président Charles Ange Ginésy s’est rendu en Chine pour renforcer la coopération territoriale…</p>
+    <div class="actus-bloc-1">
+      <div class="actu-main" style="background-image: url('images/actu_une.jpg');">
+        <h3><a href="actualites.html#article1">VISITE AU SOMMET FRANCO-CHINOIS</a></h3>
       </div>
-      <div class="listes">
-        <small>8 AVRIL 2025</small>
-        <p><a href="actualites.html#article2" style="text-decoration: none;">RÉUNION AVEC LES ÉLUS DU HAUT-PAYS</a></p>
-        <small>6 AVRIL 2025</small>
-        <p><a href="actualites.html#article3" style="text-decoration: none;">LANCEMENT DU PLAN SMART DEAL À NICE</a></p>
+      <div class="actu-liste">
+        <p><a href="actualites.html#article2">RÉUNION AVEC LES ÉLUS DU HAUT-PAYS</a></p>
+        <p><a href="actualites.html#article3">LANCEMENT DU PLAN SMART DEAL À NICE</a></p>
+        <p><a href="actualites.html#article4">DÉPLACEMENT DANS LES VALLÉES DE LA TINÉE</a></p>
+      </div>
+    </div>
+    <div class="actus-bloc-2">
+      <div class="actu-mini" style="background-image: url('images/priorite1.jpg');">
+        <h4><a href="#">PROJET D’AMÉNAGEMENT TERRITORIAL</a></h4>
+      </div>
+      <div class="actu-mini" style="background-image: url('images/priorite2.jpg');">
+        <h4><a href="#">SOUTIEN À L’AGRICULTURE LOCALE</a></h4>
       </div>
     </div>
   </section>
@@ -72,7 +92,7 @@
   </section>
 
   <section class="contact-section" id="contact">
-    <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center; justify-content: center;">
+    <div class="contact-split">
       <form class="contact-form">
         <h2>CONTACT</h2>
         <input type="text" placeholder="Votre nom">
@@ -80,7 +100,9 @@
         <textarea placeholder="Votre message"></textarea>
         <button type="submit">Envoyer</button>
       </form>
-      <img src="images/photo_contact.jpg" style="max-width: 300px; border-radius: 10px;" alt="Contact">
+      <div class="contact-photo">
+        <img src="images/photo_contact.jpg" alt="Contact">
+      </div>
     </div>
   </section>
 
@@ -98,5 +120,6 @@
       });
     }
   </script>
+
 </body>
 </html>
