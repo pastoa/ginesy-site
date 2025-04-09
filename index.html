@@ -9,73 +9,79 @@
 </head>
 <body>
   <header>
-    <img src="images/logo_cag.png" alt="Logo CAG">
+    <div>
+      <h1>CHARLES ANGE GINÉSY</h1>
+      <p>Président du Département des Alpes-Maritimes</p>
+      <p>Président de la Communauté de Communes Alpes d'Azur</p>
+    </div>
     <nav>
       <ul>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="#priorites">Mes Priorités</a></li>
-        <li><a href="#contact">Me contacter</a></li>
+        <li><a href="actualites.html">ACTUALITÉS</a></li>
+        <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
+        <li><a href="#priorites">MES PRIORITÉS</a></li>
+        <li><a href="#contact">ME CONTACTER</a></li>
       </ul>
     </nav>
     <div class="socials">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-facebook-f" style="color:#002654;"></i></a>
+      <a href="#"><i class="fab fa-x-twitter" style="color:#002654;"></i></a>
+      <a href="#"><i class="fab fa-tiktok" style="color:#002654;"></i></a>
     </div>
   </header>
 
   <section class="une">
     <img src="images/actu_une.jpg" alt="Actualité à la une">
-    <div class="caption">Rencontre diplomatique en Chine</div>
+    <div class="caption">RENCONTRE DIPLOMATIQUE EN CHINE</div>
   </section>
 
   <section class="actus-section">
-    <h2>Actualités</h2>
+    <h2>ACTUALITÉS</h2>
     <div class="actus-grid">
-      <div class="featured">
-        <h3><a href="actualites.html#article1">Visite au sommet franco-chinois</a></h3>
+      <div class="featured" style="background: url('images/actu_une.jpg') center/cover; color: white;">
+        <h3><a href="actualites.html#article1" style="color: white; text-decoration: none;">VISITE AU SOMMET FRANCO-CHINOIS</a></h3>
         <p>Le Président Charles Ange Ginésy s’est rendu en Chine pour renforcer la coopération territoriale…</p>
       </div>
       <div class="listes">
-        <small>8 avril 2025</small>
-        <p><a href="actualites.html#article2">Réunion avec les élus du haut-pays</a></p>
-        <small>6 avril 2025</small>
-        <p><a href="actualites.html#article3">Lancement du plan Smart Deal à Nice</a></p>
-        <small>2 avril 2025</small>
-        <p><a href="actualites.html#article4">Déplacement dans les vallées de la Tinée</a></p>
+        <small>8 AVRIL 2025</small>
+        <p><a href="actualites.html#article2" style="text-decoration: none;">RÉUNION AVEC LES ÉLUS DU HAUT-PAYS</a></p>
+        <small>6 AVRIL 2025</small>
+        <p><a href="actualites.html#article3" style="text-decoration: none;">LANCEMENT DU PLAN SMART DEAL À NICE</a></p>
       </div>
     </div>
   </section>
 
   <section class="priorites" id="priorites">
-    <h2>Mes Priorités</h2>
+    <h2>MES PRIORITÉS</h2>
     <div class="tabs">
-      <button class="tablink active" onclick="showTab(0)">Défendre nos territoires</button>
-      <button class="tablink" onclick="showTab(1)">Green Deal</button>
-      <button class="tablink" onclick="showTab(2)">Smart Deal</button>
+      <button class="tablink active" onclick="showTab(0)">DÉFENDRE NOS TERRITOIRES</button>
+      <button class="tablink" onclick="showTab(1)">GREEN DEAL</button>
+      <button class="tablink" onclick="showTab(2)">SMART DEAL</button>
     </div>
     <div class="tab-content active">
-      <img src="images/ruralite.webp" alt="Défendre nos territoires">
+      <img src="images/priorite1.jpg" alt="">
       <p>Protéger nos vallées, accompagner les maires ruraux, sécuriser les zones de montagne.</p>
     </div>
     <div class="tab-content">
-      <img src="images/greendeal.jpg" alt="Green Deal">
+      <img src="images/priorite2.jpg" alt="">
       <p>Investir dans la transition écologique, soutenir l’économie verte et les circuits courts.</p>
     </div>
     <div class="tab-content">
-      <img src="images/smartdeal.jpg" alt="Smart Deal">
+      <img src="images/priorite3.jpg" alt="">
       <p>Déployer le numérique dans tous les territoires pour une administration plus proche.</p>
     </div>
   </section>
 
   <section class="contact-section" id="contact">
-    <form class="contact-form">
-      <h2>Contact</h2>
-      <input type="text" placeholder="Votre nom">
-      <input type="email" placeholder="Votre email">
-      <textarea placeholder="Votre message"></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+    <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center; justify-content: center;">
+      <form class="contact-form">
+        <h2>CONTACT</h2>
+        <input type="text" placeholder="Votre nom">
+        <input type="email" placeholder="Votre email">
+        <textarea placeholder="Votre message"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <img src="images/photo_contact.jpg" style="max-width: 300px; border-radius: 10px;" alt="Contact">
+    </div>
   </section>
 
   <footer>
