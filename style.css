@@ -79,12 +79,12 @@ nav a {
   color: white;
   padding: 2em;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
-.newsletter-text {
-  font-size: 1.2em;
+.newsletter-title {
+  font-size: 1.3em;
+  font-weight: bold;
   margin-bottom: 1em;
 }
 .newsletter-form {
@@ -92,7 +92,7 @@ nav a {
   gap: 0.5em;
 }
 .newsletter-form input {
-  padding: 0.8em;
+  padding: 1em;
   border: none;
   border-radius: 5px;
   width: 300px;
@@ -100,13 +100,13 @@ nav a {
 .newsletter-form button {
   background: white;
   color: #002654;
-  padding: 0.8em 1em;
+  padding: 1em 1.2em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Bandeau réseaux */
+/* Suivez-moi */
 .suivez-moi {
   background: white;
   color: #004080;
@@ -131,4 +131,208 @@ nav a {
 .reseaux-icons a:hover {
   transform: scale(1.2);
   opacity: 0.7;
+}
+
+/* Actus */
+.actus-section {
+  max-width: 1200px;
+  margin: 4em auto;
+  padding: 0 1em;
+}
+.actus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #002654;
+  padding-bottom: 0.3em;
+  margin-bottom: 2em;
+}
+.actus-header h2 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: #002654;
+}
+.actus-header .actus-link a {
+  color: #002654;
+  text-decoration: none;
+  font-weight: bold;
+}
+.actus-header i {
+  margin-right: 0.3em;
+}
+
+.actus-bloc-1 {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+.actu-main {
+  flex: 2;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1em;
+  border-radius: 10px;
+}
+.actu-caption {
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+}
+.actu-caption a {
+  color: #002654;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.actu-liste {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.actu-liste div {
+  margin-bottom: 1em;
+}
+.actu-liste a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #002654;
+}
+.date {
+  font-size: 0.8em;
+  color: #555;
+}
+
+.actus-bloc-2 {
+  display: flex;
+  gap: 2em;
+}
+.actu-mini {
+  flex: 1;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1em;
+}
+.mini-caption {
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+}
+.mini-caption a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #002654;
+  text-transform: uppercase;
+}
+
+/* Priorités */
+.priorites {
+  background: #f7f7f7;
+  padding: 4em 2em;
+}
+.priorites h2 {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.tabs button {
+  padding: 0.7em 1.2em;
+  border: 2px solid #002654;
+  background: white;
+  color: #002654;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.tabs button.active {
+  background: #002654;
+  color: white;
+}
+.tab-content {
+  max-width: 700px;
+  margin: 2em auto 0;
+  display: none;
+  text-align: center;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content img {
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+/* Contact */
+.contact-section {
+  background: #fff;
+  padding: 4em 2em;
+}
+.contact-split {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  padding: 2em;
+}
+.contact-form h2 {
+  font-size: 1.8em;
+  color: #002654;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form textarea {
+  min-height: 150px;
+}
+.contact-form button {
+  background: #002654;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-photo {
+  flex: 1;
+}
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em;
+  background: #002654;
+  color: white;
+  margin-top: 4em;
 }
