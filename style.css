@@ -15,6 +15,7 @@ header {
   padding: 1em 2em;
   background: white;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 header img {
   height: 60px;
@@ -31,8 +32,12 @@ nav a {
   color: #111;
   font-weight: bold;
 }
+.socials {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.5em;
+}
 .socials a {
-  margin-left: 1em;
   font-size: 1.2em;
   color: #111;
 }
@@ -97,6 +102,7 @@ nav a {
   justify-content: center;
   margin-top: 2em;
   gap: 1em;
+  flex-wrap: wrap;
 }
 .tabs button {
   padding: 0.7em 1.2em;
@@ -115,9 +121,40 @@ nav a {
   max-width: 800px;
   margin: 2em auto 0;
   display: none;
+  text-align: center;
 }
 .tab-content.active {
   display: block;
+}
+.tab-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+.contact-section {
+  background: #fff;
+  padding: 4em 2em;
+  text-align: center;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button {
+  background: #002654;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 footer {
   text-align: center;

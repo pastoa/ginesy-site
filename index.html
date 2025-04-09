@@ -12,9 +12,9 @@
     <img src="images/logo_cag.png" alt="Logo CAG">
     <nav>
       <ul>
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Mes Priorités</a></li>
-        <li><a href="#">Me contacter</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="#priorites">Mes Priorités</a></li>
+        <li><a href="#contact">Me contacter</a></li>
       </ul>
     </nav>
     <div class="socials">
@@ -33,21 +33,21 @@
     <h2>Actualités</h2>
     <div class="actus-grid">
       <div class="featured">
-        <h3>Visite au sommet franco-chinois</h3>
+        <h3><a href="actualites.html#article1">Visite au sommet franco-chinois</a></h3>
         <p>Le Président Charles Ange Ginésy s’est rendu en Chine pour renforcer la coopération territoriale…</p>
       </div>
       <div class="listes">
         <small>8 avril 2025</small>
-        <p>Réunion avec les élus du haut-pays</p>
+        <p><a href="actualites.html#article2">Réunion avec les élus du haut-pays</a></p>
         <small>6 avril 2025</small>
-        <p>Lancement du plan Smart Deal à Nice</p>
+        <p><a href="actualites.html#article3">Lancement du plan Smart Deal à Nice</a></p>
         <small>2 avril 2025</small>
-        <p>Déplacement dans les vallées de la Tinée</p>
+        <p><a href="actualites.html#article4">Déplacement dans les vallées de la Tinée</a></p>
       </div>
     </div>
   </section>
 
-  <section class="priorites">
+  <section class="priorites" id="priorites">
     <h2>Mes Priorités</h2>
     <div class="tabs">
       <button class="tablink active" onclick="showTab(0)">Défendre nos territoires</button>
@@ -55,14 +55,27 @@
       <button class="tablink" onclick="showTab(2)">Smart Deal</button>
     </div>
     <div class="tab-content active">
+      <img src="images/priorite1.webp" alt="Défendre nos territoires">
       <p>Protéger nos vallées, accompagner les maires ruraux, sécuriser les zones de montagne.</p>
     </div>
     <div class="tab-content">
+      <img src="images/priorite2.jpg" alt="Green Deal">
       <p>Investir dans la transition écologique, soutenir l’économie verte et les circuits courts.</p>
     </div>
     <div class="tab-content">
+      <img src="images/priorite3.jpg" alt="Smart Deal">
       <p>Déployer le numérique dans tous les territoires pour une administration plus proche.</p>
     </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <form class="contact-form">
+      <h2>Contact</h2>
+      <input type="text" placeholder="Votre nom">
+      <input type="email" placeholder="Votre email">
+      <textarea placeholder="Votre message"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
   </section>
 
   <footer>
