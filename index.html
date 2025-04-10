@@ -2,150 +2,173 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <h1>Charles Ange Ginésy</h1>
-      <p class="subtitle">Président du Département des Alpes-Maritimes</p>
-      <p class="subtitle">Président de la Communauté de Communes Alpes d'Azur</p>
+  <header>
+    <div class="header-left">
+      <div class="header-title">CHARLES ANGE GINÉSY</div>
+      <div class="header-subtitle">Président du Département des Alpes-Maritimes</div>
+      <div class="header-subtitle">Président de la Communauté de Communes Alpes d'Azur</div>
     </div>
     <nav>
-      <ul class="menu">
-        <li><a href="#actualites">ActualitÉs</a></li>
-        <li><a href="#connaitre">Mieux me connaître</a></li>
-        <li><a href="#priorites">Mes prioritÉs</a></li>
-        <li><a href="#contact">Me contacter</a></li>
+      <ul>
+        <li><a href="#">ACTUALITÉS</a></li>
+        <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
+        <li><a href="#">MES PRIORITÉS</a></li>
+        <li><a href="#contact">ME CONTACTER</a></li>
       </ul>
     </nav>
     <div class="social-icons">
-      <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
-      <a href="#"><img src="images/x.png" alt="X" /></a>
-      <a href="#"><img src="images/tiktok.png" alt="TikTok" /></a>
+      <img src="images/facebook.png" alt="Facebook" />
+      <img src="images/instagram.png" alt="Instagram" />
+      <img src="images/linkedin.png" alt="LinkedIn" />
+      <img src="images/x.png" alt="X" />
+      <img src="images/tiktok.png" alt="TikTok" />
     </div>
   </header>
 
-  <!-- IMAGE A LA UNE CAROUSEL -->
-  <section class="carousel">
-    <div class="carousel-slide">
-      <img src="images/actu_une.jpg" alt="Actualité à la une" />
-      <div class="caption blue">
-        <h2>Un État qui protège</h2>
+  <!-- SLIDER UNE -->
+  <section class="slider">
+    <div class="slide active" style="background-image: url('images/actu_une.jpg');">
+      <div class="slider-caption">
+        <h2>UN ÉTAT QUI PROTÈGE</h2>
         <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+        <span class="slider-arrow">➔</span>
       </div>
     </div>
-    <!-- Ajoute ici les 2 autres blocs avec autres images -->
+    <!-- Ajouter d'autres .slide ici si besoin -->
   </section>
 
-  <!-- MES PRIORITES AVEC TABS -->
-  <section id="priorites" class="priorites">
-    <div class="tabs">
-      <button class="tab active" onclick="showPriority(1)">DÉFENDRE NOS TERRITOIRES</button>
-      <button class="tab" onclick="showPriority(2)">GREEN DEAL</button>
-      <button class="tab" onclick="showPriority(3)">SMART DEAL</button>
-    </div>
-    <div class="priorite-content" id="priority1">
-      <img src="images/priorite1.jpg" alt="Défendre nos territoires">
-      <div class="priority-caption">
-        <h2>DÉFENDRE NOS TERRITOIRES <span class="arrow">&#10132;</span></h2>
-        <p>Mettre en valeur la ruralité et l'identité de nos communes...</p>
-      </div>
-    </div>
-    <div class="priorite-content hidden" id="priority2">
-      <img src="images/priorite2.jpg" alt="Green Deal">
-      <div class="priority-caption">
-        <h2>GREEN DEAL <span class="arrow">&#10132;</span></h2>
-        <p>Agir pour une planète plus propre et durable...</p>
-      </div>
-    </div>
-    <div class="priorite-content hidden" id="priority3">
-      <img src="images/priorite3.jpg" alt="Smart Deal">
-      <div class="priority-caption">
-        <h2>SMART DEAL <span class="arrow">&#10132;</span></h2>
-        <p>Digitaliser et moderniser nos infrastructures...</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOC NEWSLETTER -->
+  <!-- NEWSLETTER -->
   <section class="newsletter">
-    <h2><strong>Toute mon actualité dans votre boîte mail</strong></h2>
+    <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
     <form>
-      <input type="email" placeholder="Votre adresse mail" required />
-      <button type="submit">
-        <img src="images/mail-icon.svg" alt="Envoyer">
-      </button>
+      <input type="email" placeholder="Votre adresse e-mail" required />
+      <button type="submit"><span class="icon-mail">✉️</span></button>
     </form>
   </section>
 
-  <!-- BLOC SUIVEZ-MOI -->
-  <section class="social-follow">
-    <h2><strong>SUIVEZ-MOI</strong></h2>
-    <div class="social-icons blue">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="#"><img src="images/x.png" alt="X"></a>
-      <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+  <!-- SUIVEZ-MOI -->
+  <section class="suivez-moi">
+    <h2>SUIVEZ-MOI</h2>
+    <div class="social-icons-blue">
+      <img src="images/facebook.png" alt="Facebook" />
+      <img src="images/instagram.png" alt="Instagram" />
+      <img src="images/linkedin.png" alt="LinkedIn" />
+      <img src="images/x.png" alt="X" />
+      <img src="images/tiktok.png" alt="TikTok" />
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS -->
+  <section class="actualites">
+    <div class="actu-header">
+      <h2>ACTUALITÉS</h2>
+      <a href="#" class="toute-actus">Toute l’actualité 🔍</a>
+    </div>
+    <div class="actu-bloc">
+      <div class="actu-principale" style="background-image: url('images/priorite1.jpg');">
+        <div class="actu-overlay">
+          <h3>SOMMET FRANCO-CHINOIS</h3>
+        </div>
+      </div>
+      <div class="actu-secondaires">
+        <div>
+          <h4>INAUGURATION À GUILLAUMES</h4>
+          <p>02/04/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
+        </div>
+        <div>
+          <h4>DÉPLACEMENT DANS LA TINÉE</h4>
+          <p>31/03/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
+        </div>
+        <div>
+          <h4>CONFÉRENCE SUR LE SMART DEAL</h4>
+          <p>29/03/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="actu-ligne2">
+      <div style="background-image: url('images/priorite2.jpg');">
+        <h4>VISITE À VALBERG</h4>
+      </div>
+      <div style="background-image: url('images/priorite3.jpg');">
+        <h4>FORUM JEUNES CITOYENS</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- MES PRIORITÉS -->
+  <section class="priorites">
+    <div class="onglets">
+      <button class="onglet actif">DÉFENDRE NOS TERRITOIRES</button>
+      <button class="onglet">GREEN DEAL</button>
+      <button class="onglet">SMART DEAL</button>
+    </div>
+    <div class="contenu-priorites">
+      <img src="images/priorite1.jpg" alt="Priorité" />
+      <div class="bloc-texte">
+        <h2>DÉFENDRE NOS TERRITOIRES ➔</h2>
+        <p>Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.</p>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="form-contact">
+  <section class="contact" id="contact">
+    <div class="formulaire">
       <h2>RESTONS EN CONTACT</h2>
       <form>
         <input type="text" placeholder="Nom" />
         <input type="email" placeholder="Adresse mail" />
         <textarea placeholder="Message"></textarea>
-        <button type="submit">Envoyer</button>
+        <button type="submit">ENVOYER</button>
       </form>
     </div>
-    <div class="image-contact">
-      <img src="images/photo_contact.jpg" alt="Contact">
+    <div class="photo-contact">
+      <img src="images/photo_contact.jpg" alt="Charles Ange Ginésy" />
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-left">
-      <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR">
+  <footer>
+    <div class="footer-col logo">
+      <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR" />
       <a href="#">Mentions légales</a>
     </div>
-    <div class="footer-center">
-      <h3>Actualités</h3>
-      <div class="social-icons">
-        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-        <a href="#"><img src="images/x.png" alt="X"></a>
-        <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+    <div class="footer-col">
+      <h4>ACTUALITÉS</h4>
+      <ul>
+        <li>Département</li>
+        <li>Communes</li>
+        <li>Déplacements</li>
+      </ul>
+      <div class="social-icons-blue">
+        <img src="images/facebook.png" alt="Facebook" />
+        <img src="images/instagram.png" alt="Instagram" />
+        <img src="images/linkedin.png" alt="LinkedIn" />
+        <img src="images/x.png" alt="X" />
+        <img src="images/tiktok.png" alt="TikTok" />
       </div>
     </div>
-    <div class="footer-right">
-      <h3>Navigation</h3>
+    <div class="footer-col">
+      <h4>NAVIGATION</h4>
       <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#actualites">Actualités</a></li>
-        <li><a href="#priorites">Mes priorités</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Mieux me connaître</a></li>
+        <li><a href="#">Mes priorités</a></li>
+        <li><a href="#contact">Me contacter</a></li>
       </ul>
     </div>
   </footer>
 
-  <script>
-    function showPriority(num) {
-      document.querySelectorAll('.priorite-content').forEach(el => el.classList.add('hidden'));
-      document.querySelector(`#priority${num}`).classList.remove('hidden');
-      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab')[num - 1].classList.add('active');
-    }
-  </script>
 </body>
 </html>
+
