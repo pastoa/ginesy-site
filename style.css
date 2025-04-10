@@ -145,6 +145,12 @@ nav button#menu-toggle {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #004080;
+  color: white;
 }
 
 /* SUIVEZ-MOI */
@@ -176,11 +182,34 @@ nav button#menu-toggle {
   transform: scale(1.2);
 }
 
-/* === ACTUALITÉS === */
+/* ACTUALITÉS */
 .actualites {
+  padding: 40px 20px;
+}
+
+.actualites h2 {
+  font-size: 1.8em;
+  color: #002654;
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actualites h2 span {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: #002654;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.actus-container {
   display: flex;
   gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .actu-principale {
@@ -196,41 +225,51 @@ nav button#menu-toggle {
   border-radius: 10px;
 }
 
-.actu-principale .meta {
-  font-size: 14px;
-  color: #555;
+.actu-principale h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+.actu-principale .date {
+  font-size: 0.85em;
+  color: #888;
   margin-top: 5px;
 }
 
-.actu-principale .resume {
+.actu-principale p {
   margin-top: 10px;
-  font-size: 16px;
 }
 
-.autres-actus {
+.actu-secondaires {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.autres-actus article {
+.actu-secondaires .actu {
   background-color: #f5f5f5;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
 }
 
-.autres-actus .titre,
-.autres-actus .meta {
-  font-size: 14px;
-  margin-bottom: 5px;
+.actu-secondaires .actu h4 {
+  margin: 0 0 5px 0;
+  font-size: 1em;
 }
 
-.autres-actus .btn-lire {
-  margin-top: 5px;
-  font-size: 12px;
-  color: #002654;
+.actu-secondaires .actu .date {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.actu-secondaires .actu .read-more {
+  font-size: 0.85em;
   font-weight: bold;
+  color: #002654;
+  text-decoration: none;
+  margin-top: 8px;
+  display: inline-block;
 }
 
 /* MES PRIORITÉS */
@@ -300,7 +339,7 @@ nav button#menu-toggle {
   color: #333;
 }
 
-/* CONTACT */
+/* RESTONS EN CONTACT */
 .contact {
   display: flex;
   background-color: #eef2f7;
@@ -409,49 +448,16 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
+  .actualites h2 {
     flex-direction: column;
-    background-color: #002654;
-    width: 100%;
-    padding: 10px 0;
+    align-items: flex-start;
   }
 
-  nav ul.show {
-    display: flex;
-  }
-
-  nav button#menu-toggle {
-    display: block;
-  }
-
-  .social-icons {
-    display: none;
-  }
-
-  .slider-caption {
-    max-width: 90%;
-    padding: 15px;
-    font-size: 0.9em;
-    left: 20px;
-    bottom: 20px;
-  }
-
-  .actus-grid {
+  .actus-container {
     flex-direction: column;
   }
 
-  .side-actu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .side-actu .article {
-    flex: 1;
-    min-width: 48%;
-  }
-
+  .priorite-content,
   .contact {
     flex-direction: column;
   }
