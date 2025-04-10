@@ -150,8 +150,8 @@ nav a:hover {
 }
 
 .suivez-moi .icons img {
-  width: 35px;
-  margin: 0 10px;
+  width: 28px;
+  margin: 0 8px;
   transition: transform 0.3s ease;
 }
 
@@ -169,6 +169,17 @@ nav a:hover {
   font-size: 1.5em;
   margin-bottom: 20px;
   color: #002654;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actualites h2::after {
+  content: '🔍 Toute l’actualité';
+  font-size: 0.8em;
+  color: #002654;
+  margin-left: auto;
+  padding-left: 20px;
 }
 
 .articles {
@@ -214,6 +225,7 @@ nav a:hover {
 /* PRIORITÉS */
 .priorites {
   padding: 40px;
+  text-align: center;
 }
 
 .priorites h2 {
@@ -224,6 +236,7 @@ nav a:hover {
 
 .priorite-tabs {
   display: flex;
+  justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
 }
@@ -334,17 +347,78 @@ nav a:hover {
   border-radius: 15px;
 }
 
+/* FOOTER */
+footer {
+  background: #3366cc;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-colonne {
+  width: 30%;
+  min-width: 200px;
+}
+
+.footer-colonne h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.footer-colonne a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.footer-colonne .icons img {
+  width: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #002654;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav::before {
+    content: "☰";
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .slider {
+    height: 400px;
+  }
+
   .slider-caption {
     max-width: 90%;
     left: 20px;
     bottom: 20px;
     padding: 20px;
-  }
-
-  .slider {
-    height: 400px;
+    font-size: 0.9em;
   }
 
   .formulaire, .photo-contact {
@@ -359,14 +433,19 @@ nav a:hover {
   .articles .article {
     width: 100%;
   }
-}
 
-@media (max-width: 600px) {
-  nav ul {
+  .priorite-tabs {
     flex-direction: column;
     align-items: center;
   }
 
+  .footer-colonne {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
   .slider {
     height: 300px;
   }
