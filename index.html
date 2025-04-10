@@ -1,102 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css">
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('menu-toggle');
-      const navList = document.querySelector('nav ul');
-      toggle.addEventListener('click', () => {
-        navList.classList.toggle('show');
-      });
-    });
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("nav ul");
+      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
   </script>
 </head>
-
 <body>
-  <!-- HEADER -->
   <header>
     <div class="header-left">
-      <div class="header-title">CHARLES ANGE GINÉSY</div>
-      <div class="header-subtitle">
-        Président du Département des Alpes-Maritimes<br>
-        Président de la Communauté de Communes Alpes d’Azur
-      </div>
+      <h1 class="header-title">CHARLES ANGE GINÉSY</h1>
+      <p class="header-subtitle">Président du Département des Alpes-Maritimes<br>Président de la Communauté de Communes Alpes d'Azur</p>
     </div>
+    <button id="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
-      <button id="menu-toggle"onclick=toggleMenu()">☰</button>
       <ul>
-        <li><a href="#actualites"><strong>ACTUALITÉS</strong></a></li>
-        <li><a href="#connaitre"><strong>MIEUX ME CONNAÎTRE</strong></a></li>
-        <li><a href="#priorites"><strong>MES PRIORITÉS</strong></a></li>
-        <li><a href="#contact"><strong>ME CONTACTER</strong></a></li>
+        <li><a href="#actualites">ACTUALITÉS</a></li>
+        <li><a href="#connaitre">MIEUX ME CONNAÎTRE</a></li>
+        <li><a href="#priorites">MES PRIORITÉS</a></li>
+        <li><a href="#contact">ME CONTACTER</a></li>
       </ul>
     </nav>
     <div class="social-icons">
-      <img src="images/Facebook_F_icon.svg.png" alt="Facebook">
-      <img src="images/Instagram_logo_2016.svg.webp" alt="Instagram">
-      <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
-      <img src="images/x.png" alt="X">
-      <img src="images/tiktokgood.svg" alt="TikTok">
+      <a href="https://www.facebook.com/CAGinesy/" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/ca_ginesy/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/caginesy/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://x.com/ca_ginesy" target="_blank"><img src="images/x.svg" alt="X"></a>
+      <a href="https://www.tiktok.com/@charlesangeginesy" target="_blank"><img src="images/tiktok.svg" alt="TikTok"></a>
     </div>
   </header>
 
-  <!-- SLIDER UNE -->
   <section class="slider">
-    <div class="slide" style="background-image: url('images/actu_une.jpg');">
+    <div class="slide" style="background-image: url('images/actu_une.jpg')">
       <div class="slider-caption">
-        <h2>UN ÉTAT QUI PROTÈGE ➔</h2>
-        <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+        <h2>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h2>
+        <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune, le Conservatoire du littoral et la CARF. C’est un beau projet dont je suis fier !</p>
+        <span class="arrow">➤</span>
       </div>
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section class="newsletter">
     <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
     <form>
-      <input type="email" placeholder="Votre adresse électronique">
+      <input type="email" placeholder="Votre adresse mail">
       <button type="submit">📩</button>
     </form>
   </section>
 
-  <!-- SUIVEZ-MOI -->
-  <section class="suivez-moi" style="background-color:#e6f0ff;">
+  <section class="suivez-moi">
     <h2>SUIVEZ-MOI</h2>
-    <div class="icons" style="margin-top: 15px; gap: 20px; display: flex; justify-content: center;">
-      <img src="images/Facebook_F_icon.svg.png" alt="Facebook">
-      <img src="images/Instagram_logo_2016.svg.webp" alt="Instagram">
-      <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
-      <img src="images/x.png" alt="X">
-      <img src="images/tiktokgood.svg" alt="TikTok">
+    <div class="icons">
+      <a href="https://www.facebook.com/CAGinesy/" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/ca_ginesy/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/caginesy/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://x.com/ca_ginesy" target="_blank"><img src="images/x.svg" alt="X"></a>
+      <a href="https://www.tiktok.com/@charlesangeginesy" target="_blank"><img src="images/tiktok.svg" alt="TikTok"></a>
     </div>
   </section>
 
-  <!-- ACTUALITÉS -->
   <section class="actualites" id="actualites">
-    <h2>ACTUALITÉS</h2>
+    <h2>ACTUALITÉS <span><img src="images/loupe.svg" alt="loupe"> <a href="#">Toute l’actualité</a></span></h2>
     <div class="actus-container">
       <div class="actu-principale">
-        <img src="images/490361289_1229919755156012_1786371263694239328_n.jpg" alt="Actu principale" />
-        <div class="text">
-          <h3>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
-          <p class="date">10 avril 2025</p>
-          <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune, le Conservatoire du littoral et la CARF. C’est un beau projet dont je suis fier !</p>
-        </div>
+        <img src="images/490361289_1229919755156012_1786371263694239328_n.jpg" alt="Actu principale">
+        <h3>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
+        <p class="date">10 AVRIL 2025</p>
+        <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin...</p>
       </div>
       <div class="actu-secondaires">
         <div class="actu">
           <h4>RÉOUVERTURE DU COL DE LA CAYOLE</h4>
-          <p class="date">8 avril 2025</p>
+          <p class="date">9 AVRIL 2025</p>
           <a href="#" class="read-more">Lire la suite</a>
         </div>
         <div class="actu">
           <h4>FÊTE DES TEMPLIERS À BIOT</h4>
-          <p class="date">7 avril 2025</p>
+          <p class="date">8 AVRIL 2025</p>
+          <a href="#" class="read-more">Lire la suite</a>
+        </div>
+        <div class="actu">
+          <h4>CONSEIL DÉPARTEMENTAL EN SESSION</h4>
+          <p class="date">7 AVRIL 2025</p>
           <a href="#" class="read-more">Lire la suite</a>
         </div>
       </div>
