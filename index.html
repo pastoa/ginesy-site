@@ -27,9 +27,9 @@
       </ul>
     </nav>
     <div class="social-icons">
-      <img src="images/Facebook_F_icon.svg.png" alt="Facebook" />
-      <img src="images/Instagram_logo_2016.svg.webp" alt="Instagram" />
-      <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+      <img src="images/Facebook_Lite_logo.svg." alt="Facebook" />
+      <img src="images/instagram-tile.svg" alt="Instagram" />
+      <img src="images/linkedin-big-logo.svg" alt="LinkedIn" />
       <img src="images/x.png" alt="X" />
       <img src="images/tiktokgood.svg" alt="TikTok" />
     </div>
@@ -41,6 +41,72 @@
       <div class="slider-caption">
         <h2>UN ÉTAT QUI PROTÈGE</h2>
         <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
+    <form>
+      <input type="email" placeholder="Votre adresse électronique">
+      <button type="submit">📩</button>
+    </form>
+  </section>
+
+  <!-- SUIVEZ-MOI -->
+  <section class="suivez-moi">
+    <h2>SUIVEZ-MOI</h2>
+    <div class="icons">
+      <img src="images/Facebook_Lite_logo.svg." alt="Facebook" />
+      <img src="images/instagram-tile.svg" alt="Instagram" />
+      <img src="images/linkedin-big-logo.svg" alt="LinkedIn" />
+      <img src="images/x.png" alt="X" />
+      <img src="images/tiktokgood.svg" alt="TikTok" />
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS -->
+  <section class="actualites" id="actualites">
+    <h2>ACTUALITÉS</h2>
+    <div class="articles">
+      <div class="article">
+        <img src="images/actu1.jpg" alt="Actu 1">
+        <h3>TITRE DE L'ACTU</h3>
+        <p class="date">10 avril 2025</p>
+        <p>Extrait court de l'article pour donner envie de lire la suite.</p>
+        <a href="#">Lire la suite</a>
+      </div>
+      <div class="article">
+        <img src="images/actu2.jpg" alt="Actu 2">
+        <h3>ACTUALITÉ IMPORTANTE</h3>
+        <p class="date">9 avril 2025</p>
+        <p>Brève description ou chapeau de l'actualité présentée.</p>
+        <a href="#">Lire la suite</a>
+      </div>
+      <div class="article">
+        <img src="images/actu3.jpg" alt="Actu 3">
+        <h3>RENCONTRE TERRITORIALE</h3>
+        <p class="date">8 avril 2025</p>
+        <p>Quelques mots sur cette rencontre avec les habitants ou élus.</p>
+        <a href="#">Lire la suite</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MES PRIORITÉS -->
+  <section class="priorites" id="priorites">
+    <h2>MES PRIORITÉS</h2>
+    <div class="priorite-tabs">
+      <button class="priorite-tab actif" onclick="afficherPriorite(0)">DÉFENDRE NOS TERRITOIRES</button>
+      <button class="priorite-tab" onclick="afficherPriorite(1)">GREEN DEAL</button>
+      <button class="priorite-tab" onclick="afficherPriorite(2)">SMART DEAL</button>
+    </div>
+    <div class="priorite-content" id="priorite-active">
+      <img src="images/priorite1.jpg" alt="Défendre nos territoires">
+      <div class="text-block">
+        <h3>DÉFENDRE NOS TERRITOIRES ➔</h3>
+        <p>Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.</p>
       </div>
     </div>
   </section>
@@ -60,6 +126,42 @@
       <img src="images/photo_contact.jpg" alt="Charles Ange Ginésy">
     </div>
   </section>
+
+  <script>
+    const onglets = document.querySelectorAll('.priorite-tab');
+    const contenu = document.getElementById('priorite-active');
+    const textes = [
+      {
+        titre: "DÉFENDRE NOS TERRITOIRES ➔",
+        texte: "Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.",
+        image: "images/priorite1.jpg"
+      },
+      {
+        titre: "GREEN DEAL ➔",
+        texte: "Accélérer la transition écologique dans toutes nos politiques publiques.",
+        image: "images/priorite2.jpg"
+      },
+      {
+        titre: "SMART DEAL ➔",
+        texte: "Faire du numérique une force pour l'aménagement et les citoyens.",
+        image: "images/priorite3.jpg"
+      }
+    ];
+
+    onglets.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.priorite-tab.actif').classList.remove('actif');
+        btn.classList.add('actif');
+        contenu.innerHTML = `
+          <img src="${textes[index].image}" alt="Priorité">
+          <div class="text-block">
+            <h3>${textes[index].titre}</h3>
+            <p>${textes[index].texte}</p>
+          </div>
+        `;
+      });
+    });
+  </script>
 
 </body>
 
