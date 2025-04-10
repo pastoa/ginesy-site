@@ -221,7 +221,7 @@ nav button#menu-toggle {
 
 .actu-principale img {
   width: 100%;
-  height: auto;
+  max-height: 100%;
   border-radius: 10px;
 }
 
@@ -447,19 +447,37 @@ footer {
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .actualites h2 {
+  nav ul {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    background-color: #002654;
+    padding: 10px;
   }
 
-  .actus-container {
-    flex-direction: column;
+  #menu-toggle {
+    display: block;
   }
 
+  .social-icons {
+    display: none;
+  }
+
+  .slider-caption {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .actus-container,
   .priorite-content,
   .contact {
     flex-direction: column;
+  }
+
+  .photo-contact {
+    display: none;
   }
 
   .formulaire, .photo-contact {
