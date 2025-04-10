@@ -1,3 +1,4 @@
+<!-- MISE À JOUR HTML AVEC PRIORITÉS EN TABS, TITRES ET MODIFICATIONS DEMANDÉES -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,170 +9,143 @@
 </head>
 <body>
 
-  <!-- HEADER STYLE ÉLYSÉE -->
-  <header class="header">
-    <div class="header-left">
-      <h1>CHARLES ANGE GINÉSY</h1>
-      <p class="fonction">PRÉSIDENT DU DÉPARTEMENT DES ALPES-MARITIMES</p>
-      <p class="fonction">PRÉSIDENT DE LA COMMUNAUTÉ DE COMMUNES ALPES D’AZUR</p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#actualites">ACTUALITÉS</a></li>
-        <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
-        <li><a href="#priorites">MES PRIORITÉS</a></li>
-        <li><a href="#contact">ME CONTACTER</a></li>
-      </ul>
-    </nav>
-    <div class="socials">
-      <img src="images/facebook.png" alt="Facebook" />
-      <img src="images/x.png" alt="X" />
-      <img src="images/instagram.png" alt="Instagram" />
-      <img src="images/linkedin.png" alt="LinkedIn" />
-      <img src="images/tiktok.png" alt="TikTok" />
-    </div>
-  </header>
+<header class="header">
+  <div class="header-left">
+    <h1>CHARLES ANGE GINÉSY</h1>
+    <p class="fonction petite">PRÉSIDENT DU DÉPARTEMENT DES ALPES-MARITIMES</p>
+    <p class="fonction petite">PRÉSIDENT DE LA COMMUNAUTÉ DE COMMUNES ALPES D’AZUR</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#actualites">ACTUALITÉS</a></li>
+      <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
+      <li><a href="#priorites">MES PRIORITÉS</a></li>
+      <li><a href="#contact">ME CONTACTER</a></li>
+    </ul>
+  </nav>
+  <div class="socials">
+    <img src="images/facebook.png" alt="Facebook" />
+    <img src="images/x.png" alt="X" />
+    <img src="images/instagram.png" alt="Instagram" />
+    <img src="images/linkedin.png" alt="LinkedIn" />
+    <img src="images/tiktok.png" alt="TikTok" />
+  </div>
+</header>
 
-  <!-- PHOTO DE UNE -->
-  <section class="une">
-    <img src="images/actu_une.jpg" alt="Actu Une" />
-    <div class="une-caption">SOMMET FRANCO-CHINOIS</div>
-  </section>
+<section class="une">
+  <img src="images/actu_une.jpg" alt="Actu Une" />
+  <div class="une-caption">SOMMET FRANCO-CHINOIS</div>
+</section>
 
-  <!-- BANDEAU NEWSLETTER -->
-  <section class="newsletter">
-    <h2><strong>NEWSLETTER</strong></h2>
+<section class="newsletter">
+  <h2><strong>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</strong></h2>
+  <form>
+    <input type="email" placeholder="Votre adresse email" />
+    <button type="submit">📧</button>
+  </form>
+</section>
+
+<section class="suivez-moi">
+  <h2>SUIVEZ-MOI</h2>
+  <div class="reseaux">
+    <img src="images/facebook.png" alt="Facebook" />
+    <img src="images/x.png" alt="X" />
+    <img src="images/instagram.png" alt="Instagram" />
+    <img src="images/linkedin.png" alt="LinkedIn" />
+    <img src="images/tiktok.png" alt="TikTok" />
+  </div>
+</section>
+
+<section id="actualites">
+  <div class="actus-header">
+    <h2>ACTUALITÉS</h2>
+    <div class="actu-lien"><span>🔍</span> <a href="#">Toute l’actualité</a></div>
+  </div>
+  <!-- CONTENU ACTUS -->
+</section>
+
+<section id="priorites" class="priorites-tabs">
+  <h2>MES PRIORITÉS</h2>
+  <div class="tabs">
+    <button class="tab-button active" data-tab="territoires">DÉFENDRE NOS TERRITOIRES</button>
+    <button class="tab-button" data-tab="green">GREEN DEAL</button>
+    <button class="tab-button" data-tab="smart">SMART DEAL</button>
+  </div>
+  <div class="tab-content active" id="territoires">
+    <img src="images/priorite1.jpg" alt="Défendre nos territoires" />
+    <p>Protéger nos vallées et accompagner les élus du haut-pays.</p>
+  </div>
+  <div class="tab-content" id="green">
+    <img src="images/priorite2.jpg" alt="Green Deal" />
+    <p>Accélérer la transition écologique dans toutes les Alpes-Maritimes.</p>
+  </div>
+  <div class="tab-content" id="smart">
+    <img src="images/priorite3.jpg" alt="Smart Deal" />
+    <p>Développer le numérique au service des habitants et des services publics.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-formulaire">
+    <h2>RESTONS EN CONTACT</h2>
     <form>
-      <input type="email" placeholder="Votre adresse email" />
-      <button type="submit">📧</button>
+      <input type="text" placeholder="Votre nom" class="champ-compact" />
+      <input type="email" placeholder="Votre email" class="champ-compact" />
+      <textarea placeholder="Restons en contact" class="champ-compact"></textarea>
+      <button type="submit">Envoyer</button>
     </form>
-  </section>
+  </div>
+  <div class="contact-photo">
+    <img src="images/photo_contact.jpg" alt="Contact" />
+  </div>
+</section>
 
-  <!-- BANDEAU SUIVEZ-MOI -->
-  <section class="suivez-moi">
-    <h2>SUIVEZ-MOI</h2>
-    <div class="reseaux">
+<footer class="footer">
+  <div class="footer-colonne">
+    <img src="images/lr-logo.png" alt="Logo LR" />
+    <a href="#">Mentions légales</a>
+  </div>
+  <div class="footer-colonne">
+    <h4>ACTUALITÉS</h4>
+    <ul>
+      <li><a href="#">Smart Deal</a></li>
+      <li><a href="#">Green Deal</a></li>
+      <li><a href="#">Ruralité</a></li>
+    </ul>
+    <div class="reseaux-footer">
       <img src="images/facebook.png" alt="Facebook" />
       <img src="images/x.png" alt="X" />
       <img src="images/instagram.png" alt="Instagram" />
       <img src="images/linkedin.png" alt="LinkedIn" />
       <img src="images/tiktok.png" alt="TikTok" />
     </div>
-  </section>
+  </div>
+  <div class="footer-colonne">
+    <h4>PLAN DU SITE</h4>
+    <ul>
+      <li><a href="#actualites">Actualités</a></li>
+      <li><a href="#priorites">Mes priorités</a></li>
+      <li><a href="#contact">Me contacter</a></li>
+      <li><a href="#">Mieux me connaître</a></li>
+    </ul>
+  </div>
+</footer>
 
-  <!-- ACTUALITÉS -->
-  <section id="actualites">
-    <div class="actus-header">
-      <h2>ACTUALITÉS</h2>
-      <div class="actu-lien"><span>🔍</span> <a href="#">Toute l’actualité</a></div>
-    </div>
-    <div class="actus-bloc">
-      <div class="actu-left" style="background-image: url('images/actu_une.jpg');">
-        <div class="actu-titre">SOMMET FRANCO-CHINOIS</div>
-      </div>
-      <div class="actu-right">
-        <div class="mini-actu">
-          <h3>VISITE DES MAIRES</h3>
-          <p class="date">10 avril 2025</p>
-          <p>Rencontre avec les maires du haut-pays...</p>
-          <a href="#">Lire la suite</a>
-        </div>
-        <div class="mini-actu">
-          <h3>SMART DEAL ÉTENDU</h3>
-          <p class="date">08 avril 2025</p>
-          <p>Déploiement de la fibre dans la Tinée.</p>
-          <a href="#">Lire la suite</a>
-        </div>
-        <div class="mini-actu">
-          <h3>PLAN RURALITÉ</h3>
-          <p class="date">06 avril 2025</p>
-          <p>Soutien renforcé aux petites communes isolées.</p>
-          <a href="#">Lire la suite</a>
-        </div>
-      </div>
-    </div>
-    <div class="actus-secondaires">
-      <div class="actu-sec" style="background-image: url('images/priorite1.jpg');">
-        <div class="actu-titre">AMÉNAGEMENT DU TERRITOIRE</div>
-      </div>
-      <div class="actu-sec" style="background-image: url('images/priorite2.jpg');">
-        <div class="actu-titre">TRANSITION ÉCOLOGIQUE</div>
-      </div>
-    </div>
-  </section>
+<script>
+  const tabs = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
 
-  <!-- NOS PRIORITÉS -->
-  <section id="priorites">
-    <div class="priorite">
-      <img src="images/priorite1.jpg" alt="Défendre nos territoires" />
-      <div class="priorite-texte">
-        <h3>DÉFENDRE NOS TERRITOIRES</h3>
-        <p>Protéger nos vallées et accompagner les élus du haut-pays.</p>
-      </div>
-    </div>
-    <div class="priorite">
-      <img src="images/priorite2.jpg" alt="Green Deal" />
-      <div class="priorite-texte">
-        <h3>GREEN DEAL</h3>
-        <p>Accélérer la transition écologique dans toutes les Alpes-Maritimes.</p>
-      </div>
-    </div>
-    <div class="priorite">
-      <img src="images/priorite3.jpg" alt="Smart Deal" />
-      <div class="priorite-texte">
-        <h3>SMART DEAL</h3>
-        <p>Développer le numérique au service des habitants et des services publics.</p>
-      </div>
-    </div>
-  </section>
+  tabs.forEach(button => {
+    button.addEventListener("click", () => {
+      tabs.forEach(btn => btn.classList.remove("active"));
+      contents.forEach(content => content.classList.remove("active"));
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="contact-formulaire">
-      <h2>CONTACT</h2>
-      <form>
-        <input type="text" placeholder="Votre nom" />
-        <input type="email" placeholder="Votre email" />
-        <textarea placeholder="Restons en contact"></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-    <div class="contact-photo">
-      <img src="images/photo_contact.jpg" alt="Contact" />
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-colonne">
-      <img src="images/lr-logo.png" alt="Logo LR" />
-      <a href="#">Mentions légales</a>
-    </div>
-    <div class="footer-colonne">
-      <h4>ACTUALITÉS</h4>
-      <ul>
-        <li><a href="#">Smart Deal</a></li>
-        <li><a href="#">Green Deal</a></li>
-        <li><a href="#">Ruralité</a></li>
-      </ul>
-      <div class="reseaux-footer">
-        <img src="images/facebook.png" alt="Facebook" />
-        <img src="images/x.png" alt="X" />
-        <img src="images/instagram.png" alt="Instagram" />
-        <img src="images/linkedin.png" alt="LinkedIn" />
-        <img src="images/tiktok.png" alt="TikTok" />
-      </div>
-    </div>
-    <div class="footer-colonne">
-      <h4>PLAN DU SITE</h4>
-      <ul>
-        <li><a href="#actualites">Actualités</a></li>
-        <li><a href="#priorites">Mes priorités</a></li>
-        <li><a href="#contact">Me contacter</a></li>
-        <li><a href="#">Mieux me connaître</a></li>
-      </ul>
-    </div>
-  </footer>
+      button.classList.add("active");
+      const target = document.getElementById(button.dataset.tab);
+      if (target) target.classList.add("active");
+    });
+  });
+</script>
 
 </body>
 </html>
