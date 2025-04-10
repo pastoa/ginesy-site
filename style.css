@@ -58,7 +58,6 @@ nav a:hover {
 .social-icons img {
   width: 20px;
   margin-left: 10px;
-  filter: invert(1);
   transition: transform 0.3s;
 }
 
