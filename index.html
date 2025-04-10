@@ -10,35 +10,54 @@
 
 <body>
   <!-- HEADER -->
-  <header>
-    <div class="header-left">
-      <div class="header-title">CHARLES ANGE GINÉSY</div>
-      <div class="header-subtitle">PRÉSIDENT DU DÉPARTEMENT DES ALPES-MARITIMES<br />PRÉSIDENT DE LA COMMUNAUTÉ DE COMMUNES ALPES D'AZUR</div>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo-cag-blanc.svg" alt="Logo CAG" />
     </div>
     <nav>
       <ul>
-        <li><a href="#actualites"><strong>ACTUALITÉS</strong></a></li>
-        <li><a href="#meconnaitre"><strong>MIEUX ME CONNAÎTRE</strong></a></li>
-        <li><a href="#priorites"><strong>MES PRIORITÉS</strong></a></li>
-        <li><a href="#contact"><strong>ME CONTACTER</strong></a></li>
+        <li><a href="#actualites">ACTUALITÉS</a></li>
+        <li><a href="#connaitre">MIEUX ME CONNAÎTRE</a></li>
+        <li><a href="#priorites">MES PRIORITÉS</a></li>
+        <li><a href="#contact">ME CONTACTER</a></li>
       </ul>
     </nav>
     <div class="social-icons">
       <img src="images/facebook.png" alt="Facebook" />
+      <img src="images/x.png" alt="X" />
       <img src="images/instagram.png" alt="Instagram" />
       <img src="images/linkedin.png" alt="LinkedIn" />
-      <img src="images/x.png" alt="X" />
       <img src="images/tiktok.png" alt="TikTok" />
     </div>
   </header>
 
-  <!-- SLIDER UNE -->
-  <section class="slider">
-    <div class="slide" style="background-image: url('images/actu_une.jpg');"></div>
-    <div class="slider-caption">
-      <h2>UN ÉTAT QUI PROTÈGE</h2>
-      <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
-      <div class="slider-arrow">➔</div>
+  <!-- IMAGE À LA UNE AVEC SLIDER -->
+  <section class="une-slider">
+    <div class="slide active">
+      <img src="images/actu_une.jpg" alt="Une 1" />
+      <div class="une-texte">
+        <h2>UN ÉTAT QUI PROTÈGE</h2>
+        <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/5138f258-1f4b-4723-9307-2768b3cb942b.jfif" alt="Une 2" />
+      <div class="une-texte">
+        <h2>UN ÉTAT QUI INNOVE</h2>
+        <p>Pour un territoire à la pointe de la technologie et de la transition numérique.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/450449738_1043460073801982_320030733680612078_n.jpg" alt="Une 3" />
+      <div class="une-texte">
+        <h2>UN ÉTAT PROCHE DE VOUS</h2>
+        <p>Présent sur le terrain pour chaque citoyen et chaque commune.</p>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </section>
 
@@ -47,130 +66,130 @@
     <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
     <form>
       <input type="email" placeholder="Votre adresse électronique" />
-      <button type="submit">📧</button>
+      <button type="submit">📩</button>
     </form>
   </section>
 
   <!-- SUIVEZ-MOI -->
   <section class="suivez-moi">
     <h2>SUIVEZ-MOI</h2>
-    <div class="social-icons-blue">
+    <div class="icons">
       <img src="images/facebook.png" alt="Facebook" />
+      <img src="images/x.png" alt="X" />
       <img src="images/instagram.png" alt="Instagram" />
       <img src="images/linkedin.png" alt="LinkedIn" />
-      <img src="images/x.png" alt="X" />
       <img src="images/tiktok.png" alt="TikTok" />
     </div>
   </section>
 
   <!-- ACTUALITÉS -->
   <section class="actualites" id="actualites">
-    <div class="actu-header">
-      <h2>ACTUALITÉS</h2>
-      <a href="#" class="toute-actus">🔍 Toute l’actualité</a>
-    </div>
+    <h2>ACTUALITÉS</h2>
     <div class="actu-bloc">
-      <div class="actu-principale" style="background-image: url('images/priorite1.jpg');">
-        <div class="actu-overlay">SOMMET FRANCO-CHINOIS</div>
+      <div class="actu-gauche">
+        <img src="images/actu_une.jpg" alt="Actu principale" />
+        <div class="actu-texte">
+          <h3>CHARLES ANGE GINÉSY EN CHINE</h3>
+          <p>01 avril 2025</p>
+          <p>Mission diplomatique et économique de haut niveau à Chengdu.</p>
+        </div>
       </div>
-      <div class="actu-secondaires">
-        <div><a href="#">🔹 Titre actu 2</a><br /><small>01/01/2025</small></div>
-        <div><a href="#">🔹 Titre actu 3</a><br /><small>31/12/2024</small></div>
-        <div><a href="#">🔹 Titre actu 4</a><br /><small>15/12/2024</small></div>
+      <div class="actu-droite">
+        <div class="actu-item">
+          <h4>INAUGURATION À GRASSE</h4>
+          <p>31 mars 2025</p>
+          <p>Charles Ange Ginésy lance les travaux de solarisation du site sportif.</p>
+          <a href="#">Lire la suite</a>
+        </div>
+        <div class="actu-item">
+          <h4>RURALITÉ À PUGET-THÉNIERS</h4>
+          <p>29 mars 2025</p>
+          <p>Assemblée générale des maires ruraux.</p>
+          <a href="#">Lire la suite</a>
+        </div>
+        <div class="actu-item">
+          <h4>FORUM TERRITOIRE CONNECTÉ</h4>
+          <p>27 mars 2025</p>
+          <p>Un événement pour le Smart Deal dans les Alpes-Maritimes.</p>
+          <a href="#">Lire la suite</a>
+        </div>
       </div>
-    </div>
-    <div class="actu-ligne2">
-      <div style="background-image: url('images/priorite2.jpg');">ACTU 5</div>
-      <div style="background-image: url('images/priorite3.jpg');">ACTU 6</div>
     </div>
   </section>
 
-  <!-- PRIORITÉS -->
+  <!-- MES PRIORITÉS -->
   <section class="priorites" id="priorites">
-    <div class="actu-header">
-      <h2>MES PRIORITÉS</h2>
+    <h2>MES PRIORITÉS</h2>
+    <div class="tabs">
+      <button class="tab active" data-target="priorite1">DÉFENDRE NOS TERRITOIRES</button>
+      <button class="tab" data-target="priorite2">GREEN DEAL</button>
+      <button class="tab" data-target="priorite3">SMART DEAL</button>
     </div>
-    <div class="onglets">
-      <button class="onglet actif" onclick="afficherPriorite(1)">DÉFENDRE NOS TERRITOIRES</button>
-      <button class="onglet" onclick="afficherPriorite(2)">GREEN DEAL</button>
-      <button class="onglet" onclick="afficherPriorite(3)">SMART DEAL</button>
-    </div>
-    <div class="contenu-priorites" id="bloc-priorites">
+    <div class="tab-content active" id="priorite1">
       <img src="images/priorite1.jpg" alt="Priorité 1" />
-      <div class="bloc-texte">
-        <h2>DÉFENDRE NOS TERRITOIRES</h2>
-        <p>Protéger la ruralité, nos communes, notre montagne, garantir l’accès aux soins et aux services.</p>
+      <div class="priorite-texte">
+        <h3>DÉFENDRE NOS TERRITOIRES</h3>
+        <p>Protéger la ruralité, sécuriser, accompagner et soutenir nos habitants.</p>
+      </div>
+    </div>
+    <div class="tab-content" id="priorite2">
+      <img src="images/priorite2.jpg" alt="Priorité 2" />
+      <div class="priorite-texte">
+        <h3>GREEN DEAL</h3>
+        <p>Une stratégie environnementale ambitieuse, durable et locale.</p>
+      </div>
+    </div>
+    <div class="tab-content" id="priorite3">
+      <img src="images/priorite3.jpg" alt="Priorité 3" />
+      <div class="priorite-texte">
+        <h3>SMART DEAL</h3>
+        <p>Faire du numérique une force pour l'aménagement et les citoyens.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- RESTONS EN CONTACT -->
   <section class="contact" id="contact">
-    <div class="formulaire">
+    <div class="contact-form">
       <h2>RESTONS EN CONTACT</h2>
       <form>
         <input type="text" placeholder="Nom" />
-        <input type="email" placeholder="Adresse email" />
+        <input type="email" placeholder="Adresse mail" />
         <textarea placeholder="Message"></textarea>
         <button type="submit">ENVOYER</button>
       </form>
     </div>
-    <div class="photo-contact">
+    <div class="contact-photo">
       <img src="images/photo_contact.jpg" alt="Charles Ange Ginésy" />
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-col">
+    <div class="footer-colonne">
       <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR" />
-      <ul>
-        <li><a href="#">Mentions légales</a></li>
-      </ul>
+      <a href="#">Mentions légales</a>
     </div>
-    <div class="footer-col">
+    <div class="footer-colonne">
       <h4>ACTUALITÉS</h4>
-      <ul>
-        <li><a href="#">Actu 1</a></li>
-        <li><a href="#">Actu 2</a></li>
-      </ul>
-      <div class="social-icons-blue">
+      <div class="icons">
         <img src="images/facebook.png" alt="Facebook" />
+        <img src="images/x.png" alt="X" />
         <img src="images/instagram.png" alt="Instagram" />
         <img src="images/linkedin.png" alt="LinkedIn" />
-        <img src="images/x.png" alt="X" />
         <img src="images/tiktok.png" alt="TikTok" />
       </div>
     </div>
-    <div class="footer-col">
+    <div class="footer-colonne">
       <h4>PLAN DU SITE</h4>
-      <ul>
-        <li><a href="#actualites">Actualités</a></li>
-        <li><a href="#priorites">Mes priorités</a></li>
-        <li><a href="#contact">Me contacter</a></li>
-      </ul>
+      <a href="#actualites">Actualités</a>
+      <a href="#connaitre">Mieux me connaître</a>
+      <a href="#priorites">Mes priorités</a>
+      <a href="#contact">Me contacter</a>
     </div>
   </footer>
 
-  <script>
-    function afficherPriorite(id) {
-      const images = ["priorite1.jpg", "priorite2.jpg", "priorite3.jpg"];
-      const titres = ["DÉFENDRE NOS TERRITOIRES", "GREEN DEAL", "SMART DEAL"];
-      const textes = [
-        "Protéger la ruralité, nos communes, notre montagne, garantir l’accès aux soins et aux services.",
-        "Accélérer la transition écologique tout en respectant nos spécificités locales.",
-        "Investir dans l’innovation et le numérique pour les services publics et les entreprises."
-      ];
-      document.querySelectorAll(".onglet").forEach(b => b.classList.remove("actif"));
-      document.querySelectorAll(".onglet")[id - 1].classList.add("actif");
-      document.querySelector("#bloc-priorites").innerHTML = `
-        <img src="images/${images[id - 1]}" alt="Priorité ${id}" />
-        <div class="bloc-texte">
-          <h2>${titres[id - 1]}</h2>
-          <p>${textes[id - 1]}</p>
-        </div>`;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
