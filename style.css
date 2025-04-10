@@ -1,155 +1,160 @@
+/* STYLE CSS pour le site de Charles Ange Ginésy */
 
-html {
-  scroll-behavior: smooth;
-}
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
   color: #111;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
 }
+
 header {
+  background-color: #002654;
+  color: white;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #002654;
-  color: white;
-  padding: 1em 2em;
 }
+
 .header-left h1 {
-  font-size: 1em;
   margin: 0;
+  font-size: 1.4em;
 }
+
 .fonction {
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin: 0;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 1em;
-  margin: 0;
   padding: 0;
-  font-size: 0.85em;
+  margin: 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
-.socials {
-  display: flex;
-  gap: 0.6em;
-}
-.socials img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
+  transition: color 0.3s;
 }
 
-/* Une */
+nav a:hover {
+  color: #ffcc00;
+}
+
+.socials img {
+  width: 20px;
+  margin-left: 0.5em;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
 .une {
-  max-width: 1100px;
-  margin: 2em auto;
   position: relative;
 }
+
 .une img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  display: block;
 }
-.caption {
+
+.une-caption {
   position: absolute;
-  bottom: 1em;
-  left: 1em;
+  bottom: 10%;
+  left: 5%;
   background: #002654;
   color: white;
   padding: 1em 2em;
-  font-size: 1.2em;
+  border-radius: 20px;
+  font-size: 1.5em;
   font-weight: bold;
-  border-radius: 15px;
 }
 
-/* Newsletter */
-.newsletter-banner {
+.newsletter {
   background: #002654;
   color: white;
-  padding: 2em;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.newsletter form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
 }
-.newsletter-title {
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-.newsletter-form {
-  display: flex;
-  gap: 0.5em;
-}
-.newsletter-form input {
+
+.newsletter input {
   padding: 1em;
   width: 300px;
   border-radius: 5px;
   border: none;
 }
-.newsletter-form button {
-  background: white;
+
+.newsletter button {
   padding: 1em;
-  border-radius: 5px;
   border: none;
-}
-.newsletter-form button img {
-  width: 20px;
-  height: 20px;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
 }
 
-/* Suivez-moi */
 .suivez-moi {
   background: white;
   text-align: center;
-  padding: 2em 1em;
+  padding: 2em;
+  border-top: 1px solid #ddd;
 }
-.suivez-moi-title {
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-bottom: 1em;
-  color: #004080;
+
+.suivez-moi h2 {
+  color: #002654;
+  font-size: 1.5em;
 }
-.reseaux-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
+
+.reseaux img, .reseaux-footer img {
+  width: 24px;
+  margin: 0 0.5em;
+  filter: invert(50%) sepia(60%) saturate(300%) hue-rotate(180deg);
+  transition: transform 0.3s ease;
 }
-.reseaux-icons img {
-  width: 26px;
-  height: 26px;
-  filter: invert(30%) sepia(100%) saturate(800%) hue-rotate(180deg) brightness(1.2);
-  transition: transform 0.2s, opacity 0.2s;
-}
-.reseaux-icons img:hover {
+
+.reseaux img:hover, .reseaux-footer img:hover {
   transform: scale(1.2);
   opacity: 0.7;
 }
 
-/* Actualités */
-#actualites {
+.actus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
   max-width: 1200px;
-  margin: 3em auto;
-  padding: 0 1em;
+  margin: auto;
 }
-.actus-bloc-1, .actus-bloc-2 {
+
+.actus-bloc {
   display: flex;
   gap: 2em;
-  margin-bottom: 2em;
+  padding: 1em;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
 }
-.actu-main {
+
+.actu-left {
   flex: 2;
   background-size: cover;
   background-position: center;
@@ -159,35 +164,46 @@ nav a {
   padding: 1em;
   border-radius: 10px;
 }
-.actu-caption {
+
+.actu-titre {
   background: white;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-}
-.actu-caption a {
   color: #002654;
-  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 20px;
   font-weight: bold;
 }
-.actu-liste {
+
+.actu-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1em;
 }
-.actu-liste div {
-  margin-bottom: 1em;
+
+.mini-actu h3 {
+  margin: 0;
 }
-.actu-liste a {
-  color: #002654;
+
+.mini-actu p.date {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.mini-actu a {
   text-decoration: none;
+  color: #002654;
   font-weight: bold;
 }
-.date {
-  font-size: 0.8em;
-  color: #555;
+
+.actus-secondaires {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  max-width: 1200px;
+  margin: auto;
 }
-.actu-mini {
+
+.actu-sec {
   flex: 1;
   background-size: cover;
   background-position: center;
@@ -197,111 +213,119 @@ nav a {
   padding: 1em;
   border-radius: 10px;
 }
-.mini-caption {
-  background: white;
-  padding: 0.5em 1em;
-  border-radius: 15px;
-}
-.mini-caption a {
-  color: #002654;
-  text-decoration: none;
-  font-weight: bold;
-}
 
-/* Priorités */
 #priorites {
-  background: #f7f7f7;
-  padding: 4em 2em;
-  text-align: center;
-}
-#priorites h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-}
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 2em;
-}
-.tabs button {
-  padding: 0.8em 1.5em;
-  border: 2px solid #002654;
-  background: white;
-  color: #002654;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.tabs button.active {
-  background: #002654;
-  color: white;
-}
-.tab-content {
-  max-width: 700px;
-  margin: 2em auto;
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
-.tab-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1em;
+  background: #f8f8f8;
+  padding: 2em 1em;
 }
 
-/* Contact */
-.contact-section {
-  padding: 4em 2em;
-}
-.contact-split {
+.priorite {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+  margin-bottom: 2em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.contact-form {
+
+.priorite img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.priorite-texte {
+  padding: 2em;
   flex: 1;
-  min-width: 300px;
+  text-align: left;
 }
-.contact-form h2 {
-  color: #002654;
-  font-size: 1.8em;
-  margin-bottom: 1em;
+
+.contact {
+  display: flex;
+  padding: 2em 1em;
+  background: #f5f5f5;
 }
-.contact-form input, .contact-form textarea {
-  width: 100%;
+
+.contact-formulaire {
+  flex: 1;
+  padding: 2em;
+}
+
+.contact-formulaire form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-formulaire input,
+.contact-formulaire textarea {
   padding: 1em;
-  margin-bottom: 1em;
   border-radius: 5px;
   border: 1px solid #ccc;
+  width: 100%;
 }
-.contact-form textarea {
-  min-height: 150px;
-}
-.contact-form button {
+
+.contact-formulaire button {
   background: #002654;
   color: white;
-  padding: 1em 2em;
+  padding: 0.8em;
   border: none;
   border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
 }
+
 .contact-photo {
   flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
+
 .contact-photo img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
 
-/* Footer */
-footer {
-  background: #002654;
+footer.footer {
+  background: #3366cc;
   color: white;
-  text-align: center;
-  padding: 2em 1em;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.footer-colonne {
+  flex: 1;
+  padding: 1em;
+  min-width: 200px;
+}
+
+.footer-colonne img {
+  width: 100px;
+}
+
+.footer-colonne ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-colonne li {
+  margin: 0.5em 0;
+}
+
+.footer-colonne a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-colonne a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
 }
