@@ -125,7 +125,7 @@ nav a:hover {
 }
 
 .reseaux img, .reseaux-footer img {
-  width: 24px;
+  width: 5px;
   margin: 0 0.5em;
   filter: invert(50%) sepia(60%) saturate(300%) hue-rotate(180deg);
   transition: transform 0.3s ease;
