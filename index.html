@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css">
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const navList = document.querySelector('nav ul');
+      toggle.addEventListener('click', () => {
+        navList.classList.toggle('show');
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -19,6 +28,7 @@
       </div>
     </div>
     <nav>
+      <button id="menu-toggle">☰</button>
       <ul>
         <li><a href="#actualites"><strong>ACTUALITÉS</strong></a></li>
         <li><a href="#connaitre"><strong>MIEUX ME CONNAÎTRE</strong></a></li>
@@ -39,7 +49,7 @@
   <section class="slider">
     <div class="slide" style="background-image: url('images/actu_une.jpg');">
       <div class="slider-caption">
-        <h2>UN ÉTAT QUI PROTÈGE</h2>
+        <h2>UN ÉTAT QUI PROTÈGE ➔</h2>
         <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
       </div>
     </div>
@@ -55,9 +65,9 @@
   </section>
 
   <!-- SUIVEZ-MOI -->
-  <section class="suivez-moi">
+  <section class="suivez-moi" style="background-color:#e6f0ff;">
     <h2>SUIVEZ-MOI</h2>
-    <div class="icons">
+    <div class="icons" style="margin-top: 15px; gap: 20px; display: flex; justify-content: center;">
       <img src="images/Facebook_F_icon.svg.png" alt="Facebook">
       <img src="images/Instagram_logo_2016.svg.webp" alt="Instagram">
       <img src="images/LinkedIn_icon.svg.png" alt="LinkedIn">
@@ -68,28 +78,34 @@
 
   <!-- ACTUALITÉS -->
   <section class="actualites" id="actualites">
-    <h2>ACTUALITÉS</h2>
-    <div class="articles">
-      <div class="article">
-        <img src="images/actu1.jpg" alt="Actu 1">
-        <h3>TITRE DE L'ACTU</h3>
-        <p class="date">10 avril 2025</p>
-        <p>Extrait court de l'article pour donner envie de lire la suite.</p>
-        <a href="#">Lire la suite</a>
+    <div class="actus-grid">
+      <div class="main-actu">
+        <img src="images/actu1.jpg" alt="Actu principale">
+        <div class="text-block">
+          <h3>TITRE DE L'ACTUALITÉ ➔</h3>
+          <p class="date">10 avril 2025</p>
+          <p>Une actualité mise à la une, illustrée par une grande photo, avec un résumé en trois lignes pour présenter la situation, l'engagement ou le message porté.</p>
+        </div>
       </div>
-      <div class="article">
-        <img src="images/actu2.jpg" alt="Actu 2">
-        <h3>ACTUALITÉ IMPORTANTE</h3>
-        <p class="date">9 avril 2025</p>
-        <p>Brève description ou chapeau de l'actualité présentée.</p>
-        <a href="#">Lire la suite</a>
-      </div>
-      <div class="article">
-        <img src="images/actu3.jpg" alt="Actu 3">
-        <h3>RENCONTRE TERRITORIALE</h3>
-        <p class="date">8 avril 2025</p>
-        <p>Quelques mots sur cette rencontre avec les habitants ou élus.</p>
-        <a href="#">Lire la suite</a>
+      <div class="side-actu">
+        <div class="article">
+          <h4>ACTU 2</h4>
+          <p class="date">9 avril 2025</p>
+          <p>Une ligne de résumé.</p>
+          <a href="#">Lire la suite</a>
+        </div>
+        <div class="article">
+          <h4>ACTU 3</h4>
+          <p class="date">8 avril 2025</p>
+          <p>Une ligne de résumé.</p>
+          <a href="#">Lire la suite</a>
+        </div>
+        <div class="article">
+          <h4>ACTU 4</h4>
+          <p class="date">7 avril 2025</p>
+          <p>Une ligne de résumé.</p>
+          <a href="#">Lire la suite</a>
+        </div>
       </div>
     </div>
   </section>
