@@ -96,7 +96,10 @@ nav a:hover {
 }
 
 .slider-caption p {
-  margin-top: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+margin-top: 10px;
   font-size: 1em;
 }
 
@@ -413,4 +416,7 @@ footer {
 .footer-col img {
   width: 100px;
   margin-bottom: 10px;
+}
+.formulaire textarea {
+  resize: none;
 }
