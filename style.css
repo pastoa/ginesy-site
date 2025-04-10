@@ -1,4 +1,4 @@
-/* STYLE CSS pour le site de Charles Ange Ginésy */
+/* STYLE CSS mis à jour pour les nouvelles modifications */
 
 body {
   margin: 0;
@@ -26,8 +26,9 @@ header {
   font-size: 1.4em;
 }
 
-.fonction {
-  font-size: 0.8em;
+.fonction.petite {
+  font-size: 0.7em;
+  color: #cccccc;
   margin: 0;
 }
 
@@ -46,8 +47,13 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ffcc00;
+nav a:hover,
+button:hover,
+.footer-colonne a:hover,
+.reseaux img:hover,
+.reseaux-footer img:hover {
+  color: #008cff;
+  transform: scale(1.1);
 }
 
 .socials img {
@@ -55,10 +61,6 @@ nav a:hover {
   margin-left: 0.5em;
   filter: brightness(0) invert(1);
   transition: transform 0.3s;
-}
-
-.socials img:hover {
-  transform: scale(1.2);
 }
 
 .une {
@@ -125,15 +127,10 @@ nav a:hover {
 }
 
 .reseaux img, .reseaux-footer img {
-  width: 5px;
-  margin: 0 0.5em;
+  width: 20px;
+  margin: 0 0.3em;
   filter: invert(50%) sepia(60%) saturate(300%) hue-rotate(180deg);
   transition: transform 0.3s ease;
-}
-
-.reseaux img:hover, .reseaux-footer img:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
 }
 
 .actus-header {
@@ -145,107 +142,57 @@ nav a:hover {
   margin: auto;
 }
 
-.actus-bloc {
-  display: flex;
-  gap: 2em;
-  padding: 1em;
-  max-width: 1200px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.actu-left {
-  flex: 2;
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: flex-end;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-.actu-titre {
-  background: white;
-  color: #002654;
-  padding: 0.5em 1em;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.actu-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.mini-actu h3 {
-  margin: 0;
-}
-
-.mini-actu p.date {
-  font-size: 0.8em;
-  color: #666;
-}
-
-.mini-actu a {
-  text-decoration: none;
-  color: #002654;
-  font-weight: bold;
-}
-
-.actus-secondaires {
-  display: flex;
-  gap: 1em;
-  padding: 1em;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.actu-sec {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  display: flex;
-  align-items: flex-end;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-#priorites {
-  background: #f8f8f8;
-  padding: 2em 1em;
-}
-
-.priorite {
-  display: flex;
-  margin-bottom: 2em;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.priorite img {
-  width: 50%;
-  object-fit: cover;
-}
-
-.priorite-texte {
+/* PRIORITÉS en onglets */
+.priorites-tabs {
   padding: 2em;
-  flex: 1;
-  text-align: left;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.tab-button {
+  background: #002654;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-button.active {
+  background: #008cff;
+}
+
+.tab-content {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
 }
 
 .contact {
   display: flex;
   padding: 2em 1em;
   background: #f5f5f5;
+  gap: 2em;
 }
 
 .contact-formulaire {
@@ -253,10 +200,19 @@ nav a:hover {
   padding: 2em;
 }
 
+.contact-formulaire h2 {
+  color: #002654;
+  margin-bottom: 1em;
+}
+
 .contact-formulaire form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.champ-compact {
+  max-width: 350px;
 }
 
 .contact-formulaire input,
@@ -275,11 +231,11 @@ nav a:hover {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  width: fit-content;
 }
 
 .contact-photo {
   flex: 1;
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
@@ -287,7 +243,6 @@ nav a:hover {
 .contact-photo img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -307,7 +262,7 @@ footer.footer {
 }
 
 .footer-colonne img {
-  width: 100px;
+  width: 80px;
 }
 
 .footer-colonne ul {
@@ -323,9 +278,4 @@ footer.footer {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
-}
-
-.footer-colonne a:hover {
-  text-decoration: underline;
-  color: #ffcc00;
 }
