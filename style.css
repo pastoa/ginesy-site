@@ -20,6 +20,7 @@ header {
   justify-content: space-between;
   padding: 10px 40px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header-left {
@@ -55,14 +56,19 @@ nav a:hover {
   color: #66b3ff;
 }
 
-nav button#menu-toggle {
+#menu-toggle {
   display: none;
   background: none;
   border: none;
   color: white;
   font-size: 26px;
-  margin-right: 10px;
+  margin-left: auto;
   cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
 }
 
 .social-icons img {
@@ -173,12 +179,12 @@ nav button#menu-toggle {
   margin-top: 15px;
 }
 
-.suivez-moi .icons img {
+.suivez-moi .icons a img {
   width: 30px;
   transition: transform 0.3s ease;
 }
 
-.suivez-moi .icons img:hover {
+.suivez-moi .icons a img:hover {
   transform: scale(1.2);
 }
 
@@ -210,6 +216,7 @@ nav button#menu-toggle {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .actu-principale {
@@ -217,27 +224,15 @@ nav button#menu-toggle {
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .actu-principale img {
   width: 100%;
-  max-height: 100%;
+  height: auto;
   border-radius: 10px;
-}
-
-.actu-principale h3 {
-  margin-top: 15px;
-  font-size: 1.3em;
-}
-
-.actu-principale .date {
-  font-size: 0.85em;
-  color: #888;
-  margin-top: 5px;
-}
-
-.actu-principale p {
-  margin-top: 10px;
 }
 
 .actu-secondaires {
@@ -251,6 +246,7 @@ nav button#menu-toggle {
   background-color: #f5f5f5;
   padding: 15px;
   border-radius: 10px;
+  flex: 1;
 }
 
 .actu-secondaires .actu h4 {
@@ -447,7 +443,6 @@ footer {
 }
 
 /* RESPONSIVE */
-/* RESPONSIVE */
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -488,4 +483,4 @@ footer {
     width: 100%;
     margin-bottom: 20px;
   }
-}
+
