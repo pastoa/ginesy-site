@@ -24,11 +24,11 @@
       </ul>
     </nav>
     <div class="social-icons">
-      <img src="images/facebook.png" alt="Facebook" />
-      <img src="images/instagram.png" alt="Instagram" />
-      <img src="images/linkedin.png" alt="LinkedIn" />
-      <img src="images/x.png" alt="X" />
-      <img src="images/tiktok.png" alt="TikTok" />
+<img src="images/Facebook_F_icon.svg.png" alt="Facebook" />
+<img src="images/Instagram_logo_2016.svg.webp" alt="Instagram" />
+<img src="images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+<img src="images/x.png" alt="X" />
+<img src="images/tiktokgood.svg" alt="TikTok" />
     </div>
   </header>
 
@@ -151,11 +151,12 @@
         <li>Déplacements</li>
       </ul>
       <div class="social-icons-blue">
-        <img src="images/facebook.png" alt="Facebook" />
-        <img src="images/instagram.png" alt="Instagram" />
-        <img src="images/linkedin.png" alt="LinkedIn" />
-        <img src="images/x.png" alt="X" />
-        <img src="images/tiktok.png" alt="TikTok" />
+<img src="images/Facebook_F_icon.svg.png" alt="Facebook" />
+<img src="images/Instagram_logo_2016.svg.webp" alt="Instagram" />
+<img src="images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+<img src="images/x.png" alt="X" />
+<img src="images/tiktokgood.svg" alt="TikTok" />
+
       </div>
     </div>
     <div class="footer-col">
@@ -168,6 +169,42 @@
       </ul>
     </div>
   </footer>
+<script>
+  const onglets = document.querySelectorAll('.onglet');
+  const contenu = document.querySelector('.contenu-priorites');
+  const textes = [
+    {
+      titre: "DÉFENDRE NOS TERRITOIRES ➔",
+      texte: "Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.",
+      image: "images/priorite1.jpg"
+    },
+    {
+      titre: "GREEN DEAL ➔",
+      texte: "Accélérer la transition écologique dans toutes nos politiques publiques.",
+      image: "images/priorite2.jpg"
+    },
+    {
+      titre: "SMART DEAL ➔",
+      texte: "Améliorer le quotidien grâce aux technologies et au numérique.",
+      image: "images/priorite3.jpg"
+    }
+  ];
+
+  onglets.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.onglet.actif').classList.remove('actif');
+      btn.classList.add('actif');
+
+      contenu.innerHTML = `
+        <img src="${textes[index].image}" alt="Priorité" />
+        <div class="bloc-texte">
+          <h2>${textes[index].titre}</h2>
+          <p>${textes[index].texte}</p>
+        </div>
+      `;
+    });
+  });
+</script>
 
 </body>
 </html>
