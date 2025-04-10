@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header>
     <div class="header-left">
       <div class="header-title">CHARLES ANGE GINÉSY</div>
-      <div class="header-subtitle">Président du Département des Alpes-Maritimes</div>
-      <div class="header-subtitle">Président de la Communauté de Communes Alpes d'Azur</div>
+      <div class="header-subtitle">PRÉSIDENT DU DÉPARTEMENT<br />ET DE LA COMMUNAUTÉ DE COMMUNES</div>
     </div>
     <nav>
       <ul>
-        <li><a href="#">ACTUALITÉS</a></li>
-        <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
-        <li><a href="#">MES PRIORITÉS</a></li>
-        <li><a href="#contact">ME CONTACTER</a></li>
+        <li><a href="#actualites"><strong>ACTUALITÉS</strong></a></li>
+        <li><a href="#priorites"><strong>MES PRIORITÉS</strong></a></li>
+        <li><a href="#contact"><strong>ME CONTACTER</strong></a></li>
       </ul>
     </nav>
     <div class="social-icons">
@@ -34,22 +33,20 @@
 
   <!-- SLIDER UNE -->
   <section class="slider">
-    <div class="slide active" style="background-image: url('images/actu_une.jpg');">
-      <div class="slider-caption">
-        <h2>UN ÉTAT QUI PROTÈGE</h2>
-        <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
-        <span class="slider-arrow">➔</span>
-      </div>
+    <div class="slide" style="background-image: url('images/actu_une.jpg');"></div>
+    <div class="slider-caption">
+      <h2>UN ÉTAT QUI PROTÈGE</h2>
+      <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+      <div class="slider-arrow">➔</div>
     </div>
-    <!-- Ajouter d'autres .slide ici si besoin -->
   </section>
 
   <!-- NEWSLETTER -->
   <section class="newsletter">
     <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
     <form>
-      <input type="email" placeholder="Votre adresse e-mail" required />
-      <button type="submit"><span class="icon-mail">✉️</span></button>
+      <input type="email" placeholder="Votre adresse électronique" />
+      <button type="submit">📧</button>
     </form>
   </section>
 
@@ -66,57 +63,42 @@
   </section>
 
   <!-- ACTUALITÉS -->
-  <section class="actualites">
+  <section class="actualites" id="actualites">
     <div class="actu-header">
       <h2>ACTUALITÉS</h2>
-      <a href="#" class="toute-actus">Toute l’actualité 🔍</a>
+      <a href="#" class="toute-actus">🔍 Toute l’actualité</a>
     </div>
     <div class="actu-bloc">
       <div class="actu-principale" style="background-image: url('images/priorite1.jpg');">
-        <div class="actu-overlay">
-          <h3>SOMMET FRANCO-CHINOIS</h3>
-        </div>
+        <div class="actu-overlay">SOMMET FRANCO-CHINOIS</div>
       </div>
       <div class="actu-secondaires">
-        <div>
-          <h4>INAUGURATION À GUILLAUMES</h4>
-          <p>02/04/2025</p>
-          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
-        </div>
-        <div>
-          <h4>DÉPLACEMENT DANS LA TINÉE</h4>
-          <p>31/03/2025</p>
-          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
-        </div>
-        <div>
-          <h4>CONFÉRENCE SUR LE SMART DEAL</h4>
-          <p>29/03/2025</p>
-          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
-        </div>
+        <div><a href="#">🔹 Titre actu 2</a><br /><small>01/01/2025</small></div>
+        <div><a href="#">🔹 Titre actu 3</a><br /><small>31/12/2024</small></div>
+        <div><a href="#">🔹 Titre actu 4</a><br /><small>15/12/2024</small></div>
       </div>
     </div>
     <div class="actu-ligne2">
-      <div style="background-image: url('images/priorite2.jpg');">
-        <h4>VISITE À VALBERG</h4>
-      </div>
-      <div style="background-image: url('images/priorite3.jpg');">
-        <h4>FORUM JEUNES CITOYENS</h4>
-      </div>
+      <div style="background-image: url('images/priorite2.jpg');">ACTU 5</div>
+      <div style="background-image: url('images/priorite3.jpg');">ACTU 6</div>
     </div>
   </section>
 
-  <!-- MES PRIORITÉS -->
-  <section class="priorites">
-    <div class="onglets">
-      <button class="onglet actif">DÉFENDRE NOS TERRITOIRES</button>
-      <button class="onglet">GREEN DEAL</button>
-      <button class="onglet">SMART DEAL</button>
+  <!-- PRIORITÉS -->
+  <section class="priorites" id="priorites">
+    <div class="actu-header">
+      <h2>MES PRIORITÉS</h2>
     </div>
-    <div class="contenu-priorites">
-      <img src="images/priorite1.jpg" alt="Priorité" />
+    <div class="onglets">
+      <button class="onglet actif" onclick="afficherPriorite(1)">Défendre nos territoires</button>
+      <button class="onglet" onclick="afficherPriorite(2)">Green Deal</button>
+      <button class="onglet" onclick="afficherPriorite(3)">Smart Deal</button>
+    </div>
+    <div class="contenu-priorites" id="bloc-priorites">
+      <img src="images/priorite1.jpg" alt="Priorité 1" />
       <div class="bloc-texte">
-        <h2>DÉFENDRE NOS TERRITOIRES ➔</h2>
-        <p>Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.</p>
+        <h2>DÉFENDRE NOS TERRITOIRES</h2>
+        <p>Protéger la ruralité, nos communes, notre montagne, garantir l’accès aux soins et aux services.</p>
       </div>
     </div>
   </section>
@@ -127,7 +109,7 @@
       <h2>RESTONS EN CONTACT</h2>
       <form>
         <input type="text" placeholder="Nom" />
-        <input type="email" placeholder="Adresse mail" />
+        <input type="email" placeholder="Adresse email" />
         <textarea placeholder="Message"></textarea>
         <button type="submit">ENVOYER</button>
       </form>
@@ -139,16 +121,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-col logo">
+    <div class="footer-col">
       <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR" />
-      <a href="#">Mentions légales</a>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
     </div>
     <div class="footer-col">
       <h4>ACTUALITÉS</h4>
       <ul>
-        <li>Département</li>
-        <li>Communes</li>
-        <li>Déplacements</li>
+        <li><a href="#">Actu 1</a></li>
+        <li><a href="#">Actu 2</a></li>
       </ul>
       <div class="social-icons-blue">
         <img src="images/facebook.png" alt="Facebook" />
@@ -159,16 +142,34 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4>NAVIGATION</h4>
+      <h4>PLAN DU SITE</h4>
       <ul>
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Mieux me connaître</a></li>
-        <li><a href="#">Mes priorités</a></li>
+        <li><a href="#actualites">Actualités</a></li>
+        <li><a href="#priorites">Mes priorités</a></li>
         <li><a href="#contact">Me contacter</a></li>
       </ul>
     </div>
   </footer>
 
+  <script>
+    function afficherPriorite(id) {
+      const images = ["priorite1.jpg", "priorite2.jpg", "priorite3.jpg"];
+      const titres = ["DÉFENDRE NOS TERRITOIRES", "GREEN DEAL", "SMART DEAL"];
+      const textes = [
+        "Protéger la ruralité, nos communes, notre montagne, garantir l’accès aux soins et aux services.",
+        "Accélérer la transition écologique tout en respectant nos spécificités locales.",
+        "Investir dans l’innovation et le numérique pour les services publics et les entreprises."
+      ];
+      document.querySelectorAll(".onglet").forEach(b => b.classList.remove("actif"));
+      document.querySelectorAll(".onglet")[id - 1].classList.add("actif");
+      document.querySelector("#bloc-priorites").innerHTML = `
+        <img src="images/${images[id - 1]}" alt="Priorité ${id}" />
+        <div class="bloc-texte">
+          <h2>${titres[id - 1]}</h2>
+          <p>${textes[id - 1]}</p>
+        </div>`;
+    }
+  </script>
 </body>
-</html>
 
+</html>
