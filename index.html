@@ -28,7 +28,7 @@
       </div>
     </div>
     <nav>
-      <button id="menu-toggle">☰</button>
+      <button id="menu-toggle"onclick=toggleMenu()">☰</button>
       <ul>
         <li><a href="#actualites"><strong>ACTUALITÉS</strong></a></li>
         <li><a href="#connaitre"><strong>MIEUX ME CONNAÎTRE</strong></a></li>
@@ -196,6 +196,12 @@
       });
     });
   </script>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector("nav ul");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  }
+</script>
 
 </body>
 
