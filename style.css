@@ -236,10 +236,10 @@ nav a:hover {
 }
 
 .actu-secondaires {
-  flex: 1;
+  flex: 1.5;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
 .actu-secondaires .actu {
