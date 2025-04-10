@@ -78,7 +78,7 @@ nav a:hover {
   height: 100%;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: relative;
 }
 
 .slider-caption {
@@ -101,10 +101,167 @@ nav a:hover {
   font-size: 1em;
 }
 
-.slider-arrow {
-  font-size: 1.4em;
-  float: right;
+/* NEWSLETTER */
+.newsletter {
+  background-color: #002654;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.newsletter form {
+  margin-top: 20px;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.newsletter button {
+  background: white;
   color: #002654;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SUIVEZ-MOI */
+.suivez-moi {
+  background: #f0f4f8;
+  padding: 40px;
+  text-align: center;
+}
+
+.suivez-moi h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.suivez-moi .icons img {
+  width: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.suivez-moi .icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ACTUALITÉS */
+.actualites {
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.actualites h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #002654;
+}
+
+.articles {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(33% - 20px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.article img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.article h3 {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.article .date {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.article p {
+  margin: 10px 0;
+}
+
+.article a {
+  color: #002654;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PRIORITÉS */
+.priorites {
+  padding: 40px;
+}
+
+.priorites h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #002654;
+}
+
+.priorite-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.priorite-tab {
+  background-color: #cce0f5;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #002654;
+}
+
+.priorite-tab.actif {
+  background-color: #002654;
+  color: white;
+}
+
+.priorite-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.priorite-content img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.text-block {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* CONTACT */
@@ -156,6 +313,7 @@ nav a:hover {
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .formulaire button:hover {
@@ -197,6 +355,10 @@ nav a:hover {
   .contact {
     flex-direction: column;
   }
+
+  .articles .article {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -216,5 +378,9 @@ nav a:hover {
   .slider-caption p {
     font-size: 0.9em;
   }
-}
 
+  .newsletter input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
