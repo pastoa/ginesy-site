@@ -1,156 +1,129 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Charles Ange Ginésy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
   <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <img src="images/logo-cag-blanc.svg" alt="Logo CAG" />
+  <header>
+    <div class="header-left">
+      <div class="header-title">CHARLES ANGE GINÉSY</div>
+      <div class="header-subtitle">Président du Département des Alpes-Maritimes</div>
+      <div class="header-subtitle">Président de la Communauté de Communes Alpes d'Azur</div>
     </div>
     <nav>
       <ul>
-        <li><a href="#actualites">ACTUALITÉS</a></li>
-        <li><a href="#connaitre">MIEUX ME CONNAÎTRE</a></li>
-        <li><a href="#priorites">MES PRIORITÉS</a></li>
+        <li><a href="#">ACTUALITÉS</a></li>
+        <li><a href="#">MIEUX ME CONNAÎTRE</a></li>
+        <li><a href="#">MES PRIORITÉS</a></li>
         <li><a href="#contact">ME CONTACTER</a></li>
       </ul>
     </nav>
     <div class="social-icons">
       <img src="images/facebook.png" alt="Facebook" />
-      <img src="images/x.png" alt="X" />
       <img src="images/instagram.png" alt="Instagram" />
       <img src="images/linkedin.png" alt="LinkedIn" />
+      <img src="images/x.png" alt="X" />
       <img src="images/tiktok.png" alt="TikTok" />
     </div>
   </header>
 
-  <!-- IMAGE À LA UNE AVEC SLIDER -->
-  <section class="une-slider">
-    <div class="slide active">
-      <img src="images/actu_une.jpg" alt="Une 1" />
-      <div class="une-texte">
+  <!-- SLIDER UNE -->
+  <section class="slider">
+    <div class="slide active" style="background-image: url('images/actu_une.jpg');">
+      <div class="slider-caption">
         <h2>UN ÉTAT QUI PROTÈGE</h2>
         <p>Une France forte, libre de ses actes, capable de veiller sur ses citoyens et d’assumer son rayonnement mondial.</p>
+        <span class="slider-arrow">➔</span>
       </div>
     </div>
-    <div class="slide">
-      <img src="images/5138f258-1f4b-4723-9307-2768b3cb942b.jfif" alt="Une 2" />
-      <div class="une-texte">
-        <h2>UN ÉTAT QUI INNOVE</h2>
-        <p>Pour un territoire à la pointe de la technologie et de la transition numérique.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <img src="images/450449738_1043460073801982_320030733680612078_n.jpg" alt="Une 3" />
-      <div class="une-texte">
-        <h2>UN ÉTAT PROCHE DE VOUS</h2>
-        <p>Présent sur le terrain pour chaque citoyen et chaque commune.</p>
-      </div>
-    </div>
-    <div class="slider-buttons">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+    <!-- Ajouter d'autres .slide ici si besoin -->
   </section>
 
   <!-- NEWSLETTER -->
   <section class="newsletter">
     <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
     <form>
-      <input type="email" placeholder="Votre adresse électronique" />
-      <button type="submit">📩</button>
+      <input type="email" placeholder="Votre adresse e-mail" required />
+      <button type="submit"><span class="icon-mail">✉️</span></button>
     </form>
   </section>
 
   <!-- SUIVEZ-MOI -->
   <section class="suivez-moi">
     <h2>SUIVEZ-MOI</h2>
-    <div class="icons">
+    <div class="social-icons-blue">
       <img src="images/facebook.png" alt="Facebook" />
-      <img src="images/x.png" alt="X" />
       <img src="images/instagram.png" alt="Instagram" />
       <img src="images/linkedin.png" alt="LinkedIn" />
+      <img src="images/x.png" alt="X" />
       <img src="images/tiktok.png" alt="TikTok" />
     </div>
   </section>
 
   <!-- ACTUALITÉS -->
-  <section class="actualites" id="actualites">
-    <h2>ACTUALITÉS</h2>
+  <section class="actualites">
+    <div class="actu-header">
+      <h2>ACTUALITÉS</h2>
+      <a href="#" class="toute-actus">Toute l’actualité 🔍</a>
+    </div>
     <div class="actu-bloc">
-      <div class="actu-gauche">
-        <img src="images/actu_une.jpg" alt="Actu principale" />
-        <div class="actu-texte">
-          <h3>CHARLES ANGE GINÉSY EN CHINE</h3>
-          <p>01 avril 2025</p>
-          <p>Mission diplomatique et économique de haut niveau à Chengdu.</p>
+      <div class="actu-principale" style="background-image: url('images/priorite1.jpg');">
+        <div class="actu-overlay">
+          <h3>SOMMET FRANCO-CHINOIS</h3>
         </div>
       </div>
-      <div class="actu-droite">
-        <div class="actu-item">
-          <h4>INAUGURATION À GRASSE</h4>
-          <p>31 mars 2025</p>
-          <p>Charles Ange Ginésy lance les travaux de solarisation du site sportif.</p>
-          <a href="#">Lire la suite</a>
+      <div class="actu-secondaires">
+        <div>
+          <h4>INAUGURATION À GUILLAUMES</h4>
+          <p>02/04/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
         </div>
-        <div class="actu-item">
-          <h4>RURALITÉ À PUGET-THÉNIERS</h4>
-          <p>29 mars 2025</p>
-          <p>Assemblée générale des maires ruraux.</p>
-          <a href="#">Lire la suite</a>
+        <div>
+          <h4>DÉPLACEMENT DANS LA TINÉE</h4>
+          <p>31/03/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
         </div>
-        <div class="actu-item">
-          <h4>FORUM TERRITOIRE CONNECTÉ</h4>
-          <p>27 mars 2025</p>
-          <p>Un événement pour le Smart Deal dans les Alpes-Maritimes.</p>
-          <a href="#">Lire la suite</a>
+        <div>
+          <h4>CONFÉRENCE SUR LE SMART DEAL</h4>
+          <p>29/03/2025</p>
+          <p>Deux lignes d'extrait d’actualité... <a href="#">Lire la suite</a></p>
         </div>
+      </div>
+    </div>
+    <div class="actu-ligne2">
+      <div style="background-image: url('images/priorite2.jpg');">
+        <h4>VISITE À VALBERG</h4>
+      </div>
+      <div style="background-image: url('images/priorite3.jpg');">
+        <h4>FORUM JEUNES CITOYENS</h4>
       </div>
     </div>
   </section>
 
   <!-- MES PRIORITÉS -->
-  <section class="priorites" id="priorites">
-    <h2>MES PRIORITÉS</h2>
-    <div class="tabs">
-      <button class="tab active" data-target="priorite1">DÉFENDRE NOS TERRITOIRES</button>
-      <button class="tab" data-target="priorite2">GREEN DEAL</button>
-      <button class="tab" data-target="priorite3">SMART DEAL</button>
+  <section class="priorites">
+    <div class="onglets">
+      <button class="onglet actif">DÉFENDRE NOS TERRITOIRES</button>
+      <button class="onglet">GREEN DEAL</button>
+      <button class="onglet">SMART DEAL</button>
     </div>
-    <div class="tab-content active" id="priorite1">
-      <img src="images/priorite1.jpg" alt="Priorité 1" />
-      <div class="priorite-texte">
-        <h3>DÉFENDRE NOS TERRITOIRES</h3>
-        <p>Protéger la ruralité, sécuriser, accompagner et soutenir nos habitants.</p>
-      </div>
-    </div>
-    <div class="tab-content" id="priorite2">
-      <img src="images/priorite2.jpg" alt="Priorité 2" />
-      <div class="priorite-texte">
-        <h3>GREEN DEAL</h3>
-        <p>Une stratégie environnementale ambitieuse, durable et locale.</p>
-      </div>
-    </div>
-    <div class="tab-content" id="priorite3">
-      <img src="images/priorite3.jpg" alt="Priorité 3" />
-      <div class="priorite-texte">
-        <h3>SMART DEAL</h3>
-        <p>Faire du numérique une force pour l'aménagement et les citoyens.</p>
+    <div class="contenu-priorites">
+      <img src="images/priorite1.jpg" alt="Priorité" />
+      <div class="bloc-texte">
+        <h2>DÉFENDRE NOS TERRITOIRES ➔</h2>
+        <p>Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.</p>
       </div>
     </div>
   </section>
 
-  <!-- RESTONS EN CONTACT -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="contact-form">
+    <div class="formulaire">
       <h2>RESTONS EN CONTACT</h2>
       <form>
         <input type="text" placeholder="Nom" />
@@ -159,37 +132,42 @@
         <button type="submit">ENVOYER</button>
       </form>
     </div>
-    <div class="contact-photo">
+    <div class="photo-contact">
       <img src="images/photo_contact.jpg" alt="Charles Ange Ginésy" />
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-colonne">
+    <div class="footer-col logo">
       <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR" />
       <a href="#">Mentions légales</a>
     </div>
-    <div class="footer-colonne">
+    <div class="footer-col">
       <h4>ACTUALITÉS</h4>
-      <div class="icons">
+      <ul>
+        <li>Département</li>
+        <li>Communes</li>
+        <li>Déplacements</li>
+      </ul>
+      <div class="social-icons-blue">
         <img src="images/facebook.png" alt="Facebook" />
-        <img src="images/x.png" alt="X" />
         <img src="images/instagram.png" alt="Instagram" />
         <img src="images/linkedin.png" alt="LinkedIn" />
+        <img src="images/x.png" alt="X" />
         <img src="images/tiktok.png" alt="TikTok" />
       </div>
     </div>
-    <div class="footer-colonne">
-      <h4>PLAN DU SITE</h4>
-      <a href="#actualites">Actualités</a>
-      <a href="#connaitre">Mieux me connaître</a>
-      <a href="#priorites">Mes priorités</a>
-      <a href="#contact">Me contacter</a>
+    <div class="footer-col">
+      <h4>NAVIGATION</h4>
+      <ul>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Mieux me connaître</a></li>
+        <li><a href="#">Mes priorités</a></li>
+        <li><a href="#contact">Me contacter</a></li>
+      </ul>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
-
 </html>
