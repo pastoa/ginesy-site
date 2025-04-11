@@ -11,6 +11,15 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+/* LISERET BLEU BLANC ROUGE */
+.liseret {
+  height: 4px;
+  width: 120px;
+  background: linear-gradient(to right, #0055A4 33%, white 33% 66%, #EF4135 66%);
+  margin: 6px 0 10px 0;
+  border-radius: 2px;
+}
+
 /* HEADER */
 header {
   background-color: #002654;
@@ -120,6 +129,27 @@ nav a:hover {
   margin-top: 10px;
 }
 
+.arrow-container {
+  margin-top: 10px;
+  position: relative;
+}
+
+.arrow-container .slider-read-more {
+  display: none;
+  margin-left: 10px;
+  text-decoration: none;
+  background: #002654;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.arrow-container:hover .slider-read-more {
+  display: inline-block;
+}
+
 /* NEWSLETTER */
 .newsletter {
   background-color: #002654;
@@ -198,11 +228,11 @@ nav a:hover {
 
 /* ACTUALITÉS */
 .actualites {
-  padding: 40px 20px;
+  padding: 30px 15px;
 }
 
 .actualites h2 {
-  font-size: 1.8em;
+  font-size: 1.4em;
   color: #002654;
   margin-bottom: 20px;
   text-align: left;
@@ -211,18 +241,20 @@ nav a:hover {
   align-items: center;
 }
 
-.actualites h2 span {
+.actualites h2 span a.tout-actu {
   font-size: 0.7em;
   font-weight: normal;
   color: #002654;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  text-decoration: none;
+}
+
+.actualites h2 span a.tout-actu:hover {
+  text-decoration: underline;
 }
 
 .actus-container {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
   align-items: stretch;
 }
@@ -230,7 +262,7 @@ nav a:hover {
 .actu-principale {
   flex: 2;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -247,12 +279,12 @@ nav a:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .actu-secondaires .actu {
   background-color: #f5f5f5;
-  padding: 15px;
+  padding: 12px;
   border-radius: 10px;
   flex: 1;
   display: flex;
@@ -262,7 +294,7 @@ nav a:hover {
 
 .actu-secondaires .actu h4 {
   margin: 0 0 5px 0;
-  font-size: 1em;
+  font-size: 0.95em;
 }
 
 .actu-secondaires .actu .date {
@@ -272,7 +304,7 @@ nav a:hover {
 
 .actu-secondaires .actu .read-more {
   margin-top: auto;
-  padding: 8px 15px;
+  padding: 6px 12px;
   background-color: #002654;
   color: white;
   border: none;
@@ -282,6 +314,7 @@ nav a:hover {
   text-decoration: none;
   transition: background 0.3s ease;
   width: fit-content;
+  font-size: 0.8em;
 }
 
 .actu-secondaires .actu .read-more:hover {
@@ -489,7 +522,8 @@ footer {
 
   .slider-caption {
     max-width: 90%;
-    padding: 15px;
+    padding: 10px;
+    font-size: 0.85em;
   }
 
   .actus-container,
@@ -511,9 +545,11 @@ footer {
     margin-bottom: 20px;
   }
 
-  .actu-secondaires .actu .read-more {
+  .actu-secondaires .actu .read-more,
+  .slider-read-more {
     width: 100%;
     text-align: center;
+    display: block !important;
   }
 
   .newsletter form {
@@ -523,5 +559,14 @@ footer {
   .newsletter input, .newsletter button {
     width: 100%;
     margin: 0;
+  }
+
+  .actualites h2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actualites h2 span {
+    margin-top: 10px;
   }
 }
