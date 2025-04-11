@@ -74,110 +74,125 @@
     </div>
   </section>
 
-  <!-- ACTUALITÉS -->
+<!-- SECTION ACTUALITÉS -->
 <section class="actualites" id="actualites">
-  <div class="actualites-header">
-    <h2>ACTUALITÉS</h2>
-    <div class="toute-actualite">
-      <img src="images/loupe.svg" alt="loupe">
-      <a href="#">Toute l’actualité</a>
-    </div>
-  </div>
+  <h2>ACTUALITÉS <span class="toute-actualite"><img src="images/loupe.svg" alt="loupe"> <a href="#">Toute l’ACTUALITÉ</a></span></h2>
   <div class="actus-container">
     <div class="actu-principale">
-      <img src="images/490361289_1229919755156012_1786371263694239328_n.jpg" alt="Actu principale">
+      <img src="images/actu_une.jpg" alt="Actu principale">
       <h3>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
       <p class="date">10 AVRIL 2025</p>
-      <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin...</p>
-      <a href="#" class="read-more">Lire la suite</a>
+      <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune...</p>
     </div>
     <div class="actu-secondaires">
       <div class="actu">
         <h4>RÉOUVERTURE DU COL DE LA CAYOLE</h4>
-        <p class="date small-date">9 AVRIL 2025</p>
+        <p class="date">9 AVRIL 2025</p>
+        <p>Le col est de nouveau accessible après plusieurs semaines de fermeture liée aux intempéries.</p>
         <a href="#" class="read-more">Lire la suite</a>
       </div>
       <div class="actu">
         <h4>FÊTE DES TEMPLIERS À BIOT</h4>
-        <p class="date small-date">8 AVRIL 2025</p>
+        <p class="date">8 AVRIL 2025</p>
+        <p>Une belle journée médiévale au cœur de la ville de Biot, rythmée par des animations et traditions locales.</p>
         <a href="#" class="read-more">Lire la suite</a>
       </div>
       <div class="actu">
-        <h4>CONSEIL DÉPARTEMENTAL EN SESSION</h4>
-        <p class="date small-date">7 AVRIL 2025</p>
+        <h4>SESSION DU CONSEIL DÉPARTEMENTAL</h4>
+        <p class="date">7 AVRIL 2025</p>
+        <p>Retour sur les décisions votées en séance publique, au cœur de notre département.</p>
         <a href="#" class="read-more">Lire la suite</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MES PRIORITÉS -->
-<section id="priorites">
-  <h2>MES PRIORITÉS</h2>
-  <div class="priorites-tabs">
-    <button class="tab-button active" onclick="showPriority('territoires')">Défendre nos territoires <span class="arrow">➤</span></button>
-    <button class="tab-button" onclick="showPriority('green')">Green Deal <span class="arrow">➤</span></button>
-    <button class="tab-button" onclick="showPriority('smart')">Smart Deal <span class="arrow">➤</span></button>
+<!-- SECTION MES PRIORITÉS -->
+<section class="priorites" id="priorites">
+  <div class="priorites-container">
+    <div class="priorites-texte">
+      <h2>MES PRIORITÉS</h2>
+      <p>Mon engagement repose sur des piliers forts pour notre territoire : la ruralité, l’environnement et l’innovation.</p>
+    </div>
+    <div class="priorites-boutons">
+      <button onclick="afficherPriorite('territoires')">DÉFENDRE NOS TERRITOIRES</button>
+      <button onclick="afficherPriorite('green')">GREEN DEAL</button>
+      <button onclick="afficherPriorite('smart')">SMART DEAL</button>
+    </div>
   </div>
-  <div class="priorites-content">
+  <div class="priorites-images">
     <div id="territoires" class="priorite active">
-      <img src="images/priorite1.jpg" alt="Défendre nos territoires">
-      <p>Protéger notre identité, notre patrimoine et nos valeurs locales.</p>
+      <img src="images/ruralite.webp" alt="Défendre nos territoires">
     </div>
     <div id="green" class="priorite">
-      <img src="images/priorite2.jpg" alt="Green Deal">
-      <p>Faire du développement durable une priorité départementale.</p>
+      <img src="images/green deal.jpg" alt="Green Deal">
     </div>
     <div id="smart" class="priorite">
-      <img src="images/priorite3.jpg" alt="Smart Deal">
-      <p>Développer un territoire connecté, intelligent et inclusif.</p>
+      <img src="images/smart deal.jpg" alt="Smart Deal">
     </div>
   </div>
 </section>
 
-<!-- RESTONS EN CONTACT -->
-<section id="contact" class="restons-contact">
-  <div class="contact-gauche">
-    <img src="images/mail.svg" alt="icone courrier">
-    <h2>RESTONS EN CONTACT</h2>
-    <p class="adresse">
-      Président du Département des Alpes-Maritimes<br>
-      CADAM - 147 Boulevard du Mercantour<br>
-      06000 Nice
-    </p>
-  </div>
-  <div class="contact-droite">
-    <form>
-      <input type="text" placeholder="Nom">
-      <input type="email" placeholder="Adresse mail">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+<script>
+  function afficherPriorite(id) {
+    document.querySelectorAll('.priorite').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+<!-- SECTION RESTONS EN CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>RESTONS EN CONTACT</h2>
+      <div class="adresse">
+        <img src="images/mail.svg" alt="courrier" class="icon-courrier">
+        <p><strong>Président du Département des Alpes-Maritimes</strong></p>
+        <p>CADAM - 147 Boulevard du Mercantour</p>
+        <p>06000 Nice</p>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre adresse mail" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-container">
-    <div class="footer-logo">
+    <div class="footer-col logo">
       <img src="images/logo_lr.svg" alt="Logo LR">
     </div>
-    <div class="footer-links">
-      <h3>ACTUALITÉS</h3>
+    <div class="footer-col follow">
+      <h3>ME SUIVRE</h3>
       <hr>
-      <div class="footer-social">
+      <div class="footer-icons">
         <a href="https://www.facebook.com/CAGinesy/" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
-        <a href="https://x.com/ca_ginesy" target="_blank"><img src="images/x.svg" alt="X"></a>
         <a href="https://www.instagram.com/ca_ginesy/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
         <a href="https://www.linkedin.com/in/caginesy/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://x.com/ca_ginesy" target="_blank"><img src="images/x.svg" alt="X"></a>
         <a href="https://www.tiktok.com/@charlesangeginesy" target="_blank"><img src="images/tiktok.svg" alt="TikTok"></a>
       </div>
     </div>
-    <div class="footer-credits">
-      <a href="#">Mentions légales</a> | <a href="#">Nous contacter</a>
+    <div class="footer-col sitemap">
+      <h3>PLAN DU SITE</h3>
+      <hr>
+      <ul>
+        <li><a href="#actualites">Actualités</a></li>
+        <li><a href="#connaitre">Mieux me connaître</a></li>
+        <li><a href="#priorites">Mes priorités</a></li>
+        <li><a href="#contact">Me contacter</a></li>
+      </ul>
     </div>
   </div>
 </footer>
+
   <script>
     const onglets = document.querySelectorAll('.priorite-tab');
     const contenu = document.getElementById('priorite-active');
