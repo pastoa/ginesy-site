@@ -237,17 +237,17 @@ nav a:hover {
   margin: auto;
 }
 
-.actualites h2 {
+.actualites h2:hover {
   font-size: 1.4em;
   color: #002654;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.actualites h2 span a.tout-actu {
-  font-size: 0.75em;
+.actualites h2 span a.tout-actu:hover {
+  font-size: 0.90em;
   color: #002654;
   text-decoration: none;
 }
@@ -272,7 +272,7 @@ nav a:hover {
 }
 
 .actu-principale img {
-  width: 100%;
+  width: 85%;
   border-radius: 8px;
 }
 
@@ -375,73 +375,67 @@ nav a:hover {
 }
 
 /* RESTONS EN CONTACT */
-.contact {
-  display: flex;
-  background-color: #eef2f7;
-  padding: 40px;
-  height: auto;
-  flex-wrap: wrap;
+#contact {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
 }
 
-.formulaire {
-  flex: 1;
-  padding: 20px;
+.contact-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
 }
 
-.formulaire h2 {
-  font-size: 1.4em;
+.contact-title {
   color: #002654;
+  font-size: 1.4em;
   margin-bottom: 20px;
 }
 
-.formulaire form {
+.contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-.formulaire input,
-.formulaire textarea,
-.formulaire button {
-  padding: 12px;
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
   width: 100%;
+  font-size: 1em;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.formulaire textarea {
+.contact-form textarea {
   resize: none;
-  height: 150px;
+  height: 120px;
 }
 
-.formulaire button {
+.contact-form button {
+  width: 100%;
   background: #002654;
   color: white;
+  padding: 10px;
+  font-size: 1em;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s;
 }
 
-.formulaire button:hover {
+.contact-form button:hover {
   background: #004080;
-}
-
-.photo-contact {
-  flex: 1;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .photo-contact img {
   width: 100%;
+  border-radius: 10px;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
 }
 
 /* FOOTER */
@@ -525,8 +519,8 @@ footer {
   }
 
   .read-more {
-    width: 100%;
-    text-align: center;
+    width: fit-content;
+    margin: auto;
   }
 
   .priorite-buttons {
