@@ -498,6 +498,65 @@ footer {
   text-decoration: underline;
 }
 
+/* ======= RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  /* ACTUALITÉ PRINCIPALE : image visible, bloc texte en dessous */
+  .actus-container {
+    flex-direction: column;
+  }
+  .actu-principale img {
+    max-height: 250px;
+  }
+  .actu-principale-texte {
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  /* TOUTE L'ACTUALITÉ sur une ligne à gauche puis en dessous sur mobile */
+  .actualites h2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .toute-actualite {
+    margin-top: 5px;
+  }
+
+  /* FORMULAIRE DE CONTACT prend toute la largeur */
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+  .contact-form form input,
+  .contact-form form textarea,
+  .contact-form form button {
+    width: 100%;
+  }
+
+  /* PRIORITÉS images ajustées */
+  .priorites-images img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* FOOTER ajustements */
+  .footer-col.follow h3 {
+    margin-bottom: 15px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
 /* ==== RESPONSIVE ==== */
 @media screen and (max-width: 768px) {
   .actus-container {
