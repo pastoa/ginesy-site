@@ -532,13 +532,10 @@ footer {
   .photo-contact {
     display: none;
   }
-}
-
-
   .priorite-content img {
     width: 100%;
     height: auto;
     max-width: 100%;
     object-fit: cover;
   }
-}
+
