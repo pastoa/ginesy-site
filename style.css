@@ -97,7 +97,7 @@ nav a:hover {
 .slider {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -111,39 +111,42 @@ nav a:hover {
 
 .slider-caption {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 20px;
+  left: 20px;
   background-color: white;
-  padding: 25px;
-  max-width: 450px;
-  border-radius: 12px;
+  padding: 18px;
+  max-width: 350px;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  font-size: 0.95em;
-}
-
-.slider-caption h2 {
-  font-size: 1.5em;
-}
-
-.slider-caption p {
-  margin-top: 10px;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
 }
 
 .arrow-container {
+  display: flex;
+  align-items: center;
   margin-top: 10px;
-  position: relative;
+  gap: 10px;
 }
 
-.arrow-container .slider-read-more {
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2em;
+}
+
+.arrow-container:hover .arrow {
+  transform: translateX(6px);
+}
+
+.slider-read-more {
   display: none;
-  margin-left: 10px;
-  text-decoration: none;
-  background: #002654;
+  background-color: #002654;
   color: white;
   padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
   font-size: 0.85em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
 .arrow-container:hover .slider-read-more {
@@ -154,12 +157,12 @@ nav a:hover {
 .newsletter {
   background-color: #002654;
   color: white;
-  padding: 40px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .newsletter h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -174,7 +177,7 @@ nav a:hover {
 
 .newsletter input {
   padding: 12px;
-  width: 300px;
+  width: 280px;
   border-radius: 5px;
   border: none;
   font-size: 1em;
@@ -199,12 +202,12 @@ nav a:hover {
 /* SUIVEZ-MOI */
 .suivez-moi {
   background: #e6f0ff;
-  padding: 40px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .suivez-moi h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -217,7 +220,7 @@ nav a:hover {
 }
 
 .suivez-moi .icons a img {
-  width: 30px;
+  width: 26px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
@@ -228,22 +231,20 @@ nav a:hover {
 
 /* ACTUALITÉS */
 .actualites {
-  padding: 30px 15px;
+  padding: 25px 15px;
 }
 
 .actualites h2 {
   font-size: 1.4em;
   color: #002654;
-  margin-bottom: 20px;
-  text-align: left;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .actualites h2 span a.tout-actu {
-  font-size: 0.7em;
-  font-weight: normal;
+  font-size: 0.75em;
   color: #002654;
   text-decoration: none;
 }
@@ -254,7 +255,7 @@ nav a:hover {
 
 .actus-container {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
   align-items: stretch;
 }
@@ -262,63 +263,43 @@ nav a:hover {
 .actu-principale {
   flex: 2;
   background-color: #f5f5f5;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.9em;
 }
 
 .actu-principale img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .actu-secondaires {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .actu-secondaires .actu {
   background-color: #f5f5f5;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 8px;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-.actu-secondaires .actu h4 {
-  margin: 0 0 5px 0;
-  font-size: 0.95em;
-}
-
-.actu-secondaires .actu .date {
-  font-size: 0.8em;
-  color: #999;
-}
-
-.actu-secondaires .actu .read-more {
-  margin-top: auto;
-  padding: 6px 12px;
-  background-color: #002654;
+.read-more {
+  margin-top: 8px;
+  display: inline-block;
+  background: #002654;
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  width: fit-content;
   font-size: 0.8em;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.actu-secondaires .actu .read-more:hover {
-  background-color: #004080;
+.read-more:hover {
+  background: #004080;
 }
 
 /* MES PRIORITÉS */
@@ -520,45 +501,33 @@ footer {
     display: none;
   }
 
+  .slider {
+    height: 250px;
+  }
+
   .slider-caption {
+    padding: 12px;
     max-width: 90%;
-    padding: 10px;
+    font-size: 0.75em;
+  }
+
+  .actus-container {
+    flex-direction: column;
+  }
+
+  .actu-principale,
+  .actu-secondaires .actu {
     font-size: 0.85em;
   }
 
-  .actus-container,
-  .priorite-content,
-  .contact {
-    flex-direction: column;
-  }
-
-  .photo-contact {
-    display: none;
-  }
-
-  .formulaire, .photo-contact {
-    width: 100%;
-  }
-
-  .footer-colonne {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .actu-secondaires .actu .read-more,
-  .slider-read-more {
+  .read-more {
     width: 100%;
     text-align: center;
-    display: block !important;
   }
 
-  .newsletter form {
-    flex-direction: column;
-  }
-
-  .newsletter input, .newsletter button {
+  .newsletter input, .newsletter button,
+  .slider-read-more {
     width: 100%;
-    margin: 0;
   }
 
   .actualites h2 {
@@ -568,5 +537,12 @@ footer {
 
   .actualites h2 span {
     margin-top: 10px;
+  }
+
+  .priorite-content img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
 }
