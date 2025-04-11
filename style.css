@@ -238,7 +238,7 @@ nav a:hover {
   margin: auto;
 }
 
-.actualites h2:hover {
+.actualites h2: {
   font-size: 1.4em;
   color: #002654;
   margin-bottom: 20px;
@@ -247,14 +247,14 @@ nav a:hover {
   align-items: center;
 }
 
-.actualites h2 span a.tout-actu:hover {
-  font-size: 0.90em;
+.actualites h2 span a.tout-actu: {
+  font-size: 0.70em;
   color: #002654;
   text-decoration: none;
 }
 
-.actualites h2 span a.tout-actu:hover {
-  text-decoration: underline;
+.actualites h2 span a.tout-actu: {
+  text-decoration: ;
 }
 
 .actus-container {
@@ -433,7 +433,8 @@ nav a:hover {
 }
 
 .photo-contact img {
-  width: 100%;
+  width: 50%;
+  float:right;
   border-radius: 10px;
   height: 100%;
   object-fit: cover;
