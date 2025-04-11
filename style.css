@@ -470,18 +470,24 @@ footer {
   text-decoration: none;
   font-size: 14px;
 }
-
+  
 .footer-icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .footer-icons img {
-  width: 24px;
-  height: auto;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1);
 }
-
+  
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
 footer ul {
   list-style: none;
   padding: 0;
