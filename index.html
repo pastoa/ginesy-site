@@ -76,13 +76,20 @@
 
 <!-- SECTION ACTUALITÉS -->
 <section class="actualites" id="actualites">
-  <h2>ACTUALITÉS <span class="toute-actualite"> <a href="#">TOUTE L’ACTUALITÉ 🔎</a></span></h2>
+  <h2>ACTUALITÉS <span class="toute-actualite"> <a href="#">TOUTE L'ACTUALITÉ 🔎</a></span></h2>
   <div class="actus-container">
     <div class="actu-principale">
       <img src="images/actu_une.jpg" alt="Actu principale">
-      <h3>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
-      <p class="date">10 AVRIL 2025</p>
-      <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune...</p>
+      <div class="actu-principale-texte">
+        <h3>LE DÉPARTEMENT DES ALPES-MARITIMES, ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
+        <p class="date">10 AVRIL 2025</p>
+        <p>
+          Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune, le Conservatoire du littoral et la CARF.
+          <br><br>
+          Ce projet renforcera la protection de notre littoral. Une initiative exemplaire pour la biodiversité marine, portée avec fierté.
+        </p>
+        <a href="#" class="read-more">Lire la suite</a>
+      </div>
     </div>
     <div class="actu-secondaires">
       <div class="actu">
@@ -110,34 +117,45 @@
 <!-- SECTION MES PRIORITÉS -->
 <section class="priorites" id="priorites">
   <div class="priorites-container">
-    <div class="priorites-texte">
-      <h2>MES PRIORITÉS</h2>
-      <p>Mon engagement repose sur des piliers forts pour notre territoire : la ruralité, l’environnement et l’innovation.</p>
-    </div>
+    <h2>MES PRIORITÉS</h2>
     <div class="priorites-boutons">
-      <button onclick="afficherPriorite('territoires')">DÉFENDRE NOS TERRITOIRES</button>
-      <button onclick="afficherPriorite('green')">GREEN DEAL</button>
-      <button onclick="afficherPriorite('smart')">SMART DEAL</button>
+      <button onclick="afficherPriorite('territoires')">DÉFENDRE NOS TERRITOIRES 🏔️</button>
+      <button onclick="afficherPriorite('green')">GREEN DEAL 🌿</button>
+      <button onclick="afficherPriorite('smart')">SMART DEAL🤖</button>
     </div>
   </div>
+
   <div class="priorites-images">
     <div id="territoires" class="priorite active">
       <img src="images/ruralite.webp" alt="Défendre nos territoires">
+      <div class="priorite-texte">
+        <h4>DÉFENDRE NOS TERRITOIRES</h4>
+        <p>Accompagner les maires, soutenir les vallées, renforcer les services publics dans nos zones rurales.</p>
+      </div>
     </div>
     <div id="green" class="priorite">
-      <img src="images/greendeal.jpg" alt="Green Deal">
+      <img src="images/green deal.jpg" alt="Green Deal">
+      <div class="priorite-texte">
+        <h4>GREEN DEAL</h4>
+        <p>Agir pour le climat, préserver nos ressources naturelles et faire de notre territoire un exemple de transition écologique.</p>
+      </div>
     </div>
     <div id="smart" class="priorite">
-      <img src="images/smartdeal.jpg" alt="Smart Deal">
+      <img src="images/smart deal.jpg" alt="Smart Deal">
+      <div class="priorite-texte">
+        <h4>SMART DEAL</h4>
+        <p>Déployer le numérique, connecter nos communes et préparer les Alpes-Maritimes aux défis de demain.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- SCRIPT DE CHANGEMENT DE PRIORITÉ -->
 <script>
-  function afficherPriorite(id) {
-    document.querySelectorAll('.priorite').forEach(p => p.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
+function afficherPriorite(id) {
+  document.querySelectorAll('.priorite').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 </script>
 
 <!-- SECTION RESTONS EN CONTACT -->
@@ -146,6 +164,7 @@
     <div class="contact-info">
       <h2>RESTONS EN CONTACT ✍️</h2>
       <div class="adresse">
+        <img src="images/mail.svg" alt="courrier" class="icon-courrier">
         <p><strong>Président du Département des Alpes-Maritimes</strong></p>
         <p>CADAM - 147 Boulevard du Mercantour</p>
         <p>06000 Nice</p>
@@ -166,7 +185,8 @@
 <footer>
   <div class="footer-container">
     <div class="footer-col logo">
-      <img src="images/LR_logo_blanc_120x84.webp" alt="Logo LR">
+      <img src="images/logo_lr.svg" alt="Logo LR">
+      <a href="#" class="footer-link">Mentions légales</a>
     </div>
     <div class="footer-col follow">
       <h3>ME SUIVRE</h3>
@@ -191,6 +211,7 @@
     </div>
   </div>
 </footer>
+
 
   <script>
     const onglets = document.querySelectorAll('.priorite-tab');
