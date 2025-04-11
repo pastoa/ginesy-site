@@ -106,38 +106,48 @@
     </div>
   </section>
 
-  <!-- MES PRIORITÉS -->
-  <section class="priorites" id="priorites">
+  <section id="priorites">
     <h2>MES PRIORITÉS</h2>
-    <div class="priorite-tabs">
-      <button class="priorite-tab actif" onclick="afficherPriorite(0)">DÉFENDRE NOS TERRITOIRES 🏔️</button>
-      <button class="priorite-tab" onclick="afficherPriorite(1)">GREEN DEAL ♻️</button>
-      <button class="priorite-tab" onclick="afficherPriorite(2)">SMART DEAL 🤖</button>
+    <div class="priorite-buttons">
+      <button onclick="afficherPriorite('territoires')">DÉFENDRE NOS TERRITOIRES</button>
+      <button onclick="afficherPriorite('green')">GREEN DEAL</button>
+      <button onclick="afficherPriorite('smart')">SMART DEAL</button>
     </div>
-    <div class="priorite-content" id="priorite-active">
+    <div id="territoires" class="priorite-content active">
       <img src="images/priorite1.jpg" alt="Défendre nos territoires">
-      <div class="text-block">
-        <h3>DÉFENDRE NOS TERRITOIRES ➔</h3>
-        <p>Protéger les communes rurales, améliorer la vie en montagne, soutenir les agriculteurs et les services de proximité.</p>
-      </div>
+      <h3>DÉFENDRE NOS TERRITOIRES</h3>
+      <p>Une action forte en faveur des communes rurales et des Alpes du Sud.</p>
+    </div>
+    <div id="green" class="priorite-content">
+      <img src="images/priorite2.jpg" alt="Green Deal">
+      <h3>GREEN DEAL</h3>
+      <p>Engagement écologique fort pour préserver notre environnement naturel et notre Méditerranée.</p>
+    </div>
+    <div id="smart" class="priorite-content">
+      <img src="images/priorite3.jpg" alt="Smart Deal">
+      <h3>SMART DEAL</h3>
+      <p>Innovation et attractivité pour un territoire connecté et moderne.</p>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="formulaire">
-      <h2>RESTONS EN CONTACT</h2>
-      <form>
-        <input type="text" placeholder="Nom" required>
-        <input type="email" placeholder="Adresse mail" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">ENVOYER</button>
-      </form>
-    </div>
-    <div class="photo-contact">
-      <img src="images/photo_contact.jpg" alt="Charles Ange Ginésy">
+  <section id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <h2 class="contact-title">RESTONS EN CONTACT</h2>
+        <form>
+          <input type="text" placeholder="Nom">
+          <input type="email" placeholder="Adresse mail">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div class="photo-contact">
+        <img src="images/photo_contact.jpg" alt="Photo de contact">
+      </div>
     </div>
   </section>
+</body>
+</html>
 
   <!-- FOOTER -->
   <footer>
