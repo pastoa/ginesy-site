@@ -204,6 +204,7 @@ nav a:hover {
 /* SUIVEZ-MOI */
 .suivez-moi {
   background: #e02d2d;
+  color: white;
   padding: 30px 20px;
   text-align: center;
 }
@@ -211,7 +212,6 @@ nav a:hover {
 .suivez-moi h2 {
   font-size: 1.4em;
   font-weight: bold;
-  font-color: white;
   margin-bottom: 20px;
 }
 
