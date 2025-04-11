@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
 /* LISERET BLEU BLANC ROUGE */
 .liseret {
   height: 4px;
-  width: 120px;
+  width: 270px;
   background: linear-gradient(to right, #0055A4 33%, white 33% 66%, #EF4135 66%);
   margin: 6px 0 10px 0;
   border-radius: 2px;
@@ -97,7 +97,7 @@ nav a:hover {
 .slider {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -120,6 +120,7 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   font-size: 0.85em;
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .arrow-container {
@@ -231,7 +232,9 @@ nav a:hover {
 
 /* ACTUALITÉS */
 .actualites {
-  padding: 25px 15px;
+  padding: 20px 10px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .actualites h2 {
@@ -255,7 +258,7 @@ nav a:hover {
 
 .actus-container {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: stretch;
 }
@@ -263,9 +266,9 @@ nav a:hover {
 .actu-principale {
   flex: 2;
   background-color: #f5f5f5;
-  padding: 14px;
+  padding: 10px;
   border-radius: 8px;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .actu-principale img {
@@ -277,12 +280,12 @@ nav a:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .actu-secondaires .actu {
   background-color: #f5f5f5;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
   flex: 1;
 }
@@ -302,71 +305,73 @@ nav a:hover {
   background: #004080;
 }
 
-/* MES PRIORITÉS */
-.priorites {
-  padding: 40px;
-  background-color: #ffffff;
+/* SECTION MES PRIORITÉS */
+#priorites {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
-.priorites h2 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
+#priorites h2 {
+  font-size: 1.6em;
   color: #002654;
+  margin-bottom: 30px;
 }
 
-.priorite-tabs {
+.priorite-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.priorite-tab {
-  padding: 10px 20px;
-  border: 2px solid #002654;
-  background: white;
-  color: #002654;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.priorite-tab.actif,
-.priorite-tab:hover {
+.priorite-buttons button {
+  padding: 12px 24px;
+  font-size: 1em;
   background-color: #002654;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.priorite-buttons button:hover {
+  background-color: #004080;
 }
 
 .priorite-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  display: none;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.priorite-content.active {
+  display: block;
 }
 
 .priorite-content img {
-  max-width: 400px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-.priorite-content .text-block {
-  max-width: 500px;
-  text-align: left;
-}
-
-.priorite-content .text-block h3 {
-  font-size: 1.2em;
-  color: #002654;
+.priorite-content h3 {
+  font-size: 1.3em;
   margin-bottom: 10px;
 }
 
-.priorite-content .text-block p {
+.priorite-content p {
   font-size: 1em;
-  color: #333;
+  line-height: 1.6;
 }
 
 /* RESTONS EN CONTACT */
@@ -502,22 +507,21 @@ footer {
   }
 
   .slider {
-    height: 250px;
+    height: auto;
   }
 
   .slider-caption {
+    position: static;
+    background-color: white;
     padding: 12px;
-    max-width: 90%;
-    font-size: 0.75em;
+    margin-top: 10px;
+    box-shadow: none;
+    border-radius: 6px;
+    max-width: 100%;
   }
 
   .actus-container {
     flex-direction: column;
-  }
-
-  .actu-principale,
-  .actu-secondaires .actu {
-    font-size: 0.85em;
   }
 
   .read-more {
@@ -525,19 +529,20 @@ footer {
     text-align: center;
   }
 
-  .newsletter input, .newsletter button,
-  .slider-read-more {
-    width: 100%;
-  }
-
-  .actualites h2 {
+  .priorite-buttons {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
   }
 
-  .actualites h2 span {
-    margin-top: 10px;
+  .priorite-content img {
+    max-height: 250px;
   }
+
+  .photo-contact {
+    display: none;
+  }
+}
+
 
   .priorite-content img {
     width: 100%;
