@@ -376,13 +376,13 @@ nav a:hover {
 }
 
 .contact {
-  padding: 50px 20px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
 .contact h2 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #002654;
   text-align: left;
 }
@@ -392,7 +392,7 @@ nav a:hover {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 
 .contact-container form {
@@ -421,7 +421,7 @@ nav a:hover {
 }
 
 .contact-image {
-  flex: 1;
+  flex: 1.5;
   max-width: 400px;
   display: flex;
   align-items: flex-start;
