@@ -231,282 +231,241 @@ nav a:hover {
   transform: scale(1.2);
 }
 
-/* === ACTUALITÉS === */
+/* ==== ACTUALITÉS ==== */
 .actualites {
-  padding: 60px 5%;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
+  padding: 50px 10%;
 }
-
-.actualites-header {
+.actualites h2 {
+  font-size: 28px;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.actualites-header h2 {
-  font-size: 28px;
-}
-
-.toute-actualite {
-  display: flex;
-  align-items: center;
+.toute-actualite a {
   font-size: 14px;
+  color: #002654;
+  text-decoration: none;
 }
-
 .toute-actualite img {
-  width: 18px;
+  height: 18px;
+  vertical-align: middle;
   margin-right: 5px;
 }
-
-.toute-actualite a {
-  text-decoration: none;
-  color: #002654;
-}
-
 .actus-container {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
-
 .actu-principale {
   flex: 2;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
 }
-
 .actu-principale img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-
 .actu-principale h3 {
-  margin-top: 15px;
   font-size: 20px;
-}
-
-.actu-principale .date {
-  color: #888;
-  font-size: 13px;
-}
-
-.read-more {
-  display: inline-block;
   margin-top: 10px;
-  padding: 6px 14px;
-  background-color: #002654;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s ease;
 }
-
-.read-more:hover {
-  background-color: #0043a4;
+.actu-principale .date {
+  font-size: 13px;
+  color: gray;
 }
-
 .actu-secondaires {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+}
+.actu-secondaires .actu {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.actu-secondaires .actu h4 {
+  font-size: 15px;
+}
+.actu-secondaires .actu .date {
+  font-size: 12px;
+  color: gray;
+}
+.read-more {
+  margin-top: 10px;
+  display: inline-block;
+  background: #002654;
+  color: white;
+  padding: 5px 10px;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.read-more:hover {
+  background: #0055a4;
 }
 
-.actu-secondaires .actu {
-  background: white;
-  padding: 15px;
+/* ==== PRIORITÉS ==== */
+.priorites {
+  padding: 60px 10%;
+  background: #f0f0f0;
+}
+.priorites-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.priorites-texte {
+  flex: 1;
+}
+.priorites-texte h2 {
+  font-size: 26px;
+}
+.priorites-texte p {
+  margin-top: 10px;
+}
+.priorites-boutons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.priorites-boutons button {
+  padding: 10px 20px;
+  background: #cce0f5;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.priorites-boutons button:hover {
+  background: #002654;
+  color: white;
+}
+.priorites-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.priorite {
+  display: none;
+}
+.priorite.active {
+  display: block;
+}
+.priorite img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-.actu-secondaires h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
+/* ==== CONTACT ==== */
+.contact {
+  background: #f4f4f4;
+  padding: 60px 10%;
 }
-
-.actu-secondaires .small-date {
-  font-size: 12px;
-  color: #888;
-}
-
-
-/* === MES PRIORITÉS === */
-#priorites {
-  padding: 60px 5%;
-  background-color: white;
-}
-
-#priorites h2 {
-  margin-bottom: 20px;
-}
-
-.priorites-tabs {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-.tab-button {
-  background-color: #cce3f6;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  position: relative;
-}
-
-.tab-button.active {
-  background-color: #003087;
-  color: white;
-}
-
-.tab-button .arrow {
-  margin-left: 8px;
-}
-
-.priorites-content {
-  display: flex;
-  gap: 20px;
-}
-
-.priorite {
-  display: none;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.priorite.active {
-  display: flex;
-}
-
-.priorite img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-
-/* === RESTONS EN CONTACT === */
-.restons-contact {
+.contact-container {
   display: flex;
   justify-content: space-between;
-  padding: 60px 5%;
-  background-color: #f0f0f0;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
-
-.contact-gauche {
+.contact-info {
   flex: 1;
-  padding-right: 40px;
 }
-
-.contact-gauche h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
+.contact-info h2 {
+  font-size: 26px;
 }
-
-.contact-gauche img {
-  width: 30px;
-  margin-bottom: 15px;
+.contact-info .icon-courrier {
+  height: 30px;
+  margin-bottom: 10px;
 }
-
-.contact-gauche .adresse {
-  font-size: 16px;
-  color: #444;
-}
-
-.contact-droite {
+.contact-form {
   flex: 1;
+}
+.contact-form form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 10px;
 }
-
-.contact-droite form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-droite input,
-.contact-droite textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
-.contact-droite button {
-  background-color: #002654;
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+.contact-form button {
+  background: #002654;
   color: white;
-  border: none;
   padding: 10px;
-  border-radius: 20px;
-  width: 150px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: #0055a4;
 }
 
-.contact-droite button:hover {
-  background-color: #0043a4;
-}
-
-
-/* === FOOTER === */
+/* ==== FOOTER ==== */
 footer {
-  background-color: #0043a4;
+  background: #003399;
   color: white;
-  padding: 40px 5% 20px;
+  padding: 40px 10%;
 }
-
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 20px;
 }
-
-.footer-logo img {
-  height: 50px;
-  margin-bottom: 15px;
+.footer-col {
+  flex: 1;
+  min-width: 200px;
 }
-
-.footer-links h3 {
-  margin-bottom: 8px;
+.footer-col h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-
-.footer-links hr {
+.footer-col hr {
   width: 30px;
   border: 1px solid white;
   margin-bottom: 10px;
 }
-
-.footer-social {
+.footer-icons {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
-
-.footer-social img {
-  width: 24px;
+.footer-icons img {
   height: 24px;
 }
-
-.footer-credits {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
+.footer-col ul {
+  list-style: none;
+  padding: 0;
 }
-
-.footer-credits a {
+.footer-col ul li a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
+  font-size: 14px;
+}
+.footer-col ul li a:hover {
+  text-decoration: underline;
 }
 
 
