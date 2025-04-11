@@ -10,6 +10,11 @@
       const nav = document.querySelector("nav ul");
       nav.style.display = nav.style.display === "flex" ? "none" : "flex";
     }
+    function afficherPriorite(id) {
+      const contenus = document.querySelectorAll(".priorite-content");
+      contenus.forEach(c => c.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
   </script>
 </head>
 <body>
@@ -82,19 +87,19 @@
         <div class="actu">
           <h4>RÉOUVERTURE DU COL DE LA CAYOLE</h4>
           <p class="date">9 AVRIL 2025</p>
-          <p>Pour la plus grande joie de nos travailleurs, le col rouvre enfin ! Chaque année le passage de nos deneigeuses départementales est signe de la reprise économique.</p>
+          <p>Le col rouvre enfin, un passage essentiel pour la saison estivale dans nos vallées.</p>
           <a href="#" class="read-more">Lire la suite</a>
         </div>
         <div class="actu">
           <h4>FÊTE DES TEMPLIERS À BIOT</h4>
           <p class="date">8 AVRIL 2025</p>
-          <p>Le plus grand mapping d'Europe, exceptionnel ! Accompagné de mon ami Jean-Pierre DERMIT, le Maire, c'est un véritable plaisir que le Département aide cette fête.</p>
+          <p>Un mapping exceptionnel soutenu par le Département pour faire rayonner notre patrimoine.</p>
           <a href="#" class="read-more">Lire la suite</a>
         </div>
         <div class="actu">
           <h4>CONSEIL DÉPARTEMENTAL EN SESSION</h4>
           <p class="date">7 AVRIL 2025</p>
-          <p>Encore un budget rigoureux, le tout sans augmenter les impôts des Maralpins. C'est notre cap avec ma majorité départementale !</p>
+          <p>Un budget rigoureux adopté pour 2025, sans hausse d'impôts pour les Maralpins.</p>
           <a href="#" class="read-more">Lire la suite</a>
         </div>
       </div>
