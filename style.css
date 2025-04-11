@@ -377,68 +377,60 @@ nav a:hover {
 
 /* RESTONS EN CONTACT */
 #contact {
-  padding: 40px 20px;
-  background-color: #f0f0f0;
+.contact {
+  padding: 50px 20px;
 }
 
-.contact-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-  gap: 20px;
-}
-
-.contact-title {
+.contact h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
   color: #002654;
-  font-size: 1.4em;
-  margin-bottom: 20px;
 }
 
-.contact-form form {
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-container form {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
+  max-width: 500px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
+.contact-container input,
+.contact-container textarea {
+  padding: 12px;
+  font-size: 16px;
   width: 100%;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-.contact-form textarea {
-  resize: none;
-  height: 120px;
-}
-
-.contact-form button {
-  width: 100%;
+.contact-container button {
+  padding: 12px;
   background: #002654;
   color: white;
-  padding: 10px;
-  font-size: 1em;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 16px;
+  width: 100%;
 }
 
-.contact-form button:hover {
-  background: #004080;
+.contact-image {
+  flex: 1;
+  max-width: 400px;
 }
 
-.photo-contact img {
-  width: 50%;
-  float:right;
-  border-radius: 10px;
-  height: 100%;
+.contact-image img {
+  width: 100%;
+  border-radius: 8px;
   object-fit: cover;
 }
+
 
 /* FOOTER */
 footer {
