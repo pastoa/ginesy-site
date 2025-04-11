@@ -375,24 +375,24 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* RESTONS EN CONTACT */
-#contact {
 .contact {
   padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
 .contact h2 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 30px;
   color: #002654;
+  text-align: left;
 }
 
 .contact-container {
-  display: stretch;
+  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .contact-container form {
@@ -415,8 +415,8 @@ nav a:hover {
   background: #002654;
   color: white;
   border: none;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -424,7 +424,8 @@ nav a:hover {
   flex: 1;
   max-width: 400px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .contact-image img {
@@ -434,49 +435,61 @@ nav a:hover {
   border-radius: 8px;
 }
 
-
 /* FOOTER */
+
 footer {
-  background: #3366cc;
+  background-color: #002654;
   color: white;
-  padding: 40px;
+  padding: 40px 20px;
+}
+
+.footer-container {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
-.footer-colonne {
-  width: 30%;
+.footer-col {
+  flex: 1;
   min-width: 200px;
 }
 
-.footer-colonne h4 {
+.footer-logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-col h4 {
   margin-bottom: 10px;
   font-size: 16px;
-  text-transform: uppercase;
-  border-bottom: 1px solid white;
-  padding-bottom: 5px;
 }
 
-.footer-colonne a {
+.footer-col a {
   color: white;
   text-decoration: none;
-  display: block;
-  margin-top: 10px;
+  font-size: 14px;
 }
 
-.footer-colonne .icons {
+.footer-icons {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
-  align-items: center;
 }
 
-.footer-colonne .icons img {
-  width: 22px;
-  height: 22px;
-  filter: brightness(0) invert(1);
+.footer-icons img {
+  width: 24px;
+  height: auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 6px;
 }
 
 /* RESPONSIVE */
