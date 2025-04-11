@@ -269,9 +269,14 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
 }
+.actu-principale-texte {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+}
 .actu-principale h3 {
   font-size: 20px;
-  margin-top: 10px;
 }
 .actu-principale .date {
   font-size: 13px;
@@ -311,7 +316,7 @@ nav a:hover {
   background: #0055a4;
 }
 
-/* ==== PRIORITÉS ==== */
+/* ==== MES PRIORITÉS ==== */
 .priorites {
   padding: 60px 10%;
   background: #f0f0f0;
@@ -323,20 +328,13 @@ nav a:hover {
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
-.priorites-texte {
-  flex: 1;
-}
-.priorites-texte h2 {
+.priorites-container h2 {
   font-size: 26px;
 }
-.priorites-texte p {
-  margin-top: 10px;
-}
 .priorites-boutons {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .priorites-boutons button {
   padding: 10px 20px;
@@ -358,6 +356,7 @@ nav a:hover {
 }
 .priorite {
   display: none;
+  text-align: center;
 }
 .priorite.active {
   display: block;
@@ -368,8 +367,16 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
 }
+.priorite-texte h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.priorite-texte p {
+  font-size: 14px;
+  color: #444;
+}
 
-/* ==== CONTACT ==== */
+/* ==== RESTONS EN CONTACT ==== */
 .contact {
   background: #f4f4f4;
   padding: 60px 10%;
@@ -377,7 +384,7 @@ nav a:hover {
 .contact-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -440,20 +447,29 @@ footer {
   min-width: 200px;
 }
 .footer-col h3 {
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 10px;
 }
 .footer-col hr {
-  width: 30px;
+  width: 40px;
   border: 1px solid white;
   margin-bottom: 10px;
 }
 .footer-icons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .footer-icons img {
   height: 24px;
+  filter: brightness(0) invert(1);
+}
+.footer-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
 }
 .footer-col ul {
   list-style: none;
@@ -467,6 +483,31 @@ footer {
 .footer-col ul li a:hover {
   text-decoration: underline;
 }
+
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 768px) {
+  .actus-container {
+    flex-direction: column;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .priorites-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .priorites-boutons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .priorites-images img {
+    max-height: 200px;
+  }
+  .read-more {
+    text-align: center;
+  }
+}
+
 
 
 /* === RESPONSIVE === */
