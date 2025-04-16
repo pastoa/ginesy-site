@@ -706,6 +706,30 @@ footer {
     margin-top: 10px;
   }
 }
+/* === Extraits actus secondaires : 3 lignes max === */
+.actu-secondaires .actu p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* === Extrait actu principale : 5 lignes max === */
+.actu-principale p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* === Extrait image de une : 3 lignes max === */
+.slider-caption p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
