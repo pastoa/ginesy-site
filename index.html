@@ -16,6 +16,7 @@
       document.getElementById(id).classList.add("active");
     }
   </script>
+  <script src="js/load-home-articles.js"></script>
 </head>
 <body>
   <header>
@@ -42,18 +43,7 @@
     </div>
   </header>
 
-  <section class="slider">
-    <div class="slide" style="background-image: url('images/actu_une.jpg')">
-      <div class="slider-caption">
-        <h2>LE DÉPARTEMENT ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h2>
-        <p>Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune, le Conservatoire du littoral et la CARF. C’est un beau projet dont je suis fier !</p>
-        <div class="arrow-container">
-          <span class="arrow">➔</span>
-          <a href="#" class="slider-read-more">Lire la suite</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="slider" id="image-a-la-une"></section>
 
   <section class="newsletter">
     <h2>TOUTE MON ACTUALITÉ DANS VOTRE BOÎTE MAIL</h2>
@@ -74,45 +64,14 @@
     </div>
   </section>
 
-<!-- SECTION ACTUALITÉS -->
 <section class="actualites" id="actualites">
-  <h2>ACTUALITÉS <span class="toute-actualite"> <a href="#">TOUTE L'ACTUALITÉ 🔎</a></span></h2>
+  <h2>ACTUALITÉS <span><img src="images/loupe.svg" alt="loupe"> <a href="#">Toute l’actualité</a></span></h2>
   <div class="actus-container">
-    <div class="actu-principale">
-      <img src="images/actu_une.jpg" alt="Actu principale">
-      <div class="actu-principale-texte">
-        <h3>LE DÉPARTEMENT ENGAGÉ POUR LA PROTECTION DE LA MÉDITERRANÉE</h3>
-        <p class="date">10 AVRIL 2025</p>
-        <p>
-          Je suis heureux d’annoncer la création d’un 2ème Parc maritime départemental à Roquebrune-Cap-Martin, en partenariat avec la commune, le Conservatoire du littoral et la CARF.
-          <br><br>
-          Ce projet renforcera la protection de notre littoral. Une initiative exemplaire pour la biodiversité marine, portée avec fierté.
-        </p>
-        <a href="#" class="read-more">Lire la suite</a>
-      </div>
-    </div>
-    <div class="actu-secondaires">
-      <div class="actu">
-        <h4>RÉOUVERTURE DU COL DE LA CAYOLE</h4>
-        <p class="date">9 AVRIL 2025</p>
-        <p>Le col est de nouveau accessible après plusieurs semaines de fermeture liée aux intempéries.</p>
-        <a href="#" class="read-more">Lire la suite</a>
-      </div>
-      <div class="actu">
-        <h4>FÊTE DES TEMPLIERS À BIOT</h4>
-        <p class="date">8 AVRIL 2025</p>
-        <p>Une belle journée médiévale au cœur de la ville de Biot, rythmée par des animations et traditions locales.</p>
-        <a href="#" class="read-more">Lire la suite</a>
-      </div>
-      <div class="actu">
-        <h4>SESSION DU CONSEIL DÉPARTEMENTAL</h4>
-        <p class="date">7 AVRIL 2025</p>
-        <p>Retour sur les décisions votées en séance publique, au cœur de notre département.</p>
-        <a href="#" class="read-more">Lire la suite</a>
-      </div>
-    </div>
+    <div class="actu-principale" id="actu-principale"></div>
+    <div class="actu-secondaires" id="actu-secondaires"></div>
   </div>
 </section>
+
 
 <!-- SECTION MES PRIORITÉS -->
 <section class="priorites" id="priorites">
