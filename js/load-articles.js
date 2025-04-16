@@ -1,4 +1,3 @@
-// Fonction pour charger les articles
 async function loadArticles() {
   try {
     const response = await fetch('articles.json');
@@ -14,8 +13,11 @@ async function loadArticles() {
         <div class="slide" style="background-image: url('${une.image}')">
           <div class="slider-caption">
             <h2>${une.title}</h2>
-            <p>${une.excerpt.split('\n').slice(0, 5).join(' ')}</p>
-            <span class="arrow">➤</span>
+            <p>${une.excerpt.split('\n').slice(0, 3).join(' ')}</p>
+            <div class="arrow-wrapper">
+              <span class="arrow">➤</span>
+              <a href="post/${une.slug}.html" class="cta-une">Lire la suite</a>
+            </div>
           </div>
         </div>
       `;
@@ -24,7 +26,6 @@ async function loadArticles() {
     // === ACTUALITÉS (article principal + 3 actus empilées) ===
     const actuContainer = document.querySelector('.actus-container');
     if (actuContainer) {
-      // Article principal (2e article)
       const principal = articles[1];
       let html = `
         <div class="actu-principale">
@@ -36,14 +37,13 @@ async function loadArticles() {
         </div>
       `;
 
-      // 3 articles secondaires (articles 3 à 5)
       html += `<div class="actu-secondaires">`;
       for (let i = 2; i < Math.min(5, articles.length); i++) {
         const a = articles[i];
         html += `
-          <div class="actu">
+          <div class="actu secondaire">
             <h4>${a.title}</h4>
-            <p class="date">${a.date}</p>
+            <p class="date date-secondaire">${a.date}</p>
             <p>${a.excerpt.split('\n').slice(0, 2).join(' ')}</p>
             <a href="post/${a.slug}.html" class="read-more">Lire la suite</a>
           </div>
@@ -53,10 +53,18 @@ async function loadArticles() {
 
       actuContainer.innerHTML = html;
     }
+
+    // === Mise à jour du lien "Toute l'actualité"
+    const actuLink = document.querySelector('.actu-lien');
+    if (actuLink) {
+      actuLink.textContent = "Toute l'actualité";
+      actuLink.href = "https://pastoa.github.io/actualites/";
+    }
+
   } catch (err) {
     console.error("Erreur de chargement des articles :", err);
   }
 }
 
-// Appel de la fonction au chargement
 document.addEventListener("DOMContentLoaded", loadArticles);
+
