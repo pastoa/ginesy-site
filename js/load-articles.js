@@ -74,7 +74,7 @@ fetch("articles.json")
         secondairesContainer.appendChild(div);
       });
     }
-  })
+
   .catch((error) => console.error("Erreur de chargement des articles :", error));
 
 
