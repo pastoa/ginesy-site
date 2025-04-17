@@ -15,6 +15,7 @@ async function loadArticles() {
   try {
     const response = await fetch('articles.json');
     const articles = await response.json();
+    const ARTICLES_JSON_URL = 'https://pastoa.github.io/actualites/articles.json';
 
     if (!articles.length) return;
 
