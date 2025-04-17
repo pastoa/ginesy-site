@@ -1,11 +1,13 @@
-function truncateBySentences(text, maxSentences) {
-  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-  return sentences.slice(0, maxSentences).join(" ").trim();
 
 fetch("articles.json")
   .then((response) => response.json())
   .then((articles) => {
     if (!articles || articles.length === 0) return;
+
+    // Fonction pour formater les extraits 
+    function truncateBySentences(text, maxSentences) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  return sentences.slice(0, maxSentences).join(" ").trim();
 
     // Fonction pour formater la date
     function formatDate(dateString) {
