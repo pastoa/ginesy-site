@@ -246,16 +246,18 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
 }
-.toute-actualite a {
-  font-size: 10px;
+.actualites h2 span a {
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;   /* ❌ Supprime soulignement */
   color: #002654;
-  text-decoration: none;
+  transition: color 0.2s ease;
 }
-.toute-actualite img {
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 5px;
+
+.actualites h2 span a:hover {
+  color: #004080;
 }
+
 .actus-container {
   display: flex;
   flex-wrap: wrap;
