@@ -19,17 +19,27 @@ fetch("articles.json")
   const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
   return sentences.slice(0, maxSentences).join(" ").trim();
 }
+  function truncateBySentences(text, maxSentences) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  let output = "";
+  for (let i = 0; i < maxSentences && i < sentences.length; i++) {
+    output += sentences[i].trim() + " ";
+  }
+  return output.trim();
+}
+
 
     // 👉 1. Actu de UNE : article[0]
     const une = articles[0];
     const uneContainer = document.getElementById("image-une-dynamique");
     if (une && uneContainer) {
       uneContainer.innerHTML = `
-        <img src="${une.image}" alt="${une.title}">
-        <div class="slider-caption">
-          <h2>${une.title}</h2>
-          <p>${truncateBySentences(une.excerpt, 5)}</p>
-          <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
+  <div class="slide" style="background-image: url('${une.image}')">
+    <div class="slider-caption">
+      <h2>${une.title}</h2>
+      <p>${truncateBySentences(une.excerpt, 5)}</p>
+      <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
+      </div>
         </div>
       `;
     }
