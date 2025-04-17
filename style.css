@@ -106,8 +106,8 @@ nav a:hover {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
-  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .slider-caption {
@@ -140,20 +140,22 @@ nav a:hover {
   transform: translateX(6px);
 }
 
-.slider-read-more {
-  display: none;
+.btn-une-lire {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
   background-color: #002654;
   color: white;
-  padding: 6px 12px;
-  font-size: 0.85em;
   border-radius: 5px;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.arrow-container:hover .slider-read-more {
-  display: inline-block;
+.btn-une-lire:hover {
+  background-color: #004080;
 }
+
 
 /* NEWSLETTER */
 .newsletter {
@@ -245,7 +247,7 @@ nav a:hover {
   align-items: center;
 }
 .toute-actualite a {
-  font-size: 14px;
+  font-size: 10px;
   color: #002654;
   text-decoration: none;
 }
@@ -296,7 +298,7 @@ nav a:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .actu-secondaires .actu h4 {
-  font-size: 15px;
+  font-size: 20px;
 }
 .actu-secondaires .actu .date {
   font-size: 12px;
