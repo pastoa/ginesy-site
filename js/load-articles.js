@@ -1,15 +1,15 @@
-
 fetch("articles.json")
   .then((response) => response.json())
   .then((articles) => {
     if (!articles || articles.length === 0) return;
 
-    // Fonction pour formater les extraits 
+    // Fonction pour tronquer à un nombre de phrases
     function truncateBySentences(text, maxSentences) {
-  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-  return sentences.slice(0, maxSentences).join(" ").trim();
+      const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+      return sentences.slice(0, maxSentences).join(" ").trim();
+    }
 
-    // Fonction pour formater la date
+    // Fonction pour formater la date en FR
     function formatDate(dateString) {
       const date = new Date(dateString);
       const day = String(date.getDate()).padStart(2, "0");
@@ -18,27 +18,17 @@ fetch("articles.json")
       return `${day}.${month}.${year}`;
     }
 
-    // Fonction pour tronquer à un nombre de phrases
-  function truncateBySentences(text, maxSentences) {
-  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-  return sentences.slice(0, maxSentences).join(" ").trim();
-
-  return output.trim();
-}
-
-
     // 👉 1. Actu de UNE : article[0]
     const une = articles[0];
     const uneContainer = document.getElementById("image-une-dynamique");
     if (une && uneContainer) {
       uneContainer.innerHTML = `
-  <div class="slide" style="background-image: url('${une.image}')">
-    <div class="slider-caption">
-      <h2>${une.title}</h2>
-      <p>${truncateBySentences(une.excerpt, 5)}</p>
-
-      <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
-      </div>
+        <div class="slide" style="background-image: url('${une.image}')">
+          <div class="slider-caption">
+            <h2>${une.title}</h2>
+            <p>${truncateBySentences(une.excerpt, 5)}</p>
+            <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
+          </div>
         </div>
       `;
     }
@@ -74,6 +64,7 @@ fetch("articles.json")
         secondairesContainer.appendChild(div);
       });
     }
+  })
   .catch((error) => console.error("Erreur de chargement des articles :", error));
 
 
