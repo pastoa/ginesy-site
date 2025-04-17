@@ -1,3 +1,5 @@
+console.log("SCRIPT CHARGÉ ✅");
+
 fetch("articles.json")
   .then((response) => response.json())
   .then((articles) => {
