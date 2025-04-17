@@ -15,9 +15,11 @@ fetch("articles.json")
     }
 
     // Fonction pour tronquer à un nombre de phrases
-    function truncateBySentences(text, maxSentences) {
-      const sentences = text.split(/(?<=[.!?])\s+/);
-      return sentences.slice(0, maxSentences).join(" ");
+  function truncateBySentences(text, maxSentences) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  return sentences.slice(0, maxSentences).join(" ").trim();
+}
+
     }
 
     // 👉 1. Actu de UNE : article[0]
@@ -28,7 +30,7 @@ fetch("articles.json")
         <img src="${une.image}" alt="${une.title}">
         <div class="slider-caption">
           <h2>${une.title}</h2>
-          <p>${truncateBySentences(une.excerpt, 3)}</p>
+          <p>${truncateBySentences(une.excerpt, 5)}</p>
           <span class="arrow">➤</span>
           <a class="btn-lire-suite" href="${une.link}">Lire la suite</a>
         </div>
@@ -60,7 +62,7 @@ fetch("articles.json")
         div.innerHTML = `
           <h4>${article.title}</h4>
           <p class="date">${formatDate(article.date)}</p>
-          <p>${truncateBySentences(article.excerpt, 2)}</p>
+          <p>${truncateBySentences(article.excerpt, 3)}</p>
           <a href="${article.link}" class="read-more">Lire la suite</a>
         `;
         secondairesContainer.appendChild(div);
