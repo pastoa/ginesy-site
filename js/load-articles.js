@@ -20,8 +20,6 @@ fetch("articles.json")
   return sentences.slice(0, maxSentences).join(" ").trim();
 }
 
-    }
-
     // 👉 1. Actu de UNE : article[0]
     const une = articles[0];
     const uneContainer = document.getElementById("image-une-dynamique");
