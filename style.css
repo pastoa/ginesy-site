@@ -389,6 +389,18 @@ nav a:hover {
   line-height: 1.5;
   color: #333;
 }
+/* Taille des extraits (actus secondaires) */
+.actu-secondaires .actu p {
+  font-size: 13px;
+  line-height: 1.4em;
+}
+
+/* Taille des titres (actus secondaires) */
+.actu-secondaires .actu h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 
 /* ==== RESTONS EN CONTACT ==== */
 .contact {
