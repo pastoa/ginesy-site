@@ -29,8 +29,7 @@ fetch("articles.json")
         <div class="slider-caption">
           <h2>${une.title}</h2>
           <p>${truncateBySentences(une.excerpt, 5)}</p>
-          <span class="arrow">➤</span>
-          <a class="btn-lire-suite" href="${une.link}">Lire la suite</a>
+          <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
         </div>
       `;
     }
