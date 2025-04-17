@@ -1,4 +1,6 @@
-console.log("SCRIPT CHARGÉ ✅");
+function truncateBySentences(text, maxSentences) {
+  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+  return sentences.slice(0, maxSentences).join(" ").trim();
 
 fetch("articles.json")
   .then((response) => response.json())
@@ -18,13 +20,7 @@ fetch("articles.json")
   function truncateBySentences(text, maxSentences) {
   const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
   return sentences.slice(0, maxSentences).join(" ").trim();
-}
-  function truncateBySentences(text, maxSentences) {
-  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-  let output = "";
-  for (let i = 0; i < maxSentences && i < sentences.length; i++) {
-    output += sentences[i].trim() + " ";
-  }
+
   return output.trim();
 }
 
@@ -38,6 +34,7 @@ fetch("articles.json")
     <div class="slider-caption">
       <h2>${une.title}</h2>
       <p>${truncateBySentences(une.excerpt, 5)}</p>
+
       <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
       </div>
         </div>
