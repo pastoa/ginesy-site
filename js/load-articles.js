@@ -1,71 +1,69 @@
-fetch("articles.json")
-  .then((response) => response.json())
-  .then((articles) => {
-    if (!articles || articles.length === 0) return;
+function formatDateFR(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("fr-FR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  });
+}
 
-    // Fonction pour tronquer à un nombre de phrases
-    function truncateBySentences(text, maxSentences) {
-      const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-      return sentences.slice(0, maxSentences).join(" ").trim();
-    }
+function extractSentences(content, maxSentences = 3) {
+  const sentences = content.split('.').filter(s => s.trim() !== '');
+  const trimmed = sentences.slice(0, maxSentences).join('. ') + '.';
+  return trimmed;
+}
 
-    // Fonction pour formater la date en FR
-    function formatDate(dateString) {
-      const date = new Date(dateString);
-      const day = String(date.getDate()).padStart(2, "0");
-      const month = String(date.getMonth() + 1).padStart(2, "0");
-      const year = date.getFullYear();
-      return `${day}.${month}.${year}`;
-    }
+fetch("https://pastoa.github.io/actualites/articles.json")
+  .then(response => response.json())
+  .then(articles => {
+    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // 👉 1. Actu de UNE : article[0]
+    // 🎯 Image de UNE (article 0)
     const une = articles[0];
-    const uneContainer = document.getElementById("image-une-dynamique");
-    if (une && uneContainer) {
+    const uneContainer = document.querySelector(".slider .slider-caption");
+    if (uneContainer) {
       uneContainer.innerHTML = `
-        <div class="slide" style="background-image: url('${une.image}')">
-          <div class="slider-caption">
-            <h2>${une.title}</h2>
-            <p>${truncateBySentences(une.excerpt, 5)}</p>
-            <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
-          </div>
-        </div>
+        <h2>${une.title}</h2>
+        <p>${extractSentences(une.excerpt || une.content, 3)}</p>
+        <span class="arrow">➤</span>
+        <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="slider-read-more">Lire la suite</a>
+      `;
+    }
+    document.querySelector(".slider").style.backgroundImage = `url(${une.image})`;
+
+    // 🎯 Bloc actualité principale (article 1)
+    const principale = articles[1];
+    const principaleBloc = document.querySelector(".actu-principale");
+    if (principaleBloc) {
+      principaleBloc.innerHTML = `
+        <img src="${principale.image}" alt="${principale.title}">
+        <h3>${principale.title}</h3>
+        <p class="date">${formatDateFR(principale.date)}</p>
+        <p class="excerpt">${extractSentences(principale.excerpt || principale.content, 5)}</p>
+        <a href="https://pastoa.github.io/actualites/article.html?id=${principale.id}" class="read-more">Lire la suite</a>
       `;
     }
 
-    // 👉 2. Bloc actualités :
-    const actuPrincipale = articles[1];
+    // 🎯 Actus secondaires (articles 2, 3, 4)
     const secondaires = articles.slice(2, 5);
-    const actuPrincipaleContainer = document.getElementById("actu-principale-dynamique");
-    const secondairesContainer = document.getElementById("bloc-actus-secondaires");
-
-    if (actuPrincipale && actuPrincipaleContainer) {
-      actuPrincipaleContainer.innerHTML = `
-        <img src="${actuPrincipale.image}" alt="${actuPrincipale.title}">
-        <div class="texte-actu-principale">
-          <h3>${actuPrincipale.title}</h3>
-          <p class="date">${formatDate(actuPrincipale.date)}</p>
-          <p>${truncateBySentences(actuPrincipale.excerpt, 5)}</p>
-          <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
-        </div>
-      `;
-    }
-
-    if (secondaires && secondairesContainer) {
-      secondaires.forEach((article) => {
-        const div = document.createElement("div");
-        div.className = "actu";
-        div.innerHTML = `
+    const secondairesContainer = document.querySelector(".actu-secondaires");
+    if (secondairesContainer) {
+      secondairesContainer.innerHTML = "";
+      secondaires.forEach(article => {
+        const bloc = document.createElement("div");
+        bloc.className = "actu";
+        bloc.innerHTML = `
           <h4>${article.title}</h4>
-          <p class="date">${formatDate(article.date)}</p>
-          <p>${truncateBySentences(article.excerpt, 3)}</p>
-          <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
+          <p class="date">${formatDateFR(article.date)}</p>
+          <p class="excerpt">${extractSentences(article.excerpt || article.content, 3)}</p>
+          <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">Lire la suite</a>
         `;
-        secondairesContainer.appendChild(div);
+        secondairesContainer.appendChild(bloc);
       });
     }
   })
-  .catch((error) => console.error("Erreur de chargement des articles :", error));
-
+  .catch(error => {
+    console.error("Erreur de chargement des articles :", error);
+  });
 
 
