@@ -27,7 +27,7 @@ fetch("articles.json")
           <div class="slider-caption">
             <h2>${une.title}</h2>
             <p>${truncateBySentences(une.excerpt, 5)}</p>
-            <a class="btn-une-lire" href="${une.link}">LIRE LA SUITE</a>
+            <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
           </div>
         </div>
       `;
@@ -46,7 +46,7 @@ fetch("articles.json")
           <h3>${actuPrincipale.title}</h3>
           <p class="date">${formatDate(actuPrincipale.date)}</p>
           <p>${truncateBySentences(actuPrincipale.excerpt, 5)}</p>
-          <a href="${actuPrincipale.link}" class="read-more">Lire la suite</a>
+          <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
         </div>
       `;
     }
@@ -59,7 +59,7 @@ fetch("articles.json")
           <h4>${article.title}</h4>
           <p class="date">${formatDate(article.date)}</p>
           <p>${truncateBySentences(article.excerpt, 3)}</p>
-          <a href="${article.link}" class="read-more">Lire la suite</a>
+          <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
         `;
         secondairesContainer.appendChild(div);
       });
