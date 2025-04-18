@@ -19,17 +19,28 @@ fetch("https://pastoa.github.io/actualites/articles.json")
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // 🎯 Image de UNE (article 0)
-    const une = articles[0];
-    const uneContainer = document.querySelector(".slider .slider-caption");
-    if (uneContainer) {
-      uneContainer.innerHTML = `
-        <h2>${une.title}</h2>
-        <p>${extractSentences(une.excerpt || une.content, 3)}</p>
-        <span class="arrow">➤</span>
-        <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="slider-read-more">Lire la suite</a>
-      `;
-    }
-    document.querySelector(".slider").style.backgroundImage = `url(${une.image})`;
+const une = articles[0];
+
+// Bloc texte de l’image de une
+const slider = document.querySelector(".slider");
+if (slider) {
+  slider.style.backgroundImage = `url(${une.image})`;
+
+  let caption = slider.querySelector(".slider-caption");
+  if (!caption) {
+    caption = document.createElement("div");
+    caption.className = "slider-caption";
+    slider.appendChild(caption);
+  }
+
+  caption.innerHTML = `
+    <h2>${une.title}</h2>
+    <p>${extractSentences(une.excerpt || une.content, 3)}</p>
+    <span class="arrow">➤</span>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="slider-read-more">Lire la suite</a>
+  `;
+}
+
 
     // 🎯 Bloc actualité principale (article 1)
     const principale = articles[1];
