@@ -3,12 +3,13 @@ fetch("https://pastoa.github.io/actualites/articles.json")
   .then((articles) => {
     if (!articles || articles.length === 0) return;
 
-    // Trier par date décroissante
+    // Trier les articles par date décroissante
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Article de UNE
+    // === ARTICLE DE UNE ===
     const une = articles[0];
-    document.querySelector(".slider").innerHTML = `
+    const slider = document.querySelector(".slider");
+    slider.innerHTML = `
       <div class="slide" style="background-image: url('https://pastoa.github.io/actualites/${une.image}')">
         <div class="slider-caption">
           <h2>${une.titre}</h2>
@@ -19,18 +20,18 @@ fetch("https://pastoa.github.io/actualites/articles.json")
       </div>
     `;
 
-    // Bloc Actualités
-    const container = document.querySelector(".actus-container");
-    const principal = articles[1];
-    const secondaires = articles.slice(2, 5);
+    // === ACTUALITÉ PRINCIPALE ===
+    const principale = articles[1];
+    const secondaires = articles.slice(2, 5); // 3 actus suivantes
 
-    container.innerHTML = `
+    const actusContainer = document.querySelector(".actus-container");
+    actusContainer.innerHTML = `
       <div class="actu-principale">
-        <img src="https://pastoa.github.io/actualites/${principal.image}" alt="${principal.titre}">
-        <h3>${principal.titre}</h3>
-        <p class="date">${formatDate(principal.date)}</p>
-        <p>${formatExtrait(principal.extrait, 5)}</p>
-        <a class="read-more" href="https://pastoa.github.io/actualites/article.html?id=${principal.id}">LIRE LA SUITE</a>
+        <img src="https://pastoa.github.io/actualites/${principale.image}" alt="${principale.titre}">
+        <h3>${principale.titre}</h3>
+        <p class="date">${formatDate(principale.date)}</p>
+        <p>${formatExtrait(principale.extrait, 5)}</p>
+        <a class="read-more" href="https://pastoa.github.io/actualites/article.html?id=${principale.id}">LIRE LA SUITE</a>
       </div>
       <div class="actu-secondaires">
         ${secondaires.map(article => `
@@ -44,21 +45,23 @@ fetch("https://pastoa.github.io/actualites/articles.json")
       </div>
     `;
   })
-  .catch((error) => console.error("Erreur de chargement des articles :", error));
+  .catch((error) => {
+    console.error("Erreur de chargement des articles :", error);
+  });
 
 function formatDate(dateString) {
   const d = new Date(dateString);
-  return d.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit", year: "numeric" });
+  return d.toLocaleDateString("fr-FR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  });
 }
 
-function formatExtrait(extrait, maxLignes = 3) {
-  if (!extrait) return "";
-  const phrases = extrait.split(".");
-  const clean = [];
-  for (let phrase of phrases) {
-    if (phrase.trim()) clean.push(phrase.trim());
-    if (clean.length >= maxLignes) break;
-  }
-  return clean.join(". ") + ".";
+function formatExtrait(texte, nbPhrases) {
+  if (!texte) return "";
+  const phrases = texte.split(".").filter(Boolean);
+  const extraits = phrases.slice(0, nbPhrases).map(p => p.trim());
+  return extraits.join(". ") + (extraits.length ? "." : "");
 }
 
