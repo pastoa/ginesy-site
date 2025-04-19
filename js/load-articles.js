@@ -41,7 +41,7 @@ if (slider) {
     <span class="arrow">➤</span>
     <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="read-more">Lire la suite</a>
   `;
-}
+
 
 
     // 🎯 Bloc actualité principale (article 1)
