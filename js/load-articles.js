@@ -13,6 +13,13 @@ function extractSentences(content, maxSentences = 3) {
   return trimmed;
 }
 
+const lireSuite = document.createElement("a");
+lireSuite.className = "read-more";
+lireSuite.textContent = "LIRE LA SUITE";
+lireSuite.href = `article.html?id=${article.id}`;
+texte.appendChild(lireSuite);
+
+
 fetch("https://pastoa.github.io/actualites/articles.json")
   .then(response => response.json())
   .then(articles => {
