@@ -33,18 +33,13 @@ const slider = document.querySelector(".slider");
 if (slider) {
   slider.style.backgroundImage = `url(${une.image})`;
 
-  let caption = slider.querySelector(".slider-caption");
-  if (!caption) {
-    caption = document.createElement("div");
-    caption.className = "slider-caption";
-    slider.appendChild(caption);
   }
 
   caption.innerHTML = `
     <h2>${une.title}</h2>
     <p>${extractSentences(une.excerpt || une.content, 3)}</p>
     <span class="arrow">➤</span>
-    <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="slider-read-more">Lire la suite</a>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${une.id}" class="read-more">Lire la suite</a>
   `;
 }
 
@@ -58,7 +53,7 @@ if (slider) {
         <h3>${principale.title}</h3>
         <p class="date">${formatDateFR(principale.date)}</p>
         <p class="excerpt">${extractSentences(principale.excerpt || principale.content, 5)}</p>
-        <a href="https://pastoa.github.io/actualites/article.html?id=${principale.id}" class="read-more">Lire la suite</a>
+        <a href="https://pastoa.github.io/actualites/article.html?id=${principale.id}" class="read-more">LIRE LA SUITE</a>
       `;
     }
 
