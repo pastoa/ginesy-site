@@ -8,18 +8,25 @@ fetch("https://pastoa.github.io/actualites/articles.json")
     // Trier les articles par date décroissante
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    const blocUne = document.querySelector(".slider .slider-caption");
-    const imgUne = document.querySelector(".slider.slide");
-    const articleUne = articles[0];
+function afficherArticleUne(article) {
+  const slide = document.querySelector(".slider .slide");
+  const caption = document.querySelector(".slider-caption");
 
-    if (blocUne && imgUne && articleUne) {
-      imgUne.style.backgroundImage = `url(${articleUne.image})`;
-      blocUne.innerHTML = `
-        <h2>${articleUne.title}</h2>
-        <p>${getExtraitComplet(articleUne.excerpt, 3)}</p>
-        <a href="https://pastoa.github.io/actualites/article.html?id=${articleUne.slug}" class="read-more-btn">LIRE LA SUITE</a>
-      `;
-    }
+  if (!slide || !caption || !article) return;
+
+  // Appliquer l'image de fond
+  slide.style.backgroundImage = `url('${article.image}')`;
+  slide.style.backgroundSize = "cover";
+  slide.style.backgroundPosition = "center";
+
+  // Ajouter le contenu texte
+  caption.innerHTML = `
+    <h2>${article.title}</h2>
+    <p>${article.extraitComplet || article.excerpt}</p>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="btn-une">➤ Lire la suite</a>
+  `;
+}
+
 
     const actusContainer = document.querySelector(".actus-container");
     if (!actusContainer) return;
