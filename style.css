@@ -526,6 +526,7 @@ footer {
 }
 
 /* ======= RESPONSIVE ======= */
+
 @media screen and (max-width: 768px) {
   /* ACTUALITÉ PRINCIPALE : image visible, bloc texte en dessous */
   .actus-container {
@@ -697,7 +698,10 @@ footer {
 
 
 /* === RESPONSIVE === */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
+
+  .slider-img-mobile {
+  display: none !important;
   .actus-container {
     flex-direction: column;
   }
