@@ -56,7 +56,7 @@ function afficherArticleUne(article) {
 }
 
 function getExtraitComplet(texte, nbLignes) {
-  const phrases = texte.split(".");
+  const phrases = contenu.split(/[.!?]\s/); 
   const extraits = phrases.slice(0, nbLignes).map(p => p.trim()).filter(Boolean);
   return extraits.join(". ") + (extraits.length ? "." : "");
 }
