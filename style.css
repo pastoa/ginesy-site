@@ -109,9 +109,9 @@ nav a:hover {
 }
 
 .slide {
-  position: absolute;
   width: 100%;
   height: 600px; 
+  border-radius: 10px;
 }
 
 .slider-caption {
