@@ -1,9 +1,13 @@
 // ✅ Script entièrement fonctionnel pour afficher les articles sur la page d'accueil
 
 fetch("https://pastoa.github.io/actualites/articles.json")
-  .then((response) => response.json())
+  .then((res) => res.json())
   .then((articles) => {
-    if (!Array.isArray(articles) || articles.length === 0) return;
+    if (articles.length > 0) {
+      afficherArticleUne(articles[0]); // article le plus récent
+    }
+  });
+
 
     // Trier les articles par date décroissante
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
