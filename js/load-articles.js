@@ -58,7 +58,7 @@ function afficherActusSecondaires(articles) {
     div.innerHTML = `
       <h4>${article.title}</h4>
       <p class="date">${formatDateFr(article.date)}</p>
-      <p>${getExtraitComplet(article.excerpt, 3)}</p>
+      <p>${getExtraitComplet(article.excerpt, 5)}</p>
       <a href="https://pastoa.github.io/actualites/article.html?id=${article.id}" class="read-more">LIRE LA SUITE</a>
     `;
     actuSecondaires.appendChild(div);
