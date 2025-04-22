@@ -859,7 +859,7 @@ footer {
   }
 }
 
-.slider-image-mobile {
+.slider-img-mobile {
   display: none;
   width: 100%;
   height: auto;
@@ -876,7 +876,7 @@ footer {
     background: none !important;
   }
 
-  .slider-image-mobile {
+  .slider-img-mobile {
     display: block;
   }
 
