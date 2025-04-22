@@ -1,37 +1,15 @@
-// ✅ Script entièrement fonctionnel pour afficher les articles sur la page d'accueil
-
 fetch("https://pastoa.github.io/actualites/articles.json")
   .then((res) => res.json())
   .then((articles) => {
-    if (articles.length > 0) {
-      afficherArticleUne(articles[0]); // article le plus récent
-    }
-  });
-
+    if (!articles || articles.length === 0) return;
 
     // Trier les articles par date décroissante
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-function afficherArticleUne(article) {
-  const slide = document.querySelector(".slider .slide");
-  const caption = document.querySelector(".slider-caption");
+    // Article de UNE
+    afficherArticleUne(articles[0]);
 
-  if (!slide || !caption || !article) return;
-
-  // Appliquer l'image de fond
-  slide.style.backgroundImage = `url('${article.image}')`;
-  slide.style.backgroundSize = "cover";
-  slide.style.backgroundPosition = "center";
-
-  // Ajouter le contenu texte
-  caption.innerHTML = `
-    <h2>${article.title}</h2>
-    <p>${article.extraitComplet || article.excerpt}</p>
-    <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="btn-une">➤ Lire la suite</a>
-  `;
-}
-
-
+    // Bloc actualités : principal + 3 secondaires
     const actusContainer = document.querySelector(".actus-container");
     if (!actusContainer) return;
 
@@ -60,6 +38,23 @@ function afficherArticleUne(article) {
   })
   .catch((error) => console.error("Erreur de chargement des articles :", error));
 
+function afficherArticleUne(article) {
+  const slide = document.querySelector(".slider .slide");
+  const caption = document.querySelector(".slider-caption");
+
+  if (!slide || !caption || !article) return;
+
+  slide.style.backgroundImage = `url('${article.image}')`;
+  slide.style.backgroundSize = "cover";
+  slide.style.backgroundPosition = "center";
+
+  caption.innerHTML = `
+    <h2>${article.title}</h2>
+    <p>${getExtraitComplet(article.excerpt, 3)}</p>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="btn-une">➤ Lire la suite</a>
+  `;
+}
+
 function getExtraitComplet(texte, nbLignes) {
   const phrases = texte.split(".");
   const extraits = phrases.slice(0, nbLignes).map(p => p.trim()).filter(Boolean);
@@ -73,8 +68,5 @@ function formatDate(dateStr) {
   const yyyy = date.getFullYear();
   return `${dd}.${mm}.${yyyy}`;
 }
-
-
-
 
 
