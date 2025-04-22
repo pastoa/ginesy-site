@@ -835,7 +835,7 @@ footer {
 }
 
 .slider-img-mobile {
-  display: none;
+  display: none !important;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -850,7 +850,7 @@ footer {
   }
 
   .slider-img-mobile {
-    display: block;
+    display: block !important;
     margin-bottom: 0;
   }
 
