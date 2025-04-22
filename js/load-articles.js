@@ -22,6 +22,7 @@ function afficherArticleUne(article) {
   const slide = document.querySelector(".slide");
   if (slide && article.image) {
     slide.style.backgroundImage = `url('${article.image}')`;
+    document.querySelector('.slide').style.setProperty('--slider-bg', `url('${article.image}')`);
   }
 
   const titreUne = document.getElementById("titre-une");
