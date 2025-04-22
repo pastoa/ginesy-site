@@ -110,10 +110,11 @@ nav a:hover {
 
 .slide {
   width: 100%;
-  height: 100%;
-  background-size: contain;
+  height: 600px; /* ou la hauteur que tu veux garder */
+  background-size: contain;         /* ✅ pour afficher toute l’image sans zoom */
   background-repeat: no-repeat;
-  background-position: top center; /* ✅ on ne coupe plus le haut */
+  background-position: top center;  /* ✅ pour afficher le haut de l’image */
+  background-color: #fff;           /* ✅ évite un fond vide autour */
 }
 
 .slider-caption {
