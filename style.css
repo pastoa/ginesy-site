@@ -279,6 +279,7 @@ nav a:hover {
   height: auto;
   max-height: 300px;
   object-fit: cover;
+  object-position: center center;
   border-radius: 10px;
 }
 .actu-principale-texte {
