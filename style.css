@@ -102,9 +102,10 @@ nav a:hover {
 
 /* SLIDER UNE */
 .slider {
+  position: relative
   width: 100%;
-  height: auto;                 /* ✅ Ne plus forcer la hauteur */
-  object-fit: contain;          /* ✅ Affiche toute l’image sans la couper */
+  height: 420px;                 /* ✅ Ne plus forcer la hauteur */
+  object-fit: cover;          /* ✅ Affiche toute l’image sans la couper */
   object-position: top center;  /* ✅ Aligne le haut de l’image */
   display: block;
 }
