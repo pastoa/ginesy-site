@@ -145,21 +145,21 @@ nav a:hover {
   transform: translateX(6px);
 }
 
-.btn-une-lire {
+.read-more {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
+  padding: 8px 16px;
+  margin-top: 10px;
   background-color: #002654;
   color: white;
-  border-radius: 5px;
   text-decoration: none;
+  border-radius: 20px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-
-.btn-une-lire:hover {
-  background-color: #004080;
+.read-more:hover {
+  background-color: #0056b3;
 }
+
 
 
 /* NEWSLETTER */
@@ -274,6 +274,8 @@ nav a:hover {
 }
 .actu-principale img {
   width: 100%;
+  background-size: cover;
+  background-position: center;
   height: auto;
   max-height: 300px;
   object-fit: cover;
