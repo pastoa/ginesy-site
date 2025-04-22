@@ -9,7 +9,7 @@ fetch("https://pastoa.github.io/actualites/articles.json")
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const blocUne = document.querySelector(".slider .slider-caption");
-    const imgUne = document.querySelector(".slider");
+    const imgUne = document.querySelector(".slider.slide");
     const articleUne = articles[0];
 
     if (blocUne && imgUne && articleUne) {
@@ -56,8 +56,13 @@ function getExtraitComplet(texte, nbLignes) {
 }
 
 function formatDate(dateStr) {
-  const [yyyy, mm, dd] = dateStr.split("-");
+  const date = new Date(dateStr);
+  const dd = String(date.getDate()).padStart(2, "0");
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const yyyy = date.getFullYear();
   return `${dd}.${mm}.${yyyy}`;
+}
+
 }
 
 
