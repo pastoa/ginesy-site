@@ -105,6 +105,8 @@ nav a:hover {
   width: 100%;
   height: 600px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 
 .slide {
