@@ -1,5 +1,11 @@
 
 /* RESET & FONDAMENTAUX */
+
+/* FORCER la désactivation de l’image mobile en desktop */
+.slider-img-mobile {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", sans-serif;
@@ -699,12 +705,6 @@ footer {
 
 /* === RESPONSIVE === */
 @media screen and (max-width: 768px){
-
-  .slider-img-mobile {
-  display: none !important;
-  .actus-container {
-    flex-direction: column;
-  }
 
   .restons-contact {
     flex-direction: column;
