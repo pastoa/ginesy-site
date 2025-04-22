@@ -826,37 +826,11 @@ footer {
     flex-wrap: wrap;
 }
 
-  @media (max-width: 768px) {
-  .slider {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .slide {
-    height: auto;
-    background: none !important; /* ✅ cache le background en mobile */
-  }
-
-  .slide::before {
-    content: '';
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* ou fixe selon ton image */
-    background-image: var(--slider-bg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
-
-  .slider-caption {
-    position: static;
-    margin-top: 0;
-    padding: 20px;
-    background: white;
-    box-shadow: none;
-    max-width: 100%;
-  }
+/* CORRECTION RESPONSIVE SLIDER UNE */
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slider-img-mobile {
@@ -868,25 +842,29 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .slider {
-    height: auto;
-  }
-
   .slide {
     background: none !important;
+    height: auto;
+    width: 100%;
   }
 
   .slider-img-mobile {
     display: block;
+    margin-bottom: 0;
   }
 
   .slider-caption {
     position: static;
-    padding: 20px;
-    background: white;
+    background-color: white;
+    padding: 20px 15px;
+    margin-top: 0 !important;
     box-shadow: none;
+    border-radius: 0;
     max-width: 100%;
-    margin-top: 0;        /* 🔧 enlève l’espace au-dessus */
-    padding-top: 10px;    /* optionnel pour aérer un peu */
+  }
+
+  .slider-text {
+    margin: 0;
   }
 }
+
