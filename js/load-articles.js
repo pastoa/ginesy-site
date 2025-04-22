@@ -1,7 +1,9 @@
 function getExtraitComplet(texte, nbPhrases = 3) {
+  if (!texte || typeof texte !== "string") return "";
   const phrases = texte.split(/[.!?。]/).filter(p => p.trim().length > 0);
   return phrases.slice(0, nbPhrases).join('. ') + '.';
 }
+
 
 fetch("https://pastoa.github.io/actualites/articles.json")
   .then((res) => res.json())
