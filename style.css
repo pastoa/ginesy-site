@@ -103,21 +103,27 @@ nav a:hover {
 /* SLIDER UNE */
 .slider {
   width: 100%;
-  height: auto;                /* ✅ respecte les proportions naturelles */
-  object-fit: contain;         /* ✅ affiche toute l’image sans la couper */
-  object-position: top center; /* ✅ aligne l’image en haut */
-  display: block;
-  max-height: 500px;           /* facultatif : limite la hauteur */
-  margin: 0 auto;
+  height: auto;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
 }
-
 
 .slide {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;         /* ✅ ne coupe plus l’image */
+  object-position: top center; /* ✅ bien alignée en haut */
+  display: block;
+  max-height: 500px;
 }
 
 .slider-caption {
