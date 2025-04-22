@@ -46,7 +46,7 @@ function afficherActusSecondaires(articles) {
     <h3>${article1.title}</h3>
     <p class="date">${formatDateFr(article1.date)}</p>
     <p>${getExtraitComplet(article1.excerpt, 5)}</p>
-    <a href="https://pastoa.github.io/actualites/article.html?id=${article1.slug}" class="read-more">Lire la suite</a>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${article1.slug}" class="read-more">LIRE LA SUITE</a>
   `;
 
   actuSecondaires.innerHTML = "";
@@ -59,7 +59,7 @@ function afficherActusSecondaires(articles) {
       <h4>${article.title}</h4>
       <p class="date">${formatDateFr(article.date)}</p>
       <p>${getExtraitComplet(article.excerpt, 3)}</p>
-      <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="read-more">Lire la suite</a>
+      <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="read-more">LIRE LA SUITE</a>
     `;
     actuSecondaires.appendChild(div);
   }
