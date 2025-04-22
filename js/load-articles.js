@@ -1,67 +1,49 @@
+function getExtraitComplet(texte, nbPhrases = 3) {
+  const phrases = texte.split(/[.!?。]/).filter(p => p.trim().length > 0);
+  return phrases.slice(0, nbPhrases).join('. ') + '.';
+}
+
 fetch("https://pastoa.github.io/actualites/articles.json")
-  .then((response) => response.json())
+  .then((res) => res.json())
   .then((articles) => {
-    if (!articles || articles.length === 0) return;
+    if (!articles.length) return;
 
-    // Trier les articles par date décroissante
-    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    // === ARTICLE DE UNE ===
-    const une = articles[0];
     const slider = document.querySelector(".slider");
+    const actuUne = articles[0];
+
     slider.innerHTML = `
-      <div class="slide" style="background-image: url('https://pastoa.github.io/actualites/${une.image}')">
+      <div class="slide" style="background-image: url('https://pastoa.github.io/actualites/${actuUne.Image}')">
         <div class="slider-caption">
-          <h2>${une.titre}</h2>
-          <p>${formatExtrait(une.extrait, 3)}</p>
-          <span class="arrow">➤</span>
-          <a class="read-more" href="https://pastoa.github.io/actualites/article.html?id=${une.id}">LIRE LA SUITE</a>
+          <h2>${actuUne.Title}</h2>
+          <p>${getExtraitComplet(actuUne.Excerpt, 3)}</p>
+          <a href="https://pastoa.github.io/actualites/article.html?id=${actuUne.Slug}" class="btn-une">Lire la suite</a>
         </div>
       </div>
     `;
 
-    // === ACTUALITÉ PRINCIPALE ===
-    const principale = articles[1];
-    const secondaires = articles.slice(2, 5); // 3 actus suivantes
+    const container = document.querySelector(".actus-container");
+    const actuPrincipale = articles[1];
+    const secondaires = articles.slice(2, 5);
 
-    const actusContainer = document.querySelector(".actus-container");
-    actusContainer.innerHTML = `
+    container.innerHTML = `
       <div class="actu-principale">
-        <img src="https://pastoa.github.io/actualites/${principale.image}" alt="${principale.titre}">
-        <h3>${principale.titre}</h3>
-        <p class="date">${formatDate(principale.date)}</p>
-        <p>${formatExtrait(principale.extrait, 5)}</p>
-        <a class="read-more" href="https://pastoa.github.io/actualites/article.html?id=${principale.id}">LIRE LA SUITE</a>
+        <img src="https://pastoa.github.io/actualites/${actuPrincipale.Image}" alt="${actuPrincipale.Title}">
+        <h3>${actuPrincipale.Title}</h3>
+        <p class="date">${actuPrincipale.Date}</p>
+        <p>${getExtraitComplet(actuPrincipale.Excerpt, 5)}</p>
+        <a href="https://pastoa.github.io/actualites/article.html?id=${actuPrincipale.Slug}" class="read-more">Lire la suite</a>
       </div>
       <div class="actu-secondaires">
         ${secondaires.map(article => `
           <div class="actu">
-            <h4>${article.titre}</h4>
-            <p class="date">${formatDate(article.date)}</p>
-            <p>${formatExtrait(article.extrait, 3)}</p>
-            <a class="read-more" href="https://pastoa.github.io/actualites/article.html?id=${article.id}">LIRE LA SUITE</a>
+            <h4>${article.Title}</h4>
+            <p class="date">${article.Date}</p>
+            <p>${getExtraitComplet(article.Excerpt, 3)}</p>
+            <a href="https://pastoa.github.io/actualites/article.html?id=${article.Slug}" class="read-more">Lire la suite</a>
           </div>
-        `).join('')}
+        `).join("")}
       </div>
     `;
   })
-  .catch((error) => {
-    console.error("Erreur de chargement des articles :", error);
-  });
-
-function formatDate(dateString) {
-  const d = new Date(dateString);
-  return d.toLocaleDateString("fr-FR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-  });
-}
-
-function formatExtrait(texte, nbPhrases) {
-  if (!texte) return "";
-  const phrases = texte.split(".").filter(Boolean);
-  const extraits = phrases.slice(0, nbPhrases).map(p => p.trim());
-  return extraits.join(". ") + (extraits.length ? "." : "");
-}
+  .catch((error) => console.error("Erreur de chargement des articles :", error));
 
