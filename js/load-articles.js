@@ -51,7 +51,7 @@ function afficherArticleUne(article) {
   caption.innerHTML = `
     <h2>${article.title}</h2>
     <p>${getExtraitComplet(article.excerpt, 3)}</p>
-    <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="btn-une">➤ Lire la suite</a>
+    <a href="https://pastoa.github.io/actualites/article.html?id=${article.slug}" class="btn-une"> LIRE LA SUITE</a>
   `;
 }
 
