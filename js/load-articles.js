@@ -63,7 +63,7 @@ function formatDate(dateStr) {
   return `${dd}.${mm}.${yyyy}`;
 }
 
-}
+
 
 
 
