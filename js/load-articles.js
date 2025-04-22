@@ -21,7 +21,7 @@ fetch("https://pastoa.github.io/actualites/articles.json")
 function afficherArticleUne(article) {
   const slide = document.querySelector(".slide");
   if (slide && article.image) {
- document.querySelector('.slide').style.backgroundImage = `url('${articleUne.image}')`; 
+ document.querySelector('.slide').style.backgroundImage = `url('${article.image}')`; 
     const imgMobile = document.getElementById('img-mobile-slider');
     if (imgMobile) {
   imgMobile.src = article.image;
