@@ -103,7 +103,7 @@ nav a:hover {
 /* SLIDER UNE */
 .slider {
   width: 100%;
-  height: 800px;
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
@@ -825,3 +825,37 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+  @media (max-width: 768px) {
+  .slider {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide {
+    height: auto;
+    background: none !important; /* ✅ cache le background en mobile */
+  }
+
+  .slide::before {
+    content: '';
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* ou fixe selon ton image */
+    background-image: var(--slider-bg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .slider-caption {
+    position: static;
+    margin-top: 0;
+    padding: 20px;
+    background: white;
+    box-shadow: none;
+    max-width: 100%;
+  }
+}
+
